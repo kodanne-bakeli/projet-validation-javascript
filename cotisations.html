@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="cotisations.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Le modal relié au bouton avec les trois points 
+    permettant d'afficher les cotisations terminées -->
+    <div class="container py-4 d-flex justify-content-end">
+        <button class="btn rounded-4 bouton-du-modal d-flex py-3  gap-1" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+        <!-- Modal relier au bouton-trois-points-->
+        <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog  modal-dialog-centered modal-bouton-trois-points">
+                <div class="modal-content">
+                    <div class="modal-header ">
+                        <h1 class="modal-title fs-3 ps-5" id="exampleModalLabel">cotisations terminées</h1>
+                    </div>
+                    <div class="modal-body p-5">
+                        <table class="table d-none d-lg-block table1-cotisations  table-borderless">
+                            <thead>
+                                <tr>
+                                    <th class="th-top-left " scope="col">
+                                        <h4>Membres</h4>
+                                    </th>
+                                    <th scope="col">
+                                        <h4>Date début</h4>
+                                    </th>
+                                    <th scope="col">
+                                        <h4>Date Fin</h4>
+                                    </th>
+                                    <th scope="col">
+                                        <h4>Montant total cotisé</h4>
+                                    </th>
+                                    <th scope="col">
+                                        <h4>Statut</h4>
+                                    </th>
+                                    <th class="th-top-right" scope="col">
+                                        <h4>Actions</h4>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Selena Roy</td>
+                                    <td>01/01/2022</td>
+                                    <td>31/12/2022</td>
+                                    <td>
+                                        <p class="ms-5">300.000 FCFA</p>
+                                    </td>
+                                    <td class="finish">Terminé</td>
+                                    <td><i class="fa-solid fa-eye ms-4"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>Emma watson</td>
+                                    <td>01/01/2022</td>
+                                    <td>31/12/2022</td>
+                                    <td>
+                                        <p class="ms-5">300.000 FCFA</p>
+                                    </td>
+                                    <td class="finish">Terminé</td>
+                                    <td><i class="fa-solid fa-eye ms-4"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>Jonh Robert</td>
+                                    <td>01/01/2022</td>
+                                    <td>31/12/2022</td>
+                                    <td>
+                                        <p class="ms-5">300.000 FCFA</p>
+                                    </td>
+                                    <td class="finish">Terminé</td>
+                                    <td><i class="fa-solid fa-eye ms-4"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>Anne Hataway</td>
+                                    <td>01/01/2022</td>
+                                    <td>31/12/2022</td>
+                                    <td>
+                                        <p class="ms-5">300.000 FCFA</p>
+                                    </td>
+                                    <td class="finish">Terminé</td>
+                                    <td><i class="fa-solid fa-eye ms-4"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>Ravi Shankar</td>
+                                    <td>01/01/2022</td>
+                                    <td>31/12/2022</td>
+                                    <td>
+                                        <p class="ms-5">300.000 FCFA</p>
+                                    </td>
+                                    <td class="finish">Terminé</td>
+                                    <td><i class="fa-solid fa-eye ms-4"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-bottom-left">Emma stone</td>
+                                    <td>01/01/2022</td>
+                                    <td>31/12/2022</td>
+                                    <td>
+                                        <p class="ms-5">300.000 FCFA</p>
+                                    </td>
+                                    <td class="finish">Terminé</td>
+                                    <td class="td-bottom-right"><i class="fa-solid fa-eye ms-4"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="d-block d-lg-none">
+                            <div class="d-flex mb-2">
+                                <div class="card pre-card p-1"></div>
+                                <div class="card post-card p-3 w-100">
+                                    <h4>Selena Roy</h4>
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <p>Montant total cotisé</p>
+                                        <p>300.000 FCFA</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <p>Statut</p>
+                                        <p class="statut-termine">Terminé</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <div class="card pre-card p-1"></div>
+                                <div class="card post-card p-3 w-100">
+                                    <h4>Emma Watson</h4>
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <p>Montant total cotisé</p>
+                                        <p>300.000 FCFA</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <p>Statut</p>
+                                        <p class="statut-termine">Terminé</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <div class="card pre-card p-1"></div>
+                                <div class="card post-card p-3 w-100">
+                                    <h4>Jonh Robert</h4>
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <p>Montant total cotisé</p>
+                                        <p>300.000 FCFA</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <p>Statut</p>
+                                        <p class="statut-termine">Terminé</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <div class="card pre-card p-1"></div>
+                                <div class="card post-card p-3 w-100">
+                                    <h4>Anne Hataway</h4>
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <p>Montant total cotisé</p>
+                                        <p>300.000 FCFA</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <p>Statut</p>
+                                        <p class="statut-termine">Terminé</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <div class="card pre-card p-1"></div>
+                                <div class="card post-card p-3 w-100">
+                                    <h4>Ranvi shankar</h4>
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <p>Montant total cotisé</p>
+                                        <p>300.000 FCFA</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <p>Statut</p>
+                                        <p class="statut-termine">Terminé</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <div class="card pre-card p-1"></div>
+                                <div class="card post-card p-3 w-100">
+                                    <h4>Emma stone</h4>
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <p>Montant total cotisé</p>
+                                        <p>300.000 FCFA</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <p>Statut</p>
+                                        <p class="statut-termine">Terminé</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my-4 d-flex justify-content-center">
+                            <nav aria-label="...">
+                                <ul class="pagination">
+                                    <li class="page-item disabled" href="#">
+                                        <a class="page-link ">Previous page</a>
+                                    </li>
+                                    <li class="page-item active" aria-current="page"><a class="page-link" href="#">
+                                            <div><b>1</b></div>
+                                        </a></li>
+                                    <li class="page-item ">
+                                        <a class="page-link" href="#">
+                                            <div><b>2</b></div>
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link " href="#">
+                                            <div><b>3</b></div>
+                                        </a></li>
+                                    <li class="page-item">
+                                        <a class="page-link text-dark fw-bold" href="#">Next page</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Les trois premieres cards dont une incluant le total de la caisse -->
+    <div class="container py-5">
+        <div class="row les-trois-card-du-haut">
+            <div class="col-4 d-none d-lg-block">
+                <div class="card pb-5 pt-3 px-4 border-none">
+                    <h5>Juin</h5>
+                    <h2>225.000 FCFA</h2>
+                </div>
+            </div>
+            <div class="col-4 d-none d-lg-block">
+                <div class="card pb-5 pt-3 px-4 border-none">
+                    <h5>Mai</h5>
+                    <h2>100.000 FCFA</h2>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="card pb-5 pt-3 px-4 border-none card-total-caisse">
+                    <h5>Total caisse</h5>
+                    <h2>3.500.000 FCFA</h2>
+                    <div class="progress pb-1 rounded-5 my-1" role="progressbar" aria-label="Basic example"
+                        aria-valuenow="77" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar pt-1 rounded-5" style="width: 77%  ; background-color:#20df7f ;"></div>
+                    </div>
+                    <h6 class="text-end text-secondary py-1">77% du seuil</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- le tout premier tableau des cotisations-->
+    <div class="container pt-3 d-none d-lg-block">
+        <table class="table table1-cotisations  table-borderless">
+            <thead>
+                <tr>
+                    <th class="th-top-left " scope="col">
+                        <h4>Membres</h4>
+                    </th>
+                    <th scope="col">
+                        <h4>Montant cotisé</h4>
+                    </th>
+                    <th scope="col">
+                        <h4>Date début</h4>
+                    </th>
+                    <th scope="col">
+                        <h4>Montant restant</h4>
+                    </th>
+                    <th class="th-top-right" scope="col">
+                        <h4>Actions</h4>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Selena Roy</td>
+                    <td>200.000 FCFA</td>
+                    <td>01/01/2022</td>
+                    <td>100.000 FCFA</td>
+                    <td><i class="fa-solid fa-eye ms-4" data-bs-toggle="modal" data-bs-target="#example2Modal"></i></td>
+                </tr>
+                <tr>
+                    <td>Emma watson</td>
+                    <td>200.000 FCFA</td>
+                    <td>01/01/2022</td>
+                    <td>100.000 FCFA</td>
+                    <td><i class="fa-solid fa-eye ms-4" data-bs-toggle="modal" data-bs-target="#example3Modal"></i></td>
+                </tr>
+                <tr>
+                    <td>Jonh Robert</td>
+                    <td>200.000 FCFA</td>
+                    <td>01/01/2022</td>
+                    <td>100.000 FCFA</td>
+                    <td><i class="fa-solid fa-eye ms-4"></i></td>
+                </tr>
+                <tr>
+                    <td>Anne Hataway</td>
+                    <td>200.000 FCFA</td>
+                    <td>01/01/2022</td>
+                    <td>100.000 FCFA</td>
+                    <td><i class="fa-solid fa-eye ms-4" data-bs-toggle="modal" data-bs-target="#example4Modal"></i></td>
+                </tr>
+                <tr>
+                    <td>Ravi Shankar</td>
+                    <td>200.000 FCFA</td>
+                    <td>01/01/2022</td>
+                    <td>100.000 FCFA</td>
+                    <td><i class="fa-solid fa-eye ms-4"></i></td>
+                </tr>
+                <tr>
+                    <td class="td-bottom-left">Emma stone</td>
+                    <td>200.000 FCFA</td>
+                    <td>01/01/2022</td>
+                    <td>100.000 FCFA</td>
+                    <td><i class="fa-solid fa-eye ms-4"></i></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- responsivité du tout premier tableau de cotisations -->
+    <div class="container pt-3 d-block d-lg-none">
+        <table class="table table1-cotisations  table-borderless">
+            <thead>
+                <tr>
+                    <th class="th-top-left " scope="col">
+                        <h4>Membres</h4>
+                    </th>
+                    <th class="th-top-right" scope="col">
+                        <h4>Actions</h4>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Selena Roy</td>
+                    <td><i class="fa-solid fa-eye ms-4" data-bs-toggle="modal" data-bs-target="#example2Modal"></i></td>
+                </tr>
+                <tr>
+                    <td>Emma watson</td>
+                    <td><i class="fa-solid fa-eye ms-4" data-bs-toggle="modal" data-bs-target="#example3Modal"></i></td>
+                </tr>
+                <tr>
+                    <td>Jonh Robert</td>
+                    <td><i class="fa-solid fa-eye ms-4"></i></td>
+                </tr>
+                <tr>
+                    <td>Anne Hataway</td>
+                    <td><i class="fa-solid fa-eye ms-4" data-bs-toggle="modal" data-bs-target="#example4Modal"></i></td>
+                </tr>
+                <tr>
+                    <td>Ravi Shankar</td>
+                    <td><i class="fa-solid fa-eye ms-4"></i></td>
+                </tr>
+                <tr>
+                    <td class="td-bottom-left">Emma stone</td>
+                    <td><i class="fa-solid fa-eye ms-4"></i></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- gérage de la pagination -->
+    <div class="container">
+        <div class="my-4 d-flex justify-content-center">
+            <nav aria-label="...">
+                <ul class="pagination">
+                    <li class="page-item disabled" href="#">
+                        <a class="page-link ">Previous page</a>
+                    </li>
+                    <li class="page-item active" aria-current="page"><a class="page-link" href="#">
+                            <div><b>1</b></div>
+                        </a></li>
+                    <li class="page-item ">
+                        <a class="page-link" href="#">
+                            <div><b>2</b></div>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link " href="#">
+                            <div><b>3</b></div>
+                        </a></li>
+                    <li class="page-item">
+                        <a class="page-link text-dark fw-bold" href="#">Next page</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- voir les details des cotisations des 3 utilisateurs indiqés dans le prototype
+    grace aux modals en cliquant sur les eyes des actions -->
+    <div class="details-cotisations">
+        <div class="modal fade " id="example2Modal" tabindex="-1" aria-labelledby="example2ModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog  modal-dialog-centered modal-bouton-trois-points ">
+                <div class="modal-content">
+                    <div class="modal-header ">
+                        <h1 class="modal-title fs-3 ps-5" id="example2ModalLabel">Détails cotisations</h1>
+                    </div>
+                    <div class="modal-body p-5">
+                        <div class="d-flex flex-column align-items-end nom1-details-cotisations ">
+                            <h2>Selena Roy</h2>
+                            <p class="text-secondary ">Designer</p>
+                        </div>
+                        <table class="table d-none d-sm-block table1-cotisations  table-borderless table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">
+                                        <h4>Mois</h4>
+                                    </th>
+                                    <th scope="col">
+                                        <h4>Date</h4>
+                                    </th>
+                                    <th scope="col">
+                                        <h4>Montant</h4>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="my-1">
+                                    <td>Janvier</td>
+                                    <td>22-01-2022</td>
+                                    <td>25.000 FCFA</td>
+                                </tr>
+                                <tr>
+                                    <td>Février</td>
+                                    <td>23-02-2022</td>
+                                    <td>25.000 FCFA</td>
+                                </tr>
+                                <tr>
+                                    <td>Mars</td>
+                                    <td>12/03/2022</td>
+                                    <td>25.000 FCFA</td>
+                                </tr>
+                                <tr>
+                                    <td>Avril</td>
+                                    <td>05/04/2022</td>
+                                    <td>25.000 FCFA</td>
+                                </tr>
+                                <tr>
+                                    <td>Juin</td>
+                                    <td>09/06/2022</td>
+                                    <td>25.000 FCFA</td>
+                                </tr>
+                                <tr>
+                                    <td>Juillet</td>
+                                    <td>09/07/2022</td>
+                                    <td>25.000 FCFA</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="d-block d-sm-none">
+                            <div class="d-flex mb-2">
+                                <div class="card pre-card p-1"></div>
+                                <div class="card post-card p-1 w-100">
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <p>Janvier</p>
+                                        <p>22-01-2022</p>
+                                    </div>
+                                    <div>
+                                        <p>25.000 FCFA</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <div class="card pre-card p-1"></div>
+                                <div class="card post-card p-1 w-100">
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <p>Février</p>
+                                        <p>22-02-2022</p>
+                                    </div>
+                                    <div>
+                                        <p>25.000 FCFA</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <div class="card pre-card p-1"></div>
+                                <div class="card post-card p-1 w-100">
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <p>Mars</p>
+                                        <p>22-03-2022</p>
+                                    </div>
+                                    <div>
+                                        <p>25.000 FCFA</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <div class="card pre-card p-1"></div>
+                                <div class="card post-card p-1 w-100">
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <p>Avril</p>
+                                        <p>22-04-2022</p>
+                                    </div>
+                                    <div>
+                                        <p>25.000 FCFA</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <div class="card pre-card p-1"></div>
+                                <div class="card post-card p-1 w-100">
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <p>Juin</p>
+                                        <p>22-06-2022</p>
+                                    </div>
+                                    <div>
+                                        <p>25.000 FCFA</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <div class="card pre-card p-1"></div>
+                                <div class="card post-card p-1 w-100">
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <p>Juillet</p>
+                                        <p>22-07-2022</p>
+                                    </div>
+                                    <div>
+                                        <p>25.000 FCFA</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="total-cotisations-user">
+                            <h2 class="text-end mt-4">Total = 150.000 FCFA</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade " id="example3Modal" tabindex="-1" aria-labelledby="example3ModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog  modal-dialog-centered modal-bouton-trois-points ">
+                <div class="modal-content">
+                    <div class="modal-header ">
+                        <h1 class="modal-title fs-3 ps-5" id="exampleModal3Label">Détails cotisations</h1>
+                    </div>
+                    <div class="modal-body p-5 flex ">
+                        <div class="d-flex flex-column align-items-end nom2-details-cotisations">
+                            <h2>Emma Watson</h2>
+                            <p class="text-secondary ">Designer</p>
+                        </div>
+                        <table class="table d-none d-sm-block table1-cotisations  table-borderless table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">
+                                        <h4>Mois</h4>
+                                    </th>
+                                    <th scope="col">
+                                        <h4>Date</h4>
+                                    </th>
+                                    <th scope="col">
+                                        <h4>Montant</h4>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="my-1">
+                                    <td>Janvier</td>
+                                    <td>22-01-2022</td>
+                                    <td>25.000 FCFA</td>
+                                </tr>
+                                <tr>
+                                    <td>Février</td>
+                                    <td>23-02-2022</td>
+                                    <td>25.000 FCFA</td>
+                                </tr>
+                                <tr>
+                                    <td>Mars</td>
+                                    <td>12/03/2022</td>
+                                    <td>25.000 FCFA</td>
+                                </tr>
+                                <tr>
+                                    <td>Avril</td>
+                                    <td>05/04/2022</td>
+                                    <td>25.000 FCFA</td>
+                                </tr>
+                                <tr>
+                                    <td>Juin</td>
+                                    <td>09/06/2022</td>
+                                    <td>25.000 FCFA</td>
+                                </tr>
+                                <tr>
+                                    <td>Juillet</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="d-block d-sm-none">
+                            <div class="d-flex mb-2">
+                                <div class="card pre-card p-1"></div>
+                                <div class="card post-card p-1 w-100">
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <p>Janvier</p>
+                                        <p>22-01-2022</p>
+                                    </div>
+                                    <div>
+                                        <p>25.000 FCFA</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <div class="card pre-card p-1"></div>
+                                <div class="card post-card p-1 w-100">
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <p>Février</p>
+                                        <p>22-02-2022</p>
+                                    </div>
+                                    <div>
+                                        <p>25.000 FCFA</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <div class="card pre-card p-1"></div>
+                                <div class="card post-card p-1 w-100">
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <p>Mars</p>
+                                        <p>22-03-2022</p>
+                                    </div>
+                                    <div>
+                                        <p>25.000 FCFA</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <div class="card pre-card p-1"></div>
+                                <div class="card post-card p-1 w-100">
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <p>Avril</p>
+                                        <p>22-04-2022</p>
+                                    </div>
+                                    <div>
+                                        <p>25.000 FCFA</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <div class="card pre-card p-1"></div>
+                                <div class="card post-card p-1 w-100">
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <p>Juin</p>
+                                        <p>22-06-2022</p>
+                                    </div>
+                                    <div>
+                                        <p>25.000 FCFA</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <div class="card pre-card p-1"></div>
+                                <div class="card post-card p-1 w-100">
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <p>Juillet</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="total-cotisations-user">
+                            <h2 class="text-end mt-4">Total = 125.000 FCFA</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade " id="example4Modal" tabindex="-1" aria-labelledby="example4ModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog  modal-dialog-centered modal-bouton-trois-points ">
+                <div class="modal-content">
+                    <div class="modal-header ">
+                        <h1 class="modal-title fs-3 ps-5" id="exampleModal4Label">Détails cotisations</h1>
+                    </div>
+                    <div class="modal-body p-5 flex ">
+                        <div class="hstack gap-3">
+                            <div class="d-flex flex-column align-items-end nom3-details-cotisations mb-2">
+                                <h2>Anne Hathaway</h2>
+                                <p class="text-secondary ">Enseignante</p>
+                            </div>
+                            <div class="mb-5">
+                                <i class="fa-solid fa-ban fa-2xl" style="color: #ff0000;"></i>
+                            </div>
+                        </div>
+                        <table class="table d-none d-sm-block table1-cotisations  table-borderless table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">
+                                        <h4>Mois</h4>
+                                    </th>
+                                    <th scope="col">
+                                        <h4>Date</h4>
+                                    </th>
+                                    <th scope="col">
+                                        <h4>Montant</h4>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="my-1">
+                                    <td>Janvier</td>
+                                    <td>22-01-2022</td>
+                                    <td>25.000 FCFA</td>
+                                </tr>
+                                <tr>
+                                    <td>Février</td>
+                                    <td>23-02-2022</td>
+                                    <td>25.000 FCFA</td>
+                                </tr>
+                                <tr>
+                                    <td>Mars</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Avril</td>
+                                </tr>
+                                <tr>
+                                    <td>Juin</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Juillet</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="d-block d-sm-none">
+                            <div class="d-flex mb-2">
+                                <div class="card pre-card p-1"></div>
+                                <div class="card post-card p-1 w-100">
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <p>Janvier</p>
+                                        <p>22-01-2022</p>
+                                    </div>
+                                    <div>
+                                        <p>25.000 FCFA</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <div class="card pre-card p-1"></div>
+                                <div class="card post-card p-1 w-100">
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <p>Février</p>
+                                        <p>22-02-2022</p>
+                                    </div>
+                                    <div>
+                                        <p>25.000 FCFA</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <div class="card pre-card p-1"></div>
+                                <div class="card post-card p-1 w-100">
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <p>Mars</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <div class="card pre-card p-1"></div>
+                                <div class="card post-card p-1 w-100">
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <p>Avril</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <div class="card pre-card p-1"></div>
+                                <div class="card post-card p-1 w-100">
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <p>Juin</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <div class="card pre-card p-1"></div>
+                                <div class="card post-card p-1 w-100">
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <p>Juillet</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="total-cotisations-user">
+                            <h2 class="text-end mt-4">Total = 50.000 FCFA</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

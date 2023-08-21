@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #cccccc;
+}
+
+/********** Section Caisse **********/
+.icone-caisse{
+    background: rgb(0, 149, 16, 0.4);
+    border-radius: 10px;
+}
+
+.card{
+    border-radius: 10px;
+}
+
+.caisse .mtn{
+    font-size: 2px;
+}
+
+.progress{
+    height: 8px;
+}
+
+/********** Section evolution **********/
+.table thead th, tbody th,
+.table td {
+    border: none
+}
+
+/********** Section page **********/
+.pagination li a{
+    font-size: 8px;
+}
+
+.page-link{
+    border-radius: 100%;
+}

@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+label {
+  font-weight: 500;
+}
+
+button {
+  background-color: rgba(4, 12, 65, 0.944) !important;
+  outline: none !important;
+  border: none !important;
+}
+
+button:hover {
+  background-color: rgba(8, 26, 139, 0.875) !important;
+  transition: 1s;
+}
+
+p a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: white;
+}
+
+p:hover {
+  background: rgba(4, 12, 65, 0.944);
+  width: 100%;
+  color: white !important;
+  transition: 1s;
+}
+
+ul {
+  margin: 20px auto;
+}
+
+li {
+  list-style-type: none;
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: small;
+  cursor: pointer;
+}
+
+.suivant {
+  width: 10px;
+  height: 10px;
+}
+
+.suivant:hover {
+  border-radius: 50%;
+  background-color: aqua;
+  padding: 1px;
+}

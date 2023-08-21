@@ -1,0 +1,27 @@
+.bg{
+    background: #093545!important;
+ color: white !important;
+}
+.titre{
+    color: #093545!important;
+}
+.para{
+    padding-left: 40% !important;
+    padding-right: 40% !important;
+    background-color: rgb(0, 128, 100) !important;
+    border: none !important;
+}
+.ra{
+    background-color: rgb(0, 128, 100) !important;
+    border: none !important;
+}
+.raga{
+    background-color: rgb(0, 128, 100) !important;
+    border: none !important;
+    color: #093545!important;
+    padding-left: 20% !important;
+    padding-right: 20% !important;
+}
+*{
+   
+}
