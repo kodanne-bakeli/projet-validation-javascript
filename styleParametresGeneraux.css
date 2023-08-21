@@ -1,0 +1,101 @@
+/* Parametres Generaux */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lugrasimo&family=Montserrat:wght@100;400&family=Poppins:wght@400;500;600;700&family=Satisfy&display=swap');
+#parametresGeneraux{
+    background-color: #EDEDEE;
+    font-family: 'Montserrat';
+    height: 100%;
+}
+
+#parametresGeneraux #editerProfil , #parametresGeneraux #mettreAjour{
+    background-color: #093545;
+    color: #fff;
+}
+
+#parametresGeneraux #adminInformations h4{
+    background-color: #20DF7F;
+}
+
+#parametresGeneraux #contentInfo {
+    width: 100%;
+}
+
+#parametresGeneraux #admin img {
+    border: 6px solid #20DF7F;
+    width: 45%;
+}
+
+
+
+@media screen and (min-width:560px) and (max-width:1400px){
+    #parametresGeneraux #admin{
+        border-right: 3px solid #C8C8C8;
+    }
+    #parametresGeneraux #adminInformations{
+        padding: 3%;
+    }
+
+    #parametresGeneraux #contentInfo {
+        padding: 2%;
+        width: 100%;
+    }
+
+    #parametresGeneraux .information{
+        padding-left: 6%;
+        padding-top: 1%;
+    }
+
+    #parametresGeneraux .information .bttn{
+        display: flex;
+        justify-content: right;
+    }
+
+    /* #parametresGeneraux #admin i{
+        position: absolute;
+        font-size: 20px;
+        top: 56%;
+        color: #fff;
+        background: #20DF7F;
+        left: 20%;
+    } */
+
+}
+
+@media screen and (min-width: 300px) and (max-width: 559px){
+    #parametresGeneraux #admin .profil {
+        display: flex;
+        padding-top: 2%;
+        padding-bottom: 2%;
+
+    }
+
+    #parametresGeneraux #admin .titleProfil{
+        display: none;
+    }
+    
+    #parametresGeneraux #admin img {
+        width: 40%;
+        height: 100%;
+    }
+
+    #parametresGeneraux #admin .name {
+        padding: 10%;
+    }
+
+    #parametresGeneraux #editerProfil{
+        display: none;
+    }
+
+    #parametresGeneraux .information .bttn{
+        display: flex;
+        justify-content: center;
+    }
+
+    /* #parametresGeneraux #admin i{
+        position: absolute;
+        top: 48%;
+        color: #fff;
+        background: #20DF7F;
+        left: 31%;
+        font-size: 20px;
+    } */
+}

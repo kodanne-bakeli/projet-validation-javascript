@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <!-- https://cdnjs.com/libraries/twitter-bootstrap/5.0.0-beta1 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Icons: https://getbootstrap.com/docs/5.0/extend/icons/ -->
+    <!-- https://cdnjs.com/libraries/font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+
+    <title>Paramètres généraux</title>
+  </head>
+  <body>
+    <div class="container-fluid py-4" id="parametresGeneraux">
+        <div class="row">
+            <div class="title pb-4">
+                <h2>Paramètres généraux</h2>
+            </div>
+            <div class="bg-light p-5 row" id="contentInfo">
+              <div class="col-md-4 text-center" id="admin">
+                <p class="titleProfil">Profil</p>
+                <div class="pb-5 profil">
+                    <img src="Ellipse 82.png" class="rounded-circle" alt="img" class="img-fluid">
+                    <!-- <i class="bi bi-camera-fill px-1 rounded-circle" ></i> -->
+                  <div class="name">
+                    <h3 class="fs-2 fw-bold">Ndiaga Sall</h3>
+                    <p class="fs-4 fw-bold">Admin</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-7 information">
+                <div class="row">
+                  <h4>Information Générale</h4>
+                  <form class="row g-3">
+                    <div class="col-md-6">
+                      <label for="validationDefault01" class="form-label">Prénom</label>
+                      <input type="text" class="form-control" id="prenom" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="validationDefault02" class="form-label">Nom</label>
+                      <input type="text" class="form-control" id="nom" required>
+                    </div>
+                    <div class="col-md-12">
+                      <label for="validationDefault03" class="form-label">Téléphone</label>
+                      <input type="text" class="form-control" id="phone" required>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="validationDefault03" class="form-label">E-mail</label>
+                        <input type="text" class="form-control" id="email" required>
+                    </div>
+                    <div class="col-md-12">
+                      <label for="validationDefault05" class="form-label">Statut</label>
+                      <input type="text" class="form-control" id="statut" required>
+                    </div>
+                    <div class="col-12 bttn">
+                      <a href="parametresGeneraux.html">
+                        <button class="btn" type="submit" id="mettreAjour">Mettre à jour</button>
+                      </a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <!-- https://cdnjs.com/libraries/twitter-bootstrap/5.0.0-beta1 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css"
+    />
+
+    <!-- Icons: https://getbootstrap.com/docs/5.0/extend/icons/ -->
+    <!-- https://cdnjs.com/libraries/font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+
+    <title>Paramètres généraux</title>
+  </head>
+  <body>
+    <div class="container-fluid py-4" id="parametresGeneraux">
+      <div class="row">
+        <div class="row pb-4">
+          <h2>Paramètres généraux</h2>
+        </div>
+        <div class="bg-light row" id="contentInfo">
+          <div class="col-md-4 text-center" id="admin">
+            <p class="titleProfil">Profil</p>
+            <div class="pb-5 profil">
+              <img src="Ellipse 82.png" class="rounded-circle" alt="img">
+              <div class="name">
+                <h3 class="fs-3 fw-bold">Ndiaga Sall</h3>
+                <p class="fs-4 fw-bold">Admin</p>
+              </div>
+            </div>
+            <div>
+              <a href="editProfil.html">
+                <button class="btn" id="editerProfil">Editer le profil</button>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-8" id="adminInformations">
+            <div class="col-md-12">
+              <h4 class="p-2 fw-bold">Informations générales</h4>
+              <div class="col d-flex justify-content-between border-bottom pb-3">
+                <div class="col-md-8">Prénom</div>
+                <div class="col-md-4 text-center">Ndiaga</div>
+              </div>
+              <div class="col d-flex justify-content-between border-bottom pb-3">
+                <div class="col-md-8">Nom</div>
+                <div class="col-md-4 text-center">Sall</div>
+              </div>
+              <div class="col d-flex justify-content-between border-bottom pb-3">
+                <div class="col-md-8">Statut</div>
+                <div class="col-md-4 text-center">Administrateur</div>
+              </div>
+              <div class="col d-flex justify-content-between border-bottom pb-3">
+                <div class="col-md-8">Email</div>
+                <div class="col-md-4 text-center">ndiaga@gmail.com</div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <h4 class="p-2 fw-bold">Statistiques</h4>
+              <div class="col d-flex justify-content-between border-bottom pb-3">
+                <div class="col-md-8">Nombre de membre ajoutés</div>
+                <div class="col-md-4 text-center">25</div>
+              </div>
+              <div class="col d-flex justify-content-between border-bottom pb-3">
+                <div class="col-md-8">Nombre de membre archivés</div>
+                <div class="col-md-4 text-center">10</div>
+              </div>
+              <div class="col d-flex justify-content-between border-bottom pb-3">
+                <div class="col-md-8">Nombre de membre bloqués</div>
+                <div class="col-md-4 text-center">4</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+</html>
