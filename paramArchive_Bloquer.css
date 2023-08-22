@@ -81,9 +81,6 @@ a{
 	border: 2px solid white;
 }
 
-
-
-
 /*================================================
 	R E S P O N S I V E     D E S I G N
 ==================================================*/
@@ -138,16 +135,6 @@ a{
 		height: 55px;
 	}
 	
-	/*.sidebar{
-		background-color: #FFF;
-		box-shadow: 0 0 8px 0.7px #093545;
-		bottom: 0;
-		padding-bottom: 0;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-	    align-items: center;
-	}*/
 	.sidebar{
 		background-color: #FFF;
 		box-shadow: 0 0 8px 0.7px #093545;
@@ -206,20 +193,6 @@ a{
 	  }
 }
 
-/*@media screen and (max-width: 575px){
-	.sidebar{
-		height: auto;
-		display: flex;
-		flex-direction: row;
-	    align-items: center;
-	}
-	.sidebar nav ul{
-		display: flex;
-		flex-direction: row;
-	    align-items: center;
-	}
-}*/
-
 @media screen and (max-width: 575px){
 	#header .user-name{
 	font-size: 16px;
@@ -230,5 +203,4 @@ a{
 	.option-menu{
 		font-size: 14px;
 	}
-
 }
