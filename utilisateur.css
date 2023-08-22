@@ -1,0 +1,98 @@
+body .gris{
+    background-color: rgb(210,210,210) !important;
+}
+.gris{
+    margin-bottom: 2px !important;
+}
+.les-trois-card-du-haut .card{
+    height: 130px !important;
+    border: none !important;
+    box-shadow: 2px 1px 12px 1px rgba(0,0,0,0.2) !important;
+}
+.titreUser{
+    font-size: 14px;
+}
+
+.pUser{
+    font-size: 20px;
+}
+/* bouton ajouter */
+.bajout{
+    background-color: #0c3444 !important;
+    float: right !important;
+}
+/* les tableaux */
+.table1-cotisations td,.table1-cotisations th{
+    padding: 1.5rem !important;
+}
+.table1-cotisations th{
+    background-color: #20df7f !important;
+}
+.table1-cotisations{
+    border-radius: 20px !important;
+}
+.table1-cotisations .th-top-left{
+    border-top-left-radius: 1rem !important;
+}
+.table1-cotisations .th-top-right{
+    border-top-right-radius: 1rem !important;
+}
+.table1-cotisations .td-bottom-left{
+    border-bottom-left-radius: 1rem !important;
+}
+.table1-cotisations .td-bottom-right{
+    border-bottom-right-radius: 1rem !important;
+}
+#t2{
+    width: 57% !important;
+}
+#t6{
+    width: 64% !important;
+}
+.vert1{
+    width: 100% !important;
+    background-color: #24dc7c !important;
+}
+.vert{
+    background-color: #24dc7c !important;
+}
+.text{
+    color: #24dc7c !important;
+}
+.fa-ban:hover{
+    color: red;
+}
+.fa-archive:hover{
+    color: #24dc7c;
+}
+.progwidth{
+   width: 50% !important;
+}
+
+.progress{
+    height: 5px !important;
+}
+/*  */
+.pagUser{
+    margin: 20px 0 !important;
+}
+/* pagination */
+.ppage-link{
+    width: 15px !important;
+    height: 15px !important;
+}
+.page-item .p1:active{
+    color: #24dc7c !important;
+}
+
+/* Modal */
+.modal-header{
+    background-color: #24dc7c !important;
+}
+/* ----------------------------------------------------------------- */
+.les-trois-card-du-haut .box1:active{
+    background-color: #20df7f;
+}
+.page-item a:active {
+    background-color: #20df7f;
+}
