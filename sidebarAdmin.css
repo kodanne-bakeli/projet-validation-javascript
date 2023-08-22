@@ -117,9 +117,14 @@ a{
 	#header div div button i{
 		color: #fff;
 	}
-	#header .option-menu, #header .profil-compte .clock, #header .profil-compte .user-type{
+	#header .option-menu, 
+	#header .profil-compte .clock, 
+	#header .profil-compte .user-type, 
+	.sidebar .bakeli-tontine,
+	.sidebar #navi #nav-ul li .link-name-hidden, 
+	#nav-link-items{
 	 	display: none;
-	 }
+	}
 	#header .profil-compte{
 		padding-left: 10px;
 		margin: auto;
@@ -135,7 +140,7 @@ a{
 	}
 	
 	.sidebar{
-		background-color: #FFF;
+		background-color: #fff;
 		box-shadow: 0 0 8px 0.7px #093545;
 		bottom: 0;
 		height: auto;
@@ -158,17 +163,11 @@ a{
 		font-size: 50px;
 		color: #093545;
 	}
-	.sidebar .bakeli-tontine{
-		display: none;
-	}
-	#navi ul li:active, .dropdown .dropdown-menu li:active{
-	background-color: transparent;
-	border-left: 0;
-	padding-left: 0;
-}
-	#nav-link-items{
-		display: none;
-	}
+					#navi ul li:active, .dropdown .dropdown-menu li:active{
+						background-color: transparent;
+						border-left: 0;
+						padding-left: 0;
+					}
 	.bi{
 		padding: 0 4px;
 	}
@@ -185,6 +184,16 @@ a{
 	}
 	#navi ul li span .bi{
 		font-size: 30px;
+	}
+}
+
+@media screen and (max-width: 625px){
+	#btn-deconnexion{
+		display: none;
+	}
+	#header #power-container{
+		display: flex;
+		justify-content: center;
 	}
 }
 
@@ -220,3 +229,4 @@ a{
 		margin: auto;
 	}
 }
+
