@@ -115,9 +115,14 @@ a{
 	#header div div button i{
 		color: #fff;
 	}
-	#header .option-menu, #header .profil-compte .clock, #header .profil-compte .user-type{
+	#header .option-menu, 
+	#header .profil-compte .clock, 
+	#header .profil-compte .user-type, 
+	.sidebar .bakeli-tontine,
+	.sidebar #navi #nav-ul li .link-name-hidden, 
+	#nav-link-items{
 	 	display: none;
-	 }
+	}
 	#header .profil-compte{
 		padding-left: 10px;
 		margin: auto;
@@ -156,17 +161,11 @@ a{
 		font-size: 50px;
 		color: #093545;
 	}
-	.sidebar .bakeli-tontine{
-		display: none;
-	}
-	#navi ul li:active, .dropdown .dropdown-menu li:active{
-	background-color: transparent;
-	border-left: 0;
-	padding-left: 0;
-}
-	#nav-link-items{
-		display: none;
-	}
+				#navi ul li:active, .dropdown .dropdown-menu li:active{
+					background-color: transparent;
+					border-left: 0;
+					padding-left: 0;
+				}
 	.bi{
 		padding: 0 4px;
 	}
