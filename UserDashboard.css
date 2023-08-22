@@ -2,10 +2,6 @@
     max-width: 500px;
     margin: auto !important;
 }
-.userdashboard .col-lg-3{
-    max-width: 380px;
-    margin: auto !important;
-}
 .userdashboard .bg-success{
     background-color:  #20DF7F !important;
 }
