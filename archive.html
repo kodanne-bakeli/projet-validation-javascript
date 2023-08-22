@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Archive</title>
     <!-- ========== Link Bootstrap ========= -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <!-- ========== Bootstrap Icons Link ======== -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- ========== Link CDN ======= -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="paramArchive_Bloquer.css">
 </head>
 <style>
     .header {
@@ -148,67 +147,106 @@
 
 <body>
     <div class="row text-white position-relative gx-0">
-		<div class="col-12 col-md-2 sidebar">
-			<h1 class="text-center text-capitalize my-4 bakeli-tontine">
-				<span><i class="bi bi-wallet-fill"></i></span> 
-				<span class="fw-bold">Bakeli tontine</span>
-			</h1>
-			<nav class="pt-4" id="nav">
-				<ul class="ps-0">
-					<li class="my-2 mx-0">
-						<a href="#" class="text-white">
-							<span class="fs-5 align-middle pe-2"><i class="bi bi-cash-coin"></i></span> 
-							<span class="text-capitalize nav-link-items">cotisations</span>
-						</a>	
-					</li>
-					<li class="dropdown my-2 mx-0">
-						<span class="fs-5 align-middle pe-2"><i class="bi bi-gear"></i></span> 
-						<span class="dropdown-toggle text-capitalize nav-link-items" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-						    <span>paramétres</span>	
-						    <span>profil</span>	
-						</span>
-						<ul class="dropdown-menu border-0">
-							<li class="dropdown-item text-capitalize">	
-								<a href="#" class="text-white nav-param_link-items">
-									informations
-								</a>
-							</li>
-							<li class="dropdown-item text-capitalize">
-								<a href="#" class="text-white nav-param_link-items">
-									changer mdp
-								</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</nav>
-		</div>
-		<div class="col-12 col-md-10 offset-md-2">
-			<header class="text-dark d-flex flex-row justify-content-between px-2 bg-white" id="header">
-				<h2 class="my-auto fw-bold option-menu">
-					Option menu
-				</h2>
-				<div class="d-flex align-middle">
+        <div class="col-12 col-md-2 sidebar">
+            <h1 class="text-center text-capitalize my-4 bakeli-tontine">
+                <span><i class="bi bi-wallet-fill"></i></span>
+                <span class="fw-bold">Bakeli tontine</span>
+            </h1>
+            <nav class="pt-2 pt-lg-4" id="nav">
+                <ul class="ps-0">
+                    <li class="my-2 mx-0">
+                        <a href="#" class="text-white">
+                            <span class="fs-5 align-middle pe-2"><i class="bi bi-menu-button"></i></span>
+                            <span class="text-capitalize nav-link-items">dashboard</span>
+                        </a>
+                    </li>
+                    <li class="my-2 mx-0">
+                        <a href="#" class="text-white">
+                            <span class="fs-5 align-middle pe-2"><i class="bi bi-person"></i></span>
+                            <span class="text-capitalize nav-link-items">Utilisateurs</span>
+                        </a>
+                    </li>
+                    <li class="my-2 mx-0">
+                        <a href="#" class="text-white">
+                            <span class="fs-5 align-middle pe-2"><i class="bi bi-cash-coin"></i></span>
+                            <span class="text-capitalize nav-link-items">cotisations</span>
+                        </a>
+                    </li>
+                    <li class="dropdown my-2 mx-0">
+                        <span class="dropdown-toggle text-capitalize nav-link-items" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="fs-5 align-middle pe-2"><i class="bi bi-gear"></i></span>
+                            <span id="nav-link-items">paramétres</span>
+                        </span>
+                        <ul class="dropdown-menu border-0">
+                            <li class="dropdown-item text-capitalize">
+                                <a href="#" class="text-white nav-param_link-items">
+                                    paramétres généraux
+                                </a>
+                            </li>
+                            <li class="dropdown-item text-capitalize">
+                                <a href="#" class="text-white nav-param_link-items">
+                                    utilisateurs
+                                </a>
+                            </li>
+                            <li class="dropdown-item text-capitalize">
+                                <a href="#" class="text-white nav-param_link-items">
+                                    archives
+                                </a>
+                            </li>
+                            <li class="dropdown-item text-capitalize">
+                                <a href="#" class="text-white nav-param_link-items">
+                                    membres bloqués
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-12 col-md-10 offset-md-2">
+            <header class="d-flex flex-row justify-content-between px-2" id="header">
+                <h2 class="my-auto fw-bold option-menu">
+                    Archives
+                </h2>
+                <div class="d-flex align-middle profil-compte">
 
-					<span class="fs-3 me-2 me-md-4 my-auto position-relative"><i class="bi bi-bell"></i>
-					  	<span class="position-absolute start-75 translate-middle badge rounded-circle text-center" id="badge">
-						    4
-						    <span class="visually-hidden">unread messages</span>
-					 	</span>
-					</span>
+                    <span class="fs-3 me-2 me-md-4 my-auto position-relative clock"><i class="bi bi-bell"></i>
+                        <span class="position-absolute start-75 translate-middle badge rounded-circle text-center"
+                            id="badge">
+                            4
+                            <span class="visually-hidden">unread messages</span>
+                        </span>
+                    </span>
 
-					<div class="d-flex mx-2">
-						<img src="img/profil.png" width="45" height="45" class="rounded-circle me-2 me-md-4 my-auto">
-						<div class="d-flex flex-column lh-1 py-auto">
-							<h3 class="fw-bold py-0 user-name">Ndiaga Sall</h3> 
-							<p class="text-muted py-0 user-type">Administrateur</p>
-						</div>
-						<button class="ms-3 my-auto border-0" id="header-btn-down"><i class="bi bi-caret-down-fill"></i></button>
-					</div>
-				</div>
-			</header>
-			
-			<div class="">
+                    <div class="d-flex mx-2">
+                        <div class="d-flex">
+                            <img src="img/profil.png" class="rounded-circle me-2 me-md-4 my-auto">
+                            <div class="d-flex flex-column lh-1 py-auto">
+                                <h3 class="fw-bold py-0 user-name">Ndiaga Sall</h3>
+                                <p class="text-muted py-0 user-type">Administrateur</p>
+                            </div>
+                            <button class="ms-3 my-auto border-0" id="header-btn-down"><i
+                                    class="bi bi-caret-down-fill"></i></button>
+                        </div>
+
+                        <div class="ms-4 my-auto" id="header-mobile-option">
+                            <div class="d-flex ">
+                                <div class="border rounded p-1 me-1">
+                                    <span class="align-middle"><i class="bi bi-plus-square-dotted"></i></span>
+                                    <span class="text-capitalize pe-1">create new</span>
+                                </div>
+                                <!-- <div class="border my-auto rounded p-2 ms-1">
+									<span class="align-middle"><i class="bi bi-wifi-off"></i></span> 
+									<span class="text-capitalize pe-1">Deconnexion</span>
+								</div> -->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section class="table-content">
                 <div class="header p-4">
                     <h1 class="fs-4">Archives</h1>
                 </div>
@@ -289,11 +327,12 @@
                         </ul>
                     </nav>
                 </div>
-			</div>
-		</div>
-	</div>
-    
-
+            </section>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

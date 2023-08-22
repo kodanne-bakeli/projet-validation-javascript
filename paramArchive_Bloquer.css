@@ -3,9 +3,7 @@
 	padding: 0;
 }
 body{
-	background-color: #ededee;
 	font-family: Montserrat;
-/*	font-weight: bold;*/
 }
 #nav ul li{
 	list-style-type: none;
@@ -51,7 +49,10 @@ a{
 }
 
 #header{
+	padding-top: 10px;
 	box-shadow: 0 0 8px 0.7px;
+	background-color: #fff;
+	color: #333;
 }
 #header div span .bi{
 	font-size: 25px;
@@ -65,6 +66,10 @@ a{
 #header-btn-down{
 	background-color: transparent;
 }
+#header img{
+		width: 45px;
+		height: 45px;
+	}
 
 #badge{
 	top: 20%;
@@ -75,6 +80,12 @@ a{
 	border: 2px solid white;
 }
 
+
+
+
+/*================================================
+	R E S P O N S I V E     D E S I G N
+==================================================*/
 @media screen and (max-width: 1000px){
 	#nav ul li{
 		padding-left: 0.1rem;
@@ -93,24 +104,82 @@ a{
 	}
 }
 
+@media screen and (min-width: 768px){
+	#header-mobile-option{
+		display: none;
+	}
+}
+
 @media screen and (max-width: 768px){
+	#header{
+		padding-top: 10px;
+		padding-bottom: 10px;
+		box-shadow: 0 0 8px 0.7px;
+		background-color: #093545;
+		color: #fff;
+	}
+	#header div div button i{
+		color: #fff;
+	}
+	#header .option-menu, #header .profil-compte .clock, #header .profil-compte .user-type{
+	 	display: none;
+	 }
+	#header .profil-compte{
+		padding-left: 10px;
+	 	align-items: center;
+	}
+	#header .profil-compte .user-name{
+	 	vertical-align: center;
+	 	margin: auto 10px;
+	}
+	#header img{
+		width: 55px;
+		height: 55px;
+	}
+	
+	/*.sidebar{
+		background-color: #FFF;
+		box-shadow: 0 0 8px 0.7px #093545;
+		bottom: 0;
+		padding-bottom: 0;
+		height: auto;
+		display: flex;
+		flex-direction: row;
+	    align-items: center;
+	}*/
 	.sidebar{
+		background-color: #FFF;
+		box-shadow: 0 0 8px 0.7px #093545;
 		bottom: 0;
 		height: auto;
 		display: flex;
 		flex-direction: row;
 	    align-items: center;
 	}
+	.sidebar #nav {
+		width: 100%;
+		padding-top: 0;
+	}
 	.sidebar #nav ul{
 		width: 100%;
+		margin-bottom: 0;
 		display: flex;
 		flex-direction: row;
-		justify-content: center;
+		justify-content: space-around;
+	}
+	#nav ul li a .bi, #nav ul li .nav-link-items .bi{
+		font-size: 50px;
+		color: #093545;
 	}
 	.sidebar .bakeli-tontine{
 		display: none;
 	}
-	.nav-link-items{
+	#nav ul li:active, .dropdown .dropdown-menu li:active{
+	background-color: transparent;
+	border-left: 0rem;
+	padding-left: 0rem;
+}
+	#nav-link-items{
 		display: none;
 	}
 	.bi{
@@ -124,11 +193,11 @@ a{
 	}
 	
 	#nav ul li a .bi{
-		font-size: 30px;
+		font-size: 45px;
 		margin: auto;
 	}
 	#nav ul li span .bi{
-		font-size: 30px;
+		font-size: 45px;
 	}
 
 	.sidebar nav {
@@ -136,7 +205,7 @@ a{
 	  }
 }
 
-@media screen and (max-width: 575px){
+/*@media screen and (max-width: 575px){
 	.sidebar{
 		height: auto;
 		display: flex;
@@ -148,16 +217,17 @@ a{
 		flex-direction: row;
 	    align-items: center;
 	}
-}
+}*/
 
 @media screen and (max-width: 575px){
 	#header .user-name{
 	font-size: 16px;
-}
+	}
 	#header .user-type{
 		font-size: 12px;
 	}
 	.option-menu{
 		font-size: 14px;
 	}
+
 }
