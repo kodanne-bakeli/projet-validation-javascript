@@ -25,31 +25,31 @@
                 <span><i class="bi bi-wallet-fill"></i></span>
                 <span class="fw-bold">Bakeli tontine</span>
             </h1>
-            <nav class="pt-2 pt-lg-4" id="nav">
-                <ul class="ps-0">
-                    <li class="my-2 mx-0">
+            <nav class="pt-2 pt-lg-4" id="navi">
+                <ul class="ps-0" id="nav-ul">
+                    <li class="my-3 mx-0">
                         <a href="#" class="text-white">
                             <span class="fs-5 align-middle pe-2"><i class="bi bi-menu-button"></i></span>
-                            <span class="text-capitalize nav-link-items">dashboard</span>
+                            <span class="text-capitalize nav-link-items link-name-hidden">dashboard</span>
                         </a>
                     </li>
-                    <li class="my-2 mx-0">
+                    <li class="my-3 mx-0">
                         <a href="#" class="text-white">
                             <span class="fs-5 align-middle pe-2"><i class="bi bi-person"></i></span>
-                            <span class="text-capitalize nav-link-items">Utilisateurs</span>
+                            <span class="text-capitalize nav-link-items link-name-hidden">Utilisateurs</span>
                         </a>
                     </li>
-                    <li class="my-2 mx-0">
+                    <li class="my-3 mx-0">
                         <a href="#" class="text-white">
                             <span class="fs-5 align-middle pe-2"><i class="bi bi-cash-coin"></i></span>
-                            <span class="text-capitalize nav-link-items">cotisations</span>
+                            <span class="text-capitalize nav-link-items link-name-hidden">cotisations</span>
                         </a>
                     </li>
-                    <li class="dropdown my-2 mx-0">
+                    <li class="dropdown my-3 mx-0">
                         <span class="dropdown-toggle text-capitalize nav-link-items" type="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="fs-5 align-middle pe-2"><i class="bi bi-gear"></i></span>
-                            <span id="nav-link-items">paramétres</span>
+                            <span class="link-name-hidden" id="nav-link-items">paramétres</span>
                         </span>
                         <ul class="dropdown-menu border-0">
                             <li class="dropdown-item text-capitalize">
@@ -69,7 +69,7 @@
                             </li>
                             <li class="dropdown-item text-capitalize">
                                 <a href="#" class="text-white nav-param_link-items">
-                                    membres bloqués
+                                    membres bloqué
                                 </a>
                             </li>
                         </ul>
@@ -79,8 +79,8 @@
         </div>
         <div class="col-12 col-md-10 offset-md-2">
             <header class="d-flex flex-row justify-content-between px-2" id="header">
-                <h2 class="my-auto fw-bold option-menu">
-                    cotisations
+                <h2 class="my-auto ps-3 ms-4 fw-bold option-menu">
+                    Cotisations
                 </h2>
                 <div class="d-flex align-middle profil-compte">
 
@@ -104,15 +104,17 @@
                         </div>
 
                         <div class="ms-4 my-auto" id="header-mobile-option">
-                            <div class="d-flex ">
-                                <div class="border rounded p-1 me-1">
-                                    <span class="align-middle"><i class="bi bi-plus-square-dotted"></i></span>
-                                    <span class="text-capitalize pe-1">create new</span>
+                            <div class="row ">
+                                <div class="col d-flex border rounded p-1 me-1" id="create-new-container">
+                                    <span class="my-auto"><i class="bi bi-plus-square-dotted"></i></span>
+                                    <span class="text-capitalize pe-1 my-auto">create new</span>
                                 </div>
-                                <!-- <div class="border my-auto rounded p-2 ms-1">
-									<span class="align-middle"><i class="bi bi-wifi-off"></i></span> 
-									<span class="text-capitalize pe-1">Deconnexion</span>
-								</div> -->
+                                <div class="col d-flex border my-auto rounded p-2 ms-1" id="power-container">
+                                    <span class="align-middle"><i class="bi bi-power"></i></span>
+                                    <span class="text-capitalize pe-1 my-auto" id="btn-deconnexion">
+                                        Deconnexion
+                                    </span>
+                                </div>
                             </div>
 
                         </div>
@@ -139,7 +141,8 @@
                             <div class="modal-content">
                                 <div class="modal-header ">
                                     <h1 class="modal-title fs-3 ps-5" id="exampleModalLabel">cotisations terminées</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body p-5">
                                     <table
@@ -523,7 +526,8 @@
                             <div class="modal-content">
                                 <div class="modal-header ">
                                     <h1 class="modal-title fs-3 ps-5" id="example2ModalLabel">Détails cotisations</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body p-5">
                                     <div class="d-flex flex-column align-items-end nom1-details-cotisations ">
@@ -654,7 +658,8 @@
                             <div class="modal-content">
                                 <div class="modal-header ">
                                     <h1 class="modal-title fs-3 ps-5" id="exampleModal3Label">Détails cotisations</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body p-5 flex ">
                                     <div class="d-flex flex-column align-items-end nom2-details-cotisations">
@@ -779,7 +784,8 @@
                             <div class="modal-content">
                                 <div class="modal-header ">
                                     <h1 class="modal-title fs-3 ps-5" id="exampleModal4Label">Détails cotisations</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body p-5 flex ">
                                     <div class="hstack gap-3">
