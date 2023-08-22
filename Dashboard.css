@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #cccccc;
+}
+
+/********** Section Caisse **********/
+.icone-caisse{
+    background: rgba(231, 232, 242, 1);
+    border-radius: 10px;
+}
+
+.card{
+    border-radius: 10px;
+}
+
+.text-card{
+    color: rgba(9, 53, 69, 1);
+
+}
+
+.caisse .mtn{
+    font-size: 2px;
+}
+
+.text-valide, .icone-card{
+    color: rgba(32, 223, 127, 1) !important;
+
+}
+
+.progress{
+    height: 8px;
+}
+
+/********** Section evolution **********/
+.bg-table, .bg-vert{
+    background: rgba(32, 223, 127, 1);
+}
+
+.bg-blue{
+    background: rgba(9, 53, 69, 1);
+}
+
+.en-attente{
+    background: rgba(9, 53, 69, 1);
+}
+
+.table{
+    font-family: Montserrat;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.free-bar{
+    height: 5px;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+
+.progress .progress-value{
+    font-size: 10px;
+    font-weight: 200;
+    color: rgba(9, 53, 69, 1);
+    position: absolute;
+    top: -17px;
+    right: 10px;
+}
+
+/* .number{
+    margin-right: 20px;
+} */
+
+.table thead th, tbody th,
+.table td {
+    border: none;
+    outline: none;
+}
+
+/********** Section page **********/
+.pagination li a{
+    font-size: 8px;
+}
+
+.page-link{
+    border-radius: 100%;
+}
