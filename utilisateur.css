@@ -1,5 +1,8 @@
-body .gris{
+body, .gris{
     background-color: rgb(210,210,210) !important;
+}
+.contsection{
+	width: 85% !important;
 }
 .gris{
     margin-bottom: 2px !important;
@@ -93,7 +96,7 @@ body .gris{
 .les-trois-card-du-haut .box1:active{
     background-color: #20df7f;
 }
-.page-item agi:active {
+.page-item .agi:active {
     background-color: #20df7f;
 }
 
@@ -116,6 +119,7 @@ a{
 	background-color: #093545;
 	height: 100%;
 	position: fixed;
+	z-index: 1000;
 }
 .sidebar .bakeli-tontine{
 	font-size: 22px;
@@ -178,7 +182,70 @@ a{
 	background-color: #20df7f;
 	border: 2px solid white;
 }
+/* debut de copie du css de chams */
+.details-cotisations .modal-bouton-trois-points {
+    max-width: 700px;
+}
 
+@media(max-width:720px) {
+    .details-cotisations .modal-bouton-trois-points {
+        max-width: 600px;
+    }
+}
+
+@media(max-width:668px) {
+    .details-cotisations .modal-bouton-trois-points {
+        max-width: 570px;
+    }
+}
+
+.details-cotisations .modal-body {
+    overflow: scroll;
+    max-height: 600px;
+}
+
+@media(max-width:992px) {
+    .details-cotisations .modal-body {
+        height: 500px;
+    }
+}
+
+.details-cotisations .table1-cotisations th {
+    padding: 10px;
+}
+
+.details-tableau div {
+    background-color: #cccc;
+}
+
+.details-tableau .first-div {
+    background-color: #093545;
+    color: #fff;
+}
+
+.nom1-details-cotisations {
+    max-width: 180px;
+}
+
+.nom2-details-cotisations {
+    max-width: 240px;
+}
+
+.nom3-details-cotisations {
+    max-width: 260px;
+}
+
+.pre-card {
+    background-color: #20df7f;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.post-card {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+/* fin de copie du css de chams */
 
 
 
@@ -328,5 +395,14 @@ a{
 	.option-menu{
 		font-size: 14px;
 	}
+	/* ----------------------------utilisateur------------------- */
+	.contsection{
+		width: 100% !important;
+	}
+	.iconeResp{
+		display: flex !important;
+		gap: 5px;
+	}
+	/*  */
 
-}
+} 
