@@ -26,21 +26,21 @@
                 <span class="fw-bold">Bakeli tontine</span>
             </h1>
             <nav class="pt-2 pt-lg-4" id="navi">
-                <ul class="ps-0" id="nav-ul">
+                <ul class="ps-0 align-items-center" id="nav-ul">
                     <li class="my-3 mx-0">
-                        <a href="#" class="text-white">
+                        <a href="Dashboard.html" class="text-white">
                             <span class="fs-5 align-middle pe-2"><i class="bi bi-menu-button"></i></span>
                             <span class="text-capitalize nav-link-items link-name-hidden">dashboard</span>
                         </a>
                     </li>
                     <li class="my-3 mx-0">
-                        <a href="#" class="text-white">
+                        <a href="utilisateur.html" class="text-white">
                             <span class="fs-5 align-middle pe-2"><i class="bi bi-person"></i></span>
                             <span class="text-capitalize nav-link-items link-name-hidden">Utilisateurs</span>
                         </a>
                     </li>
                     <li class="my-3 mx-0">
-                        <a href="#" class="text-white">
+                        <a href="cotisations.html" class="text-white">
                             <span class="fs-5 align-middle pe-2"><i class="bi bi-cash-coin"></i></span>
                             <span class="text-capitalize nav-link-items link-name-hidden">cotisations</span>
                         </a>
@@ -58,17 +58,17 @@
                                 </a>
                             </li>
                             <li class="dropdown-item text-capitalize">
-                                <a href="#" class="text-white nav-param_link-items">
+                                <a href="utilisateur.html" class="text-white nav-param_link-items">
                                     utilisateurs
                                 </a>
                             </li>
                             <li class="dropdown-item text-capitalize">
-                                <a href="#" class="text-white nav-param_link-items">
+                                <a href="archive.html" class="text-white nav-param_link-items">
                                     archives
                                 </a>
                             </li>
                             <li class="dropdown-item text-capitalize">
-                                <a href="#" class="text-white nav-param_link-items">
+                                <a href="bloquer.html" class="text-white nav-param_link-items">
                                     membres bloqué
                                 </a>
                             </li>
@@ -92,9 +92,9 @@
                         </span>
                     </span>
 
-                    <div class="d-flex mx-2">
+                    <div class="d-flex mx-2" id="header-user-profil">
                         <div class="d-flex">
-                            <img src="images/Ellipse 9.png" class="rounded-circle me-2 me-md-4 my-auto">
+                            <img src="images/Ellipse 9.png" class="rounded-circle me-2 me-md-4 my-auto" id="profil-img">
                             <div class="d-flex flex-column lh-1 py-auto">
                                 <h3 class="fw-bold py-0 user-name">Ndiaga Sall</h3>
                                 <p class="text-muted py-0 user-type">Administrateur</p>
@@ -105,16 +105,18 @@
 
                         <div class="ms-4 my-auto" id="header-mobile-option">
                             <div class="row ">
-                                <div class="col d-flex border rounded p-1 me-1" id="create-new-container">
+                                <button class="btn col text-white btn-sm mb-1 d-flex border rounded p-1"
+                                    id="create-new-container">
                                     <span class="my-auto"><i class="bi bi-plus-square-dotted"></i></span>
-                                    <span class="text-capitalize pe-1 my-auto">create new</span>
-                                </div>
-                                <div class="col d-flex border my-auto rounded p-2 ms-1" id="power-container">
+                                    <span class="text-capitalize pe-1 my-auto create-new">create new</span>
+                                </button>
+                                <button class="btn col text-white btn-sm mb-1 d-flex border my-auto rounded p-2 ms-1"
+                                    id="power-container">
                                     <span class="align-middle"><i class="bi bi-power"></i></span>
                                     <span class="text-capitalize pe-1 my-auto" id="btn-deconnexion">
                                         Deconnexion
                                     </span>
-                                </div>
+                                </button>
                             </div>
 
                         </div>
@@ -124,7 +126,7 @@
 
             <div class="">
                 <!-- LE CONTENU DE LA PAGE ICI -->
-                <!-- Le modal relié au bouton avec les trois points 
+                                <!-- Le modal relié au bouton avec les trois points 
                 permettant d'afficher les cotisations terminées -->
                 <div class="container  py-4 d-flex justify-content-end w-75">
                     <button class="btn rounded-4 bouton-du-modal d-flex py-3  gap-1" data-bs-toggle="modal"
@@ -377,24 +379,24 @@
                     </div>
                 </div>
                 <!-- le tout premier tableau des cotisations-->
-                <div class="container pt-3 d-none d-lg-block w-75">
+                <div class="container pt-3 table-responsive w-75">
                     <table class="table table1-cotisations  table-borderless">
                         <thead>
                             <tr>
-                                <th class="th-top-left " scope="col">
-                                    <h4>Membres</h4>
+                                <th class="th-top-left" scope="col">
+                                    <h5>Membres</h5>
                                 </th>
                                 <th scope="col">
-                                    <h4>Montant cotisé</h4>
+                                    <h5>Montant cotisé</h5>
                                 </th>
                                 <th scope="col">
-                                    <h4>Date début</h4>
+                                    <h5>Date début</h5>
                                 </th>
                                 <th scope="col">
-                                    <h4>Montant restant</h4>
+                                    <h5>Montant restant</h5>
                                 </th>
                                 <th class="th-top-right" scope="col">
-                                    <h4>Actions</h4>
+                                    <h5>Actions</h5>
                                 </th>
                             </tr>
                         </thead>
@@ -443,50 +445,6 @@
                                 <td>01/01/2022</td>
                                 <td>100.000 FCFA</td>
                                 <td class="td-bottom-right"><i class="fa-solid fa-eye ms-4 "></i></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <!-- responsivité du tout premier tableau de cotisations -->
-                <div class="container pt-3 d-block d-lg-none">
-                    <table class="table table1-cotisations  table-borderless">
-                        <thead>
-                            <tr>
-                                <th class="th-top-left " scope="col">
-                                    <h4>Membres</h4>
-                                </th>
-                                <th class="th-top-right" scope="col">
-                                    <h4>Actions</h4>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Selena Roy</td>
-                                <td><i class="fa-solid fa-eye ms-4" data-bs-toggle="modal"
-                                        data-bs-target="#example2Modal"></i></td>
-                            </tr>
-                            <tr>
-                                <td>Emma watson</td>
-                                <td><i class="fa-solid fa-eye ms-4" data-bs-toggle="modal"
-                                        data-bs-target="#example3Modal"></i></td>
-                            </tr>
-                            <tr>
-                                <td>Jonh Robert</td>
-                                <td><i class="fa-solid fa-eye ms-4"></i></td>
-                            </tr>
-                            <tr>
-                                <td>Anne Hataway</td>
-                                <td><i class="fa-solid fa-eye ms-4" data-bs-toggle="modal"
-                                        data-bs-target="#example4Modal"></i></td>
-                            </tr>
-                            <tr>
-                                <td>Ravi Shankar</td>
-                                <td><i class="fa-solid fa-eye ms-4"></i></td>
-                            </tr>
-                            <tr>
-                                <td class="td-bottom-left">Emma stone</td>
-                                <td class="td-bottom-right"><i class="fa-solid fa-eye ms-4"></i></td>
                             </tr>
                         </tbody>
                     </table>
