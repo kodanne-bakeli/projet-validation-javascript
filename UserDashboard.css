@@ -1,5 +1,5 @@
 .userdashboard .col-12{
-    max-width: 500px;
+    max-width: 400px;
     margin: auto !important;
 }
 .userdashboard .bg-success{
@@ -28,7 +28,7 @@
     height: 10px !important;
     }
 .userdashboard .table{
-    width: 1000px;
+    width: 100%;
     margin: auto ;
 }
 @media screen and (max-width:300px) {
