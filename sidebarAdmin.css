@@ -108,6 +108,7 @@ a{
 
 @media screen and (max-width: 768px){
 	#header{
+		width: 100%;
 		padding-top: 10px;
 		padding-bottom: 10px;
 		box-shadow: 0 0 8px 0.7px;
@@ -138,9 +139,13 @@ a{
 		width: 55px;
 		height: 55px;
 	}
+	#header #create-new-container{
+		margin-right: 25px;
+	}
 	
 	.sidebar{
 		background-color: #fff;
+		width: 100%;
 		box-shadow: 0 0 8px 0.7px #093545;
 		bottom: 0;
 		height: auto;
@@ -227,6 +232,21 @@ a{
 	#navi ul li .nav-link-items span .bi{
 		font-size: 30px;
 		margin: auto;
+	}
+}
+
+@media screen and (max-width: 405px){
+	#header #create-new-container{
+		margin-right: 10px;
+
+	}
+
+	#create-new-container{
+		display: flex;
+		justify-content: center;
+	}
+	#create-new-container .create-new{
+		display: none;
 	}
 }
 
