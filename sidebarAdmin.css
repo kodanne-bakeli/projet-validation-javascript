@@ -19,6 +19,7 @@ a{
 	background-color: #093545;
 	height: 100%;
 	position: fixed;
+	z-index: 1000;
 }
 .sidebar .bakeli-tontine{
 	font-size: 22px;
