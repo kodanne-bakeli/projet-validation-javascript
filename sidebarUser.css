@@ -106,6 +106,7 @@ a{
 
 @media screen and (max-width: 768px){
 	#header{
+		width: 100%;
 		padding-top: 10px;
 		padding-bottom: 10px;
 		box-shadow: 0 0 8px 0.7px;
@@ -139,6 +140,7 @@ a{
 	
 	.sidebar{
 		background-color: #FFF;
+		max-width: 100%;
 		box-shadow: 0 0 8px 0.7px #093545;
 		bottom: 0;
 		height: auto;
@@ -166,6 +168,13 @@ a{
 					border-left: 0;
 					padding-left: 0;
 				}
+	#navi {
+		padding: 0;
+	}
+	#navi ul li{
+		padding: 0;
+		margin: 0;
+	}			
 	.bi{
 		padding: 0 4px;
 	}
