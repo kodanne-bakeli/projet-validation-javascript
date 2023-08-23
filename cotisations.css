@@ -294,7 +294,7 @@ a {
 }
 
 .les-trois-card-du-haut .card {
-    height: 150px;
+    height: 170px;
     border: none;
     box-shadow: 2px 1px 12px 1px rgba(0, 0, 0, 0.2);
     color: #093545;
@@ -303,6 +303,9 @@ a {
 @media(max-width:468px) {
     .les-trois-card-du-haut h2 {
         font-size: 20px;
+    }
+    .les-trois-card-du-haut .card{
+        height: 120px;
     }
 }
 
@@ -411,6 +414,7 @@ a {
     box-shadow: 2px 1px 12px 1px rgba(0, 0, 0, 0.2);
 }
 
+/* debut de copie du css par barry */
 .details-cotisations .modal-bouton-trois-points {
     max-width: 700px;
 }
@@ -452,15 +456,15 @@ a {
 }
 
 .nom1-details-cotisations {
-    max-width: 160px;
+    max-width: 180px;
 }
 
 .nom2-details-cotisations {
-    max-width: 210px;
+    max-width: 240px;
 }
 
 .nom3-details-cotisations {
-    max-width: 230px;
+    max-width: 260px;
 }
 
 .pre-card {
@@ -473,3 +477,4 @@ a {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
 }
+/* fin de copie du css par barry */
