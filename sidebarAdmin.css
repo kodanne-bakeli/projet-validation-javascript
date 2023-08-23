@@ -19,6 +19,7 @@ a{
 	background-color: #093545;
 	height: 100%;
 	position: fixed;
+	z-index: 1000;
 }
 .sidebar .bakeli-tontine{
 	font-size: 22px;
@@ -37,7 +38,7 @@ a{
 .dropdown .dropdown-menu li{
 	padding-left: 0.2rem;
 }
-#navi ul li:active, .dropdown .dropdown-menu li:active{
+.style-nav-elem{
 	background-color: #20df7f;
 	border-left: 0.2rem solid white;
 	padding-left: 0.8rem;
@@ -69,8 +70,8 @@ a{
 	background-color: transparent;
 }
 #header img{
-	width: 45px;
-	height: 45px;
+	width: 55px;
+	height: 55px;
 }
 
 #badge{
@@ -108,6 +109,7 @@ a{
 
 @media screen and (max-width: 768px){
 	#header{
+		width: 100%;
 		padding-top: 10px;
 		padding-bottom: 10px;
 		box-shadow: 0 0 8px 0.7px;
@@ -117,9 +119,14 @@ a{
 	#header div div button i{
 		color: #fff;
 	}
-	#header .option-menu, #header .profil-compte .clock, #header .profil-compte .user-type{
+	#header .option-menu, 
+	#header .profil-compte .clock, 
+	#header .profil-compte .user-type, 
+	.sidebar .bakeli-tontine,
+	.sidebar #navi #nav-ul li .link-name-hidden, 
+	#nav-link-items{
 	 	display: none;
-	 }
+	}
 	#header .profil-compte{
 		padding-left: 10px;
 		margin: auto;
@@ -133,9 +140,13 @@ a{
 		width: 55px;
 		height: 55px;
 	}
+	#header #create-new-container{
+		margin-right: 25px;
+	}
 	
 	.sidebar{
-		background-color: #FFF;
+		background-color: #fff;
+		width: 100%;
 		box-shadow: 0 0 8px 0.7px #093545;
 		bottom: 0;
 		height: auto;
@@ -158,17 +169,11 @@ a{
 		font-size: 50px;
 		color: #093545;
 	}
-	.sidebar .bakeli-tontine{
-		display: none;
-	}
-	#navi ul li:active, .dropdown .dropdown-menu li:active{
-	background-color: transparent;
-	border-left: 0;
-	padding-left: 0;
-}
-	#nav-link-items{
-		display: none;
-	}
+					#navi ul li:active, .dropdown .dropdown-menu li:active{
+						background-color: transparent;
+						border-left: 0;
+						padding-left: 0;
+					}
 	.bi{
 		padding: 0 4px;
 	}
@@ -186,10 +191,16 @@ a{
 	#navi ul li span .bi{
 		font-size: 30px;
 	}
+}
 
-	.sidebar nav {
-	    margin-top: auto;
-	  }
+@media screen and (max-width: 625px){
+	#btn-deconnexion{
+		display: none;
+	}
+	#header #power-container{
+		display: flex;
+		justify-content: center;
+	}
 }
 
 @media screen and (max-width: 575px){
@@ -217,3 +228,26 @@ a{
 		font-size: 14px;
 	}
 }
+
+@media screen and (max-width: 430px){
+	#navi ul li .nav-link-items span .bi{
+		font-size: 30px;
+		margin: auto;
+	}
+}
+
+@media screen and (max-width: 405px){
+	#header #create-new-container{
+		margin-right: 10px;
+
+	}
+
+	#create-new-container{
+		display: flex;
+		justify-content: center;
+	}
+	#create-new-container .create-new{
+		display: none;
+	}
+}
+
