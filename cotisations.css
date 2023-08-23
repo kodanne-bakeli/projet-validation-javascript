@@ -3,14 +3,25 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     background-color: rgb(210, 210, 210);
     font-family: Montserrat;
 }
 
 /* css sidebar admin par sam laye */
+* {
+    margin: 0;
+    padding: 0;
+}
 
-#nav ul li {
+body {
+    background-color: #ededee;
+    font-family: Montserrat;
+    /*	font-weight: bold;*/
+}
+
+#navi ul li {
     list-style-type: none;
     padding-left: 1rem;
 }
@@ -46,8 +57,7 @@ a {
     padding-left: 0.2rem;
 }
 
-#nav ul li:active,
-.dropdown .dropdown-menu li:active {
+.style-nav-elem {
     background-color: #20df7f;
     border-left: 0.2rem solid white;
     padding-left: 0.8rem;
@@ -84,8 +94,8 @@ a {
 }
 
 #header img {
-    width: 45px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
 }
 
 #badge {
@@ -97,14 +107,8 @@ a {
     border: 2px solid white;
 }
 
-
-
-
-/*================================================
-	R E S P O N S I V E     D E S I G N
-==================================================*/
 @media screen and (max-width: 1000px) {
-    #nav ul li {
+    #navi ul li {
         padding-left: 0.1rem;
     }
 
@@ -118,7 +122,7 @@ a {
 }
 
 @media screen and (max-width: 823px) {
-    #nav ul li .dropdown-toggle span {
+    #navi ul li .dropdown-toggle span {
         font-size: 13px;
     }
 }
@@ -144,12 +148,16 @@ a {
 
     #header .option-menu,
     #header .profil-compte .clock,
-    #header .profil-compte .user-type {
+    #header .profil-compte .user-type,
+    .sidebar .bakeli-tontine,
+    .sidebar #navi #nav-ul li .link-name-hidden,
+    #nav-link-items {
         display: none;
     }
 
     #header .profil-compte {
         padding-left: 10px;
+        margin: auto;
         align-items: center;
     }
 
@@ -164,22 +172,21 @@ a {
     }
 
     .sidebar {
-        background-color: #FFF;
+        background-color: #fff;
         box-shadow: 0 0 8px 0.7px #093545;
         bottom: 0;
-        padding-bottom: 0;
         height: auto;
         display: flex;
         flex-direction: row;
         align-items: center;
     }
 
-    .sidebar #nav {
+    .sidebar #navi {
         width: 100%;
         padding-top: 0;
     }
 
-    .sidebar #nav ul {
+    .sidebar #navi ul {
         width: 100%;
         margin-bottom: 0;
         display: flex;
@@ -187,25 +194,17 @@ a {
         justify-content: space-around;
     }
 
-    #nav ul li a .bi,
-    #nav ul li .nav-link-items .bi {
+    #navi ul li a .bi,
+    #navi ul li .nav-link-items span .bi {
         font-size: 50px;
         color: #093545;
     }
 
-    .sidebar .bakeli-tontine {
-        display: none;
-    }
-
-    #nav ul li:active,
+    #navi ul li:active,
     .dropdown .dropdown-menu li:active {
         background-color: transparent;
-        border-left: 0rem;
-        padding-left: 0rem;
-    }
-
-    #nav-link-items {
-        display: none;
+        border-left: 0;
+        padding-left: 0;
     }
 
     .bi {
@@ -218,17 +217,40 @@ a {
         font-size: 13px;
     }
 
-    #nav ul li a .bi {
-        font-size: 45px;
+    #navi ul li a .bi,
+    #navi ul li .nav-link-items span .bi {
+        font-size: 30px;
         margin: auto;
     }
 
-    #nav ul li span .bi {
-        font-size: 45px;
+    #navi ul li span .bi {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 625px) {
+    #btn-deconnexion {
+        display: none;
     }
 
-    .sidebar nav {
-        margin-top: auto;
+    #header #power-container {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .sidebar {
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .sidebar nav ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 }
 
@@ -244,7 +266,13 @@ a {
     .option-menu {
         font-size: 14px;
     }
+}
 
+@media screen and (max-width: 430px) {
+    #navi ul li .nav-link-items span .bi {
+        font-size: 30px;
+        margin: auto;
+    }
 }
 
 /* css sidebar admin par sam laye */
@@ -266,16 +294,21 @@ a {
 }
 
 .les-trois-card-du-haut .card {
-    height: 150px;
+    height: 170px;
     border: none;
     box-shadow: 2px 1px 12px 1px rgba(0, 0, 0, 0.2);
     color: #093545;
 }
-@media(max-width:468px){
-    .les-trois-card-du-haut h2{
+
+@media(max-width:468px) {
+    .les-trois-card-du-haut h2 {
         font-size: 20px;
     }
+    .les-trois-card-du-haut .card{
+        height: 120px;
+    }
 }
+
 .les-trois-card-du-haut .card h5 {
     color: #6C757D;
 }
@@ -317,10 +350,12 @@ a {
 .table1-cotisations .td-bottom-right {
     border-bottom-right-radius: 1rem;
 }
+
 .pagination .page-link {
     border: none;
     background-color: transparent;
 }
+
 .pagination .page-link div {
     background-color: #fff;
     width: 30px;
@@ -338,12 +373,14 @@ a {
 .modal-bouton-trois-points {
     max-width: 1000px;
 }
-@media(max-width:992px){
+
+@media(max-width:992px) {
     .modal-bouton-trois-points {
         max-width: 700px;
     }
 }
-@media(max-width:768px){
+
+@media(max-width:768px) {
     .modal-bouton-trois-points {
         max-width: 500px;
     }
@@ -368,30 +405,38 @@ a {
     background-color: #093545;
     color: #fff;
 }
+.modal-body h2{
+    color: #083A50;
+    font-weight: bolder;
+}
 
 .modal-bouton-trois-points .table1-cotisations {
     box-shadow: 2px 1px 12px 1px rgba(0, 0, 0, 0.2);
 }
 
-.details-cotisations .modal-bouton-trois-points{
+/* debut de copie du css par barry */
+.details-cotisations .modal-bouton-trois-points {
     max-width: 700px;
 }
-@media(max-width:720px){
-    .details-cotisations .modal-bouton-trois-points{
+
+@media(max-width:720px) {
+    .details-cotisations .modal-bouton-trois-points {
         max-width: 600px;
     }
 }
-@media(max-width:668px){
-    .details-cotisations .modal-bouton-trois-points{
+
+@media(max-width:668px) {
+    .details-cotisations .modal-bouton-trois-points {
         max-width: 570px;
     }
 }
+
 .details-cotisations .modal-body {
     overflow: scroll;
     max-height: 600px;
 }
 
-@media(max-width:992px){
+@media(max-width:992px) {
     .details-cotisations .modal-body {
         height: 500px;
     }
@@ -411,15 +456,15 @@ a {
 }
 
 .nom1-details-cotisations {
-    max-width: 160px;
+    max-width: 180px;
 }
 
 .nom2-details-cotisations {
-    max-width: 210px;
+    max-width: 240px;
 }
 
 .nom3-details-cotisations {
-    max-width: 230px;
+    max-width: 260px;
 }
 
 .pre-card {
@@ -432,3 +477,4 @@ a {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
 }
+/* fin de copie du css par barry */

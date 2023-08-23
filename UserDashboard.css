@@ -1,7 +1,7 @@
 .userdashboard .col-12{
-    max-width: 400px;
+    max-width: 360px;
     margin: auto !important;
-}
+}  
 .userdashboard .bg-success{
     background-color:  #20DF7F !important;
 }
@@ -29,6 +29,7 @@
     }
 .userdashboard .table{
     width: 100%;
+    min-width: 800px;
     margin: auto ;
 }
 @media screen and (max-width:300px) {
