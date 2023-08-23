@@ -105,7 +105,17 @@ a{
 	}
 }
 
-@media screen and (max-width: 768px){
+@media screen and (min-width: 767px){
+	#icone-infos,
+	#icone-chg-password
+	{
+		display: none;
+	}
+}	
+
+
+
+@media screen and (max-width: 767px){
 	#header{
 		width: 100%;
 		padding-top: 10px;
@@ -122,7 +132,9 @@ a{
 	#header .profil-compte .user-type, 
 	.sidebar .bakeli-tontine,
 	.sidebar #navi #nav-ul li .link-name-hidden, 
-	#nav-link-items{
+	#nav-link-items,
+	#profil-user-link
+	{
 	 	display: none;
 	}
 	#header .profil-compte{
