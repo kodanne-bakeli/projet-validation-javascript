@@ -101,8 +101,10 @@ a{
 	padding-left: 0;
 }
 #myModal #modal_container ul #modal_deconnexion button{
-	transition: 0.75s ease-in-out !important;
 	padding-left: 0 !important;
+}
+#myModal #modal_container ul #modal_deconnexion button a{
+	transition: 0.75s ease-in-out !important;
 }
 #myModal #modal_container ul #modal_deconnexion i{
 	font-size: 15px;
@@ -112,7 +114,7 @@ a{
 {
 	background-color: transparent;
 }
-#myModal #modal_container ul #modal_deconnexion button:hover{
+#myModal #modal_container ul #modal_deconnexion button a:hover{
 	 color: red !important;
 }
 #closeModalBtn{
