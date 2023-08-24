@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lugrasimo&family=Montserrat:wght@100;400&family=Poppins:wght@400;500;600;700&family=Satisfy&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +6,7 @@
 }
 
 body {
-    font-family: Montserrat;
+    font-family: 'Montserrat';
     background: #cccccc;
 }
 
@@ -60,6 +61,17 @@ body {
     text-align: left;
 }
 
+#doughnut-chart{
+   height: 44vh;
+   width: 75%;
+   margin: 0 40px;
+   cursor: pointer;
+}
+
+#doughnut{
+    height: 30%;
+}
+
 .free-bar {
     height: 5px;
     margin-right: 40px;
@@ -69,7 +81,7 @@ body {
 .progress .progress-value {
     font-size: 10px;
     font-weight: 200;
-    color: rgba(9, 53, 69, 1);
+    color: rgba(9, 53, 69, 1) !important;
     position: absolute;
     top: -17px;
     right: 10px;
@@ -305,6 +317,10 @@ a {
        padding: 0;
        margin: 0 0 10px;
     }
+
+    #doughnut-chart{
+        height: 30vh;
+     }
 }
 
 @media screen and (max-width: 650px) {
@@ -337,6 +353,10 @@ a {
        padding: 0;
        margin: 0 0 10px;
     }
+
+    #doughnut-chart{
+        height: 30vh;
+     }
 }
 
 @media screen and (max-width: 575px) {

@@ -255,8 +255,9 @@
                                     <table class="table">
                                         <thead>
                                             <tr class="bg-table">
-                                                <th>Evolution des cotisation en founction de temps</th>
+                                                <th>Evolution des cotisations en founction de temps</th>
                                             </tr>
+                                        </thead>
                                         <tbody>
                                             <th>
                                                 <div class="chart">
@@ -264,7 +265,7 @@
                                                 </div>
                                             </th>
                                         </tbody>
-                                        </thead>
+                                        
                                     </table>
                                 </div>
                             </div>
@@ -276,24 +277,15 @@
                                             <tr class="bg-table">
                                                 <th>Statistique</th>
                                             </tr>
-                                        <!-- <tbody>
-                                            <tr>
-                                                <th>Terminé 18%</th>
-                                              </tr>
-                                              <tr>
-                                                <th>En cours 49,48%</th>
-                                              </tr>
-                                              <tr>
-                                                <th>Archivé 23,62%</th>
-                                              </tr>
-                                              <tr>
-                                                <th>Bloqué 9.04%</th>
-                                             </tr>
-                                        </tbody> -->
                                         </thead>
+                                        <tbody>
+                                            <th>
+                                                <div class="" id="doughnut-chart">
+                                                    <canvas class="" id="doughnut"></canvas>
+                                                </div>
+                                            </th>
+                                        </tbody>
                                     </table>
-                                    <!-- <div id="DonutTicketsByDepartment"></div>
-                                    <ul id="TicketByDepartmentLegends"></ul> -->
                                 </div>
                                 </div>
                             </div>
@@ -466,35 +458,6 @@
                         </div>
                     </div>
                 </section>
-    
-                <!-- <section id="page" class="p-4">
-                    <div class="container  text-center">
-                        <ul class="pagination my-4 mx-4 col-12">
-                            <li class="page-item">
-                                <a class="page-Link mx-2 text-dark text-decoration-none text-secondary" href="#">
-                                    Previous page
-                                </a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link mx-2 bg-vert text-black fw-bolder" href="#">1</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link mx-2 text-black fw-bolder" href="#">2</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link mx-2 text-black fw-bolder" href="#">3</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link mx-2 text-black fw-bolder" href="#">4</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-Link mx-2 text-black text-decoration-none text-dark fw-bolder" href="#">
-                                    Next page
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </section> -->
                 <nav aria-label="Page navigation">
                     <ul class="pagination justify-content-center custom-pagination">
                         <li class="page-pagi disabled">
@@ -520,7 +483,8 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.umd.min.js"></script>
-    <script src="Dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <script src="chart.js"></script>
+    <script src="chart2.js"></script>
 </body>
 </html>
