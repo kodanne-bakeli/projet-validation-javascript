@@ -1,34 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inscription</title>
-    <link rel="stylesheet" href="inscription.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Paramètres Utilisateurs</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-      crossorigin="anonymous"
-    ></script>
-    
-   
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="param-user.css" />
   </head>
   <body>
-    <div class="container-fluid">
+    <!-- Données de l'utilisateur -->
+    <h3 class="p-4 bg-body-secondary">Utilisateurs</h3>
+    <!-- Container principal -->
+    <main class="container">
       <div class="row">
-        <div class="col-lg-4 conte">
-          <div class="">
-            <img src="images/Sign up-pana 1.png" class="img-fluid" alt="" />
+        <div class="col-lg-3 col-md-3 border-end border-2 text-center">
+          <!-- Liste des membres -->
+          <h4 class="pt-5 pb-3">Membres</h4>
+          <div class="list">
+            <a href="param-user.html"><p class="p-2">Selena Roy</p></a>
+            <a href="emma.html"><p class="p-2">Emma Watson</p></a>
+            <a href="john.html"><p class="p-2">John Robert</p></a>
+            <a href="anne.html"><p class="p-2">Anne Hathaway</p></a>
+            <a href="ravi.html"><p class="p-2">Ravi Shankar</p></a>
+            <a href="stone.html"><p class="p-2">Emma Stone</p></a>
+            <a href="floyd.html"><p class="p-2">Floyd Miles</p></a>
+            <a href="jane.html"><p class="p-2">Jane Cooper</p></a>
+          </div>
+          <div class="next">
+            <ul>
+              <li id="suivant">
+                <i class="bi bi-chevron-left mx-2"></i
+                ><span class="suivant">1</span>
+              </li>
+              <li id="suivant"><span class="suivant">2</span></li>
+              <li id="suivant"><span class="suivant">3</span></li>
+              <li id="suivant">
+                <span class="suivant">4</span
+                ><i class="bi bi-chevron-right mx-2"></i>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="col-lg-8">
-           <h3 class="pt-3 pb-3 text-center">Inscription</h3>
+        <div class="col-lg-9 col-md-9 col-sm-12">
+          <!-- Informations de l'utilisateur -->
+          <h4 class="pt-3 pb-3 text-center">Informations générales</h4>
           <div class="row px-5">
             <div class="col-lg-6 col-md-6 col-sm-6">
               <form>
@@ -40,7 +64,6 @@
                     id="last-name"
                     aria-describedby="nameHelp"
                     placeholder="last-name"
-                    required
                   />
                 </div>
                 <div class="mb-3">
@@ -53,7 +76,6 @@
                     id="first-name"
                     aria-describedby="nameHelp"
                     placeholder="first name"
-                    required
                   />
                 </div>
                 <div class="mb-3">
@@ -64,8 +86,7 @@
                     type="email"
                     class="form-control"
                     id="email"
-                    placeholder="e-mail"
-                    required
+                    placeholder="email"
                   />
                 </div>
                 <div class="mb-3">
@@ -76,8 +97,7 @@
                     type="number"
                     class="form-control"
                     id="number"
-                    placeholder="contact"
-                    required
+                    placeholder="number"
                   />
                 </div>
                 <div class="mb-3">
@@ -89,7 +109,6 @@
                     class="form-control"
                     id="date"
                     placeholder="birthday"
-                    required
                   />
                 </div>
               </form>
@@ -104,8 +123,7 @@
                     type="address"
                     class="form-control"
                     id="adresse"
-                    placeholder="address"
-                    required
+                    placeholder="adresse"
                   />
                 </div>
                 <div class="mb-3">
@@ -117,7 +135,6 @@
                     class="form-control"
                     id="profession"
                     placeholder="profession"
-                    required
                   />
                 </div>
                 <div class="mb-3">
@@ -129,7 +146,6 @@
                     class="form-control"
                     id="organisation"
                     placeholder="organisation"
-                    required
                   />
                 </div>
                 <div class="mb-3">
@@ -141,7 +157,6 @@
                     class="form-control"
                     id="password"
                     placeholder="password"
-                    required
                   />
                 </div>
                 <div class="mb-3">
@@ -153,30 +168,24 @@
                     class="form-control"
                     id="password2"
                     placeholder="confirm password"
-                    required
                   />
                 </div>
               </form>
-      </div>
-      <div class="d-flex justify-content-center mt-3">
-            <button
-              type="submit"
-              class="btn btn-primary raga fw-bolder"
-              id="inscription"
-            >
-              S'inscrire
-            </button>
-          </div>
-          <div class="d-flex justify-content-center  pt-3">
-            <p>Avez-vous déja un compte ?</p>
-            <a
-              class="titre text-decoration-none fw-bolder ps-2"
-              href="index.html"
-              id="ConnectezVous"
-              >Connectez-vous!</a
-              >
+              <div class="d-flex justify-content-end">
+                <button type="button" class="btn btn-primary btn-sm">
+                  Mettre à jour
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-    </div>
+      </div>
+    </main>
+    <!-- Script -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
