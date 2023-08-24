@@ -2,6 +2,9 @@
 .userdashboard .bg-success {
     background-color: #20DF7F !important;
 }
+.userdashboard .main {
+    width: 90%;
+}
 
 .userdashboard .text-success {
     color: #20DF7F !important;
@@ -40,7 +43,10 @@
     min-width: 600px;
     margin: auto;
 }
-
+.userdashboard .pagination .page-link div {
+    width: 30px;
+    height: 30px;
+}
 @media screen and (max-width:768px) {
     
     .userdashboard .caisse .card {
