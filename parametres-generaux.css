@@ -41,6 +41,7 @@ body{
     #parametresGeneraux #contentInfo {
         padding: 3%;
         width: 100%;
+        
     }
 
     #parametresGeneraux .information{
@@ -110,7 +111,7 @@ body{
 
     #parametresGeneraux #contentInfo {
         padding: 0;
-        /* width: 100%; */
+        width: 100%;
     }
 
     #parametresGeneraux .information{
