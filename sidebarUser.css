@@ -38,7 +38,7 @@ a{
 .dropdown .dropdown-menu li{
 	padding-left: 0.2rem;
 }
-#navi ul li:active, .dropdown .dropdown-menu li:active{
+.style-nav-elem{
 	background-color: #20df7f;
 	border-left: 0.2rem solid white;
 	padding-left: 0.8rem;
@@ -70,8 +70,8 @@ a{
 	background-color: transparent;
 }
 #header img{
-		width: 45px;
-		height: 45px;
+		width: 55px;
+		height: 55px;
 	}
 
 #badge{
@@ -107,6 +107,7 @@ a{
 
 @media screen and (max-width: 768px){
 	#header{
+		width: 100%;
 		padding-top: 10px;
 		padding-bottom: 10px;
 		box-shadow: 0 0 8px 0.7px;
@@ -116,9 +117,14 @@ a{
 	#header div div button i{
 		color: #fff;
 	}
-	#header .option-menu, #header .profil-compte .clock, #header .profil-compte .user-type{
+	#header .option-menu, 
+	#header .profil-compte .clock, 
+	#header .profil-compte .user-type, 
+	.sidebar .bakeli-tontine,
+	.sidebar #navi #nav-ul li .link-name-hidden, 
+	#nav-link-items{
 	 	display: none;
-	 }
+	}
 	#header .profil-compte{
 		padding-left: 10px;
 		margin: auto;
@@ -135,6 +141,7 @@ a{
 	
 	.sidebar{
 		background-color: #FFF;
+		max-width: 100%;
 		box-shadow: 0 0 8px 0.7px #093545;
 		bottom: 0;
 		height: auto;
@@ -157,17 +164,18 @@ a{
 		font-size: 50px;
 		color: #093545;
 	}
-	.sidebar .bakeli-tontine{
-		display: none;
+				#navi ul li:active, .dropdown .dropdown-menu li:active{
+					background-color: transparent;
+					border-left: 0;
+					padding-left: 0;
+				}
+	#navi {
+		padding: 0;
 	}
-	#navi ul li:active, .dropdown .dropdown-menu li:active{
-	background-color: transparent;
-	border-left: 0;
-	padding-left: 0;
-}
-	#nav-link-items{
-		display: none;
-	}
+	#navi ul li{
+		padding: 0;
+		margin: 0;
+	}			
 	.bi{
 		padding: 0 4px;
 	}
