@@ -52,10 +52,12 @@
     .userdashboard .caisse i {
         background-color: #20df8049 !important;
     }
+    .userdashboard{
+        width: 75% !important;
+    }
 }
  @media screen and (min-width:768px) {
-    .userdashboard  .container-fluid,
-    .userdashboard{
+    .userdashboard  .container-fluid{
         width: 75% !important;
     }
    
