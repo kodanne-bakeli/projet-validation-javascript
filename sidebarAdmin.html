@@ -19,7 +19,7 @@
 
 </head>
 <body>
-	<div class="row text-white position-relative gx-0">
+	<div class="row text-white position-relative gx-0 unNomDeClasseSpecial">
 		<div class="col-12 col-md-2 sidebar">
 			<h1 class="text-center text-capitalize my-4 bakeli-tontine">
 				<span><i class="bi bi-wallet-fill"></i></span> 
@@ -81,8 +81,9 @@
 					<li class="my-3 mx-0" id="param-dropu">
 						<span class="" id="start">
 								<span style="--i:0;--x:0;--y:0" class="fs-5 align-middle pe-2" id="link-animation-start">
+
 									<i class="bi bi-gear" id="link-animation-start-param"></i>
-									<i class="bi bi-x-lg" id="link-animation-stop-param"></i>
+									<i class="bi bi-x-circle" id="link-animation-stop-param"></i>
 								</span> 
 							    <!-- ANIMATION -->
 							    <span style="--i:1;--x:0;--y:-5" id="fas" class="link-animation position-absolute p-sm-1">
@@ -98,7 +99,6 @@
 							    	<a href="bloquer.html"><i class="bi bi-slash-circle text-white"></i></i></a>
 							    </span>
 						    </span>	
-						    <span id="close"></span>
 						 
 					</li>
 					<!-- ====================================================================== -->
@@ -126,25 +126,27 @@
 								<h3 class="fw-bold py-0 user-name">Ndiaga Sall</h3> 
 								<p class="text-muted py-0 user-type">Administrateur</p>
 							</div>
-							<button class="ms-3 my-auto border-0" id="header-btn-down"><i class="bi bi-caret-down-fill"></i></button>
+							<button class="ms-3 my-auto border-0" id="header-btn-down"><i class="bi bi-caret-down-fill align-middle"></i></button>
 
+							<div class="rounded" id="myModal">
+								<button class="btn btn-danger close d-flex justify-content-center rounded" id="closeModalBtn">
+									<i class="bi bi-x text-white"></i>
+								</button> 
+								<div id="modal_container">
+									<ul>
+										<li id="modal_deconnexion">
+											<button type="button" class="btn text-white" id="btn"><i class="bi bi-power"></i> Deconnexion</button>
+										</li>
+										<li id="notification_resp">
+											<button type="button" class="btn text-white">
+										  		Notifications 
+										  		<span class="badge bg-success">4</span>
+											</button>
+										</li>
 
-							<!-- <button class="btn-group ms-3 my-auto border-0" id="header-btn-down">
-								<span class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"></span> -->
-<!-- </button> -->
-<!-- Example single danger button -->
-<!-- <div class="btn-group"  id="header-btn-down">
-		<button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"> -->
-				<!-- Action -->
-		<!-- </button> -->
-							  <!-- <ul class="dropdown-menu">
-							    <li><a class="dropdown-item" href="#"><i class="bi bi-power"></i></a></li>
-							    <li><a class="dropdown-item" href="#">here</a></li>
-							    <li><hr class="dropdown-divider"></li>
-							    <li><a class="dropdown-item" href="#">link</a></li>
-							  </ul> -->
-<!-- </div> -->
-							<!-- </button> -->
+									</ul>
+								</div>
+							</div>
 
 						</div>
 
