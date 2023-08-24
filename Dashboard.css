@@ -24,9 +24,9 @@ body {
 
 }
 
-.caisse .mtn {
+/* .caisse .mtn {
     font-size: 2px;
-}
+} */
 
 .text-valide,
 .icone-card {
@@ -34,7 +34,7 @@ body {
 
 }
 
-.progress {
+#caisse .progress {
     height: 8px;
 }
 
@@ -53,7 +53,6 @@ body {
 }
 
 .table {
-    font-family: Montserrat;
     font-size: 15px;
     font-weight: 500;
     line-height: 40px;
@@ -293,6 +292,19 @@ a {
     .bi {
         padding: 0 4px;
     }
+
+    .this-cards-1 .card{
+        margin: 0 -60px;
+    }
+
+    .this-table .card{
+        margin: 0 -60px;
+    }
+
+    #page ul li {
+       padding: 0;
+       margin: 0 0 10px;
+    }
 }
 
 @media screen and (max-width: 650px) {
@@ -312,6 +324,19 @@ a {
     .sidebar nav {
         margin-top: auto;
     }
+
+    .this-cards-1 .card{
+        margin: 0 -60px;
+    }
+
+    .this-table .card{
+        margin: 0 -60px;
+    }
+
+    #page ul li {
+       padding: 0;
+       margin: 0 0 10px;
+    }
 }
 
 @media screen and (max-width: 575px) {
@@ -325,5 +350,18 @@ a {
 
     .option-menu {
         font-size: 14px;
+    }
+
+    .this-cards-1 .card{
+        margin: 0 -60px;
+    }
+
+    .this-table .card{
+        margin: 0 -60px;
+    }
+
+    #page ul li {
+       padding: 0;
+       margin: 0 0 10px;
     }
 }

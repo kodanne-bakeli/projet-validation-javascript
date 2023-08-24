@@ -504,3 +504,11 @@ a{
     border-bottom-left-radius: 0px;
 }
 /* fin de copie du css par barry */
+.w-100-w-md-75{
+	width: 75%;
+}
+@media(max-width:768px){
+	.w-100-w-md-75{
+		width: 100%;
+	}
+}
