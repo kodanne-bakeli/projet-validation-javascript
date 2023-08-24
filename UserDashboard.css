@@ -2,6 +2,9 @@
 .userdashboard .bg-success {
     background-color: #20DF7F !important;
 }
+.userdashboard .main {
+    width: 90%;
+}
 
 .userdashboard .text-success {
     color: #20DF7F !important;
@@ -29,7 +32,10 @@
 }
 
 .userdashboard .caisse .progress {
-    height: 10px !important;
+    height: 5px !important;
+}
+.userdashboard .caisse .card-text {
+    font-size: 14px !important;
 }
 
 .userdashboard .table {
@@ -37,7 +43,10 @@
     min-width: 600px;
     margin: auto;
 }
-
+.userdashboard .pagination .page-link div {
+    width: 30px;
+    height: 30px;
+}
 @media screen and (max-width:768px) {
     
     .userdashboard .caisse .card {
@@ -52,11 +61,7 @@
     .userdashboard .caisse i {
         background-color: #20df8049 !important;
     }
-}
- @media screen and (min-width:768px) {
-    .userdashboard  .container-fluid,
     .userdashboard{
         width: 75% !important;
     }
-   
 }
