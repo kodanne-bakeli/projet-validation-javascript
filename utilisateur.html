@@ -85,7 +85,7 @@
         <div class="col-12 col-md-10 offset-md-2">
             <header class="d-flex flex-row justify-content-between px-2" id="header">
                 <h2 class="my-auto fw-bold option-menu">
-                    Utilisateurs
+                    Archives
                 </h2>
                 <div class="d-flex align-middle profil-compte">
 
@@ -96,44 +96,26 @@
                             <span class="visually-hidden">unread messages</span>
                         </span>
                     </span>
-
                     <div class="d-flex mx-2">
                         <div class="d-flex">
-                            <img src="images/Ellipse 9.png"rounded-circle me-2 me-md-4 my-auto">
+                            <img src="images/Ellipse 9.png" class="rounded-circle me-2 me-md-4 my-auto">
                             <div class="d-flex flex-column lh-1 py-auto">
                                 <h3 class="fw-bold py-0 user-name">Ndiaga Sall</h3>
                                 <p class="text-muted py-0 user-type">Administrateur</p>
                             </div>
-                            <button class="ms-3 my-auto border-0" id="header-btn-down"><i
-                                    class="bi bi-caret-down-fill"></i></button>
+                            <button class="ms-3 my-auto border-0" id="header-btn-down"><i class="bi bi-caret-down-fill"></i></button>
                         </div>
-
                         <div class="ms-4 my-auto" id="header-mobile-option">
                             <div class="d-flex ">
                                 <div class="border rounded p-1 me-1">
                                     <span class="align-middle"><i class="bi bi-plus-square-dotted"></i></span>
                                     <span class="text-capitalize pe-1">create new</span>
                                 </div>
-                                <button class="ms-3 my-auto border-0" id="header-btn-down"><i
-                                        class="bi bi-caret-down-fill"></i></button>
-                            </div>
-
-                            <div class="ms-4 my-auto" id="header-mobile-option">
-                                <div class="d-flex ">
-                                    <div class="border rounded p-1 me-1">
-                                        <span class="align-middle"><i class="bi bi-plus-square-dotted"></i></span>
-                                        <span class="text-capitalize pe-1">create new</span>
-                                    </div>
-                                    <!-- <div class="border my-auto rounded p-2 ms-1">
-                                        <span class="align-middle"><i class="bi bi-wifi-off"></i></span> 
-                                        <span class="text-capitalize pe-1">Deconnexion</span>
-                                    </div> -->
-                                </div>
-
                             </div>
                         </div>
                     </div>
-                </header>
+                </div>
+            </header>
                 <!-- Partie de Aissatou Barry -->
                 <section class="container pt-5 contsection">
                     <div class="row mx-auto les-trois-card-du-haut">
@@ -181,10 +163,10 @@
                                         <h4>Membres</h4>
                                     </th>
                                     <th scope="col">
-                                        <h4>Date début</h4>
+                                        <h4>Seuil</h4>
                                     </th>
                                     <th scope="col">
-                                        <h4>Seuil</h4>
+                                        <h4>Date début</h4>
                                     </th>
                                     <th scope="col">
                                         <h4>Pogression</h4>
@@ -311,10 +293,10 @@
                                             <h4>Membres</h4>
                                         </th>
                                         <th scope="col">
-                                            <h4>Date début</h4>
+                                            <h4>Seuil</h4>
                                         </th>
                                         <th scope="col">
-                                            <h4>Seuil</h4>
+                                            <h4>Date début</h4>
                                         </th>
                                         <th scope="col">
                                             <h4>Statut</h4>
@@ -398,10 +380,10 @@
                                             <h4>Membres</h4>
                                         </th>
                                         <th scope="col">
-                                            <h4>Date début</h4>
+                                            <h4>Seuil</h4>
                                         </th>
                                         <th scope="col">
-                                            <h4>Seuil</h4>
+                                            <h4>Date début</h4>
                                         </th>
                                         <th scope="col">
                                             <h4>Pogression</h4>
@@ -592,7 +574,7 @@
                                     </div>
                                     <div class="modal-body p-5">
                                         <div class="d-flex flex-column align-items-end nom1-details-cotisations ">
-                                            <h2>Selena Roy</h2>
+                                            <h2 class="text-dark">Selena Roy</h2>
                                             <p class="text-secondary ">Designer</p>
                                         </div>
                                         <div class="d-none d-sm-block details-tableau">
@@ -707,7 +689,7 @@
                                             </div>
                                         </div>
                                         <div class="total-cotisations-user">
-                                            <h2 class="text-end mt-4">Total = 150.000 FCFA</h2>
+                                            <h2 class="text-end mt-4 totalCotisation">Total = 150.000 FCFA</h2>
                                         </div>
                                     </div>
                                 </div>
@@ -724,7 +706,7 @@
                                     </div>
                                     <div class="modal-body p-5 flex ">
                                         <div class="d-flex flex-column align-items-end nom2-details-cotisations">
-                                            <h2>Emma Watson</h2>
+                                            <h2 class="text-dark">Emma Watson</h2>
                                             <p class="text-secondary ">Designer</p>
                                         </div>
                                         <div class="d-none d-sm-block details-tableau">
@@ -833,7 +815,7 @@
                                             </div>
                                         </div>
                                         <div class="total-cotisations-user">
-                                            <h2 class="text-end mt-4">Total = 125.000 FCFA</h2>
+                                            <h2 class="text-end mt-4 totalCotisation">Total = 125.000 FCFA</h2>
                                         </div>
                                     </div>
                                 </div>
@@ -851,7 +833,7 @@
                                     <div class="modal-body p-5 flex ">
                                         <div class="hstack gap-3">
                                             <div class="d-flex flex-column align-items-end nom3-details-cotisations mb-2">
-                                                <h2>Anne Hathaway</h2>
+                                                <h2 class="text-dark">Anne Hathaway</h2>
                                                 <p class="text-secondary ">Enseignante</p>
                                             </div>
                                             <div class="mb-5">
@@ -946,7 +928,7 @@
                                             </div>
                                         </div>
                                         <div class="total-cotisations-user">
-                                            <h2 class="text-end mt-4">Total = 50.000 FCFA</h2>
+                                            <h2 class="text-end mt-4 totalCotisation">Total = 50.000 FCFA</h2>
                                         </div>
                                     </div>
                                 </div>

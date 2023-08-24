@@ -92,6 +92,9 @@ body, .gris{
 .modal-header{
     background-color: #24dc7c !important;
 }
+.totalCotisation{
+	color: #24dc7c !important;
+}
 /* ----------------------------------------------------------------- */
 .les-trois-card-du-haut .box1:active{
     background-color: #20df7f;
