@@ -1,0 +1,49 @@
+/* CSS */
+* {
+    padding: 0;
+    margin: 0;
+    word-wrap: break-word;
+    box-sizing: border-box;
+}
+html{
+    height: 100vh;
+}
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container-fluid {
+    height: 100%;
+    background-color: #dfdfdf;
+}
+.row{
+    height: 100%;
+}
+.col2{
+    height: 70%;
+}
+.col1,.col3{
+    background-color: #dfdfdf;
+    height: 17%;
+}
+.bor{
+    border: 2px solid #C8C8C8;
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+img[alt="profil"]{
+    width: 80px;
+    height: 75px;
+}
+input[type="password"]{
+    width: 90%;
+    height: 30px;
+    border-radius: 10px;
+}
+button[type="button"]{
+    width: 30%;
+    background-color: #093545;
+    font-size: 12px;
+}
