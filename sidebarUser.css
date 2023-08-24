@@ -7,8 +7,10 @@ body{
 	font-family: Montserrat;
 /*	font-weight: bold;*/
 }
-#navi ul li{
+li{
 	list-style-type: none;
+}
+#navi ul li{
 	padding-left: 1rem;
 }
 a{
@@ -72,7 +74,56 @@ a{
 #header img{
 		width: 55px;
 		height: 55px;
-	}
+}
+
+/*================D.R.O.P.D.O.W.N==================*/
+
+#myModal{
+	position: absolute;
+	display: none;
+	width: 200px;
+	height: auto;
+	margin: 10px;
+	background-color: #093545;
+	z-index: 10;
+	top: 50px;
+	right: 50px;
+	color: #fff;
+}
+#modal_container{
+	position: relative;
+	padding: 20px 10px 10px 10px;
+	margin: 10px;
+	border: 1px solid #fff;
+}
+#myModal #modal_container ul{
+	margin-left: 0px;
+	padding-left: 0;
+}
+#myModal #modal_container ul #modal_deconnexion button{
+	transition: 0.75s ease-in-out !important;
+	padding-left: 0 !important;
+}
+#myModal #modal_container ul #modal_deconnexion i{
+	font-size: 15px;
+}
+#myModal #modal_container ul #modal_deconnexion button,
+#myModal #modal_container ul #notification_resp button
+{
+	background-color: transparent;
+}
+#myModal #modal_container ul #modal_deconnexion button:hover{
+	 color: red !important;
+}
+#closeModalBtn{
+	position: absolute;
+	z-index: 9;
+	top: 0;
+	right: 0;
+	width: 40px;
+	height: 30px;
+}
+/*======================================*/
 
 #badge{
 	top: 20%;
@@ -107,7 +158,8 @@ a{
 
 @media screen and (min-width: 767px){
 	#icone-infos,
-	#icone-chg-password
+	#icone-chg-password,
+	#notification_resp
 	{
 		display: none;
 	}
@@ -134,6 +186,7 @@ a{
 	.sidebar #navi #nav-ul li .link-name-hidden, 
 	#nav-link-items,
 	#profil-user-link
+/*	,#myModal #modal_container ul #modal_deconnexion #btn*/
 	{
 	 	display: none;
 	}
@@ -149,6 +202,10 @@ a{
 	#header img{
 		width: 55px;
 		height: 55px;
+	}
+	#header #myModal{
+		top: 50px;
+		left: 35%;
 	}
 	
 	.sidebar{
