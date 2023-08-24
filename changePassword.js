@@ -45,7 +45,7 @@ changePasswordForm.addEventListener("submit", async (e) => {
   const confirmPassword = changePasswordForm.password3.value;
 
   if (newPassword !== confirmPassword) {
-    console.log("Les nouveaux mots de passe ne correspondent pas");
+    alert("Les nouveaux mots de passe ne correspondent pas");
     return;
   }
 
@@ -53,12 +53,13 @@ changePasswordForm.addEventListener("submit", async (e) => {
     // Appeler la fonction pour changer le mot de passe
     await changePassword(newPassword);
 
-    console.log("Mot de passe mis à jour avec succès");
+    alert("Mot de passe mis à jour avec succès");
 
     // Réinitialiser le formulaire si nécessaire
     changePasswordForm.reset();
   } catch (error) {
-    console.log("Erreur lors de la mise à jour du mot de passe:", error.message);
+    alert("Erreur lors de la mise à jour du mot de passe:");
+    console.log(error.message);
   }
 });
 
