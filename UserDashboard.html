@@ -147,7 +147,19 @@
                             <div class="d-md-flex d-none "><a class="btn btn-primary ms-auto mb-3"
                                     data-bs-toggle="modal" data-bs-target="#exampleModal">Je cotise</a></div>
                             <div class="table-responsive">
-                                <table class="table table-borderless my-3">
+                                <table class="table table-borderless my-3" id="tableOne">
+                                    <thead>
+                                        <tr>
+                                       <th scope="col" class="bg-success text-primary">Mois</th>
+                                       <th scope="col" class="bg-success text-primary">Date</th>
+                                       <th scope="col" class="bg-success text-primary">Montant</th>
+                                       <th scope="col" class="bg-success text-primary">Statut</th>
+                                       <th scope="col" class="bg-success text-primary">Actions</th>
+                                        </tr>
+                                       </thead>
+                                    
+                                </table>
+                                <table class="table table-borderless my-3 d-none" id="tableTwo">
                                     <thead>
                                         <tr>
                                             <th scope="col" class="bg-success text-primary">Mois</th>
@@ -157,84 +169,20 @@
                                             <th scope="col" class="bg-success text-primary">Actions</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">Janvier</th>
-                                            <td>01/01/2023</td>
-                                            <td>25.000FCFA</td>
-                                            <td class="text-primary fw-bold"> En attente</td>
-                                            <td><i class="bi bi-eye" data-bs-toggle="modal"
-                                                    data-bs-target="#exampleModal1"></i>
-                                                <i class="bi bi-pencil-square"></i>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Fevrier</th>
-                                            <td>01/02/2023</td>
-                                            <td>25.000FCFA</td>
-                                            <td class="text-success fw-bold">Validé</td>
-                                            <td><i class="bi bi-eye" data-bs-toggle="modal"
-                                                    data-bs-target="#exampleModal1"></i>
-                                                <i class="bi bi-pencil-square" data-bs-toggle="modal"
-                                                    data-bs-target="#exampleModal2"></i>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Mars</th>
-                                            <td>01/03/2023</td>
-                                            <td>25.000FCFA</td>
-                                            <td class="text-primary fw-bold"> En attente</td>
-                                            <td><i class="bi bi-eye" data-bs-toggle="modal"
-                                                    data-bs-target="#exampleModal1"></i>
-                                                <i class="bi bi-pencil-square"></i>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Avril</th>
-                                            <td>01/04/2023</td>
-                                            <td>25.000FCFA</td>
-                                            <td class="text-success fw-bold">Validé</td>
-                                            <td><i class="bi bi-eye" data-bs-toggle="modal"
-                                                    data-bs-target="#exampleModal1"></i>
-                                                <i class="bi bi-pencil-square" data-bs-toggle="modal"
-                                                    data-bs-target="#exampleModal2"></i>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Mai</th>
-                                            <td>01/05/2023</td>
-                                            <td>25.000FCFA</td>
-                                            <td class="text-primary fw-bold"> En attente</td>
-                                            <td><i class="bi bi-eye" data-bs-toggle="modal"
-                                                    data-bs-target="#exampleModal1"></i>
-                                                <i class="bi bi-pencil-square"></i>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Juin</th>
-                                            <td>01/06/2023</td>
-                                            <td>25.000FCFA</td>
-                                            <td class="text-success fw-bold">Validé</td>
-                                            <td><i class="bi bi-eye" data-bs-toggle="modal"
-                                                    data-bs-target="#exampleModal1"></i>
-                                                <i class="bi bi-pencil-square" data-bs-toggle="modal"
-                                                    data-bs-target="#exampleModal2"></i>
-                                            </td>
-                                        </tr>
-                                    </tbody>
+                                    
                                 </table>
                             </div>
                             <div class="my-4 d-flex justify-content-center">
                                 <nav aria-label="...">
                                     <ul class="pagination">
                                         <li class="page-item disabled" href="#">
-                                            <a class="page-link border-0 bg-transparent ">Previous page</a>
+                                            <a class="page-link border-0 bg-transparent " onclick="Prev()">Previous page</a>
                                         </li>
-                                        <li class="page-item active" aria-current="page"><a class="page-link border-0 bg-transparent" href="#">
+                                        <li class="page-item active" aria-current="page"><a class="page-link border-0 bg-transparent" href="#" onclick="Prev()">
                                                 <div class="bg-success rounded-circle d-flex justify-content-center align-items-center"><b>1</b></div>
                                             </a></li>
-                                        <li class="page-item ">
-                                            <a class="page-link border-0 bg-transparent" href="#">
+                                        <li class="page-item next">
+                                            <a class="page-link border-0 bg-transparent btn" href="#" onclick="Next()">
                                                 <div class="bg-white rounded-circle d-flex justify-content-center align-items-center"><b>2</b></div>
                                             </a>
                                         </li>
@@ -242,7 +190,7 @@
                                                 <div class="bg-white rounded-circle d-flex justify-content-center align-items-center"><b>3</b></div>
                                             </a></li>
                                         <li class="page-item">
-                                            <a class="page-link text-dark fw-bold border-0 bg-transparent" href="#">Next page</a>
+                                            <a class="page-link text-dark fw-bold border-0 bg-transparent" href="#" onclick="Next()">Next page</a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -333,7 +281,7 @@
         </div>
     </div>
 
-
+    <script src="UserDashboard.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
