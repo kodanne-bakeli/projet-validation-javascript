@@ -26,9 +26,9 @@
 				<span class="fw-bold">Bakeli tontine</span>
 			</h1>
 			<nav class="pt-2 pt-lg-4" id="navi">
-				<ul class="ps-0" id="nav-ul">
+				<ul class="ps-0 align-items-center" id="nav-ul">
 					<li class="my-3 mx-0">
-						<a href="#" class="text-white">
+						<a href="Dashboard.html" class="text-white">
 							<span class="fs-5 align-middle pe-2"><i class="bi bi-menu-button"></i></span> 
 							<span class="text-capitalize nav-link-items link-name-hidden">dashboard</span>
 						</a>
@@ -45,19 +45,22 @@
 							<span class="text-capitalize nav-link-items link-name-hidden">cotisations</span>
 						</a>	
 					</li>
-					<li class="dropdown my-3 mx-0">
-						<span class="dropdown-toggle text-capitalize nav-link-items" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-							<span class="fs-5 align-middle pe-2"><i class="bi bi-gear"></i></span> 
-						    <span class="link-name-hidden" id="nav-link-items">paramétres</span>	
+					<!-- ====================== Dropdown param ======================= -->
+					<li class="dropdown my-3 mx-0" id="param-dropdown">
+						<span class="dropdown-toggle text-capitalize nav-link-items" type="button" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
+								<span class="fs-5 align-middle pe-2">
+									<i class="bi bi-gear"></i>
+								</span>
+								<span class="text-capitalize link-name-hidden" id="nav-link-items">paramètres</span>	
 						</span>
 						<ul class="dropdown-menu border-0">
 							<li class="dropdown-item text-capitalize">	
-								<a href="#" class="text-white nav-param_link-items">
+								<a href="parametresGeneraux.html" class="text-white nav-param_link-items">
 									paramétres généraux
 								</a>
 							</li>
 							<li class="dropdown-item text-capitalize">
-								<a href="utilisateur.html" class="text-white nav-param_link-items">
+								<a href="param-user.html" class="text-white nav-param_link-items">
 									utilisateurs
 								</a>
 							</li>
@@ -73,6 +76,32 @@
 							</li>
 						</ul>
 					</li>
+					<!-- ================================================================== -->
+					<!-- ======================Dropdup reponsive param======================== -->
+					<li class="my-3 mx-0" id="param-dropu">
+						<span class="" id="start">
+								<span style="--i:0;--x:0;--y:0" class="fs-5 align-middle pe-2" id="link-animation-start">
+									<i class="bi bi-gear" id="link-animation-start-param"></i>
+									<i class="bi bi-x-lg" id="link-animation-stop-param"></i>
+								</span> 
+							    <!-- ANIMATION -->
+							    <span style="--i:1;--x:0;--y:-5" id="fas" class="link-animation position-absolute p-sm-1">
+							    	<a href="param-user.html"><i class="bi bi-gear-fill text-white"></i></a>
+							    </span>
+							    <span style="--i:2;--x:0;--y:-10" class="link-animation position-absolute p-sm-1">
+							    	<a href="#"><i class="bi bi-person text-white"></i></a>
+							    </span>
+							    <span style="--i:3;--x:0;--y:-15" class="link-animation position-absolute p-sm-1">
+							    	<a href="archive.html"><i class="bi bi-archive text-white"></i></a>
+							    </span>
+							    <span style="--i:4;--x:0;--y:-20" class="link-animation position-absolute p-sm-1">
+							    	<a href="bloquer.html"><i class="bi bi-slash-circle text-white"></i></i></a>
+							    </span>
+						    </span>	
+						    <span id="close"></span>
+						 
+					</li>
+					<!-- ====================================================================== -->
 				</ul>
 			</nav>
 		</div>
@@ -90,14 +119,33 @@
 					 	</span>
 					</span>
 
-					<div class="d-flex mx-2">
+					<div class="d-flex mx-2" id="header-user-profil">
 						<div class="d-flex">
-							<img src="images/Ellipse 9.png" class="rounded-circle me-2 me-md-4 my-auto">
+							<img src="images/Ellipse 9.png" class="rounded-circle me-2 me-md-4 my-auto" id="profil-img">
 							<div class="d-flex flex-column lh-1 py-auto">
 								<h3 class="fw-bold py-0 user-name">Ndiaga Sall</h3> 
 								<p class="text-muted py-0 user-type">Administrateur</p>
 							</div>
 							<button class="ms-3 my-auto border-0" id="header-btn-down"><i class="bi bi-caret-down-fill"></i></button>
+
+
+							<!-- <button class="btn-group ms-3 my-auto border-0" id="header-btn-down">
+								<span class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"></span> -->
+<!-- </button> -->
+<!-- Example single danger button -->
+<!-- <div class="btn-group"  id="header-btn-down">
+		<button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"> -->
+				<!-- Action -->
+		<!-- </button> -->
+							  <!-- <ul class="dropdown-menu">
+							    <li><a class="dropdown-item" href="#"><i class="bi bi-power"></i></a></li>
+							    <li><a class="dropdown-item" href="#">here</a></li>
+							    <li><hr class="dropdown-divider"></li>
+							    <li><a class="dropdown-item" href="#">link</a></li>
+							  </ul> -->
+<!-- </div> -->
+							<!-- </button> -->
+
 						</div>
 
 						<div class="ms-4 my-auto" id="header-mobile-option">
@@ -124,7 +172,7 @@
 				<br><br><br><br><br><br><br><br><br><br><br>3
 				<br><br><br><br><br><br><br><br><br><br><br>4
 				<br><br><br><br><br><br><br><br><br><br><br>5
-				<br><br><br><br><br><br><br><br><br><br><br>6	
+				<br><br><br><br><br><br><br><br><br><br><br>6
 			</div>
 		</div>
 	</div>
