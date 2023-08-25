@@ -9,10 +9,12 @@ body{
     height: 100%;
 }
 
-#parametresGeneraux #editerProfil , #parametresGeneraux #mettreAjour{
+#parametresGeneraux #editerProfil , #parametresGeneraux .btn{
     background-color: #093545;
     color: #fff;
 }
+
+
 
 #parametresGeneraux #adminInformations h4{
     background-color: #20DF7F;

@@ -20,6 +20,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
     <link rel="stylesheet" href="parametres-generaux.css">
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore-compat.js"></script>
 
     <title>Paramètres généraux</title>
   </head>
@@ -126,8 +128,8 @@
                     <h2>Paramètres généraux</h2>
                 </div>
                 <div class="bg-light d-flex flex-wrap" id="contentInfo">
-                  <div class="col-md-4 text-center" id="admin">
-                    <p class="titleProfil">Profil</p>
+                  <div class="col-md-4 text-center editAdmin" id="admin">
+                    <!-- <p class="titleProfil">Profil</p>
                     <div class="pb-5 profil">
                       <div class="profilAdmin">
                         <img src="./images/Ellipse 82.png" class="rounded-circle" alt="img" id="photo">
@@ -138,7 +140,7 @@
                         <h3 class="fw-bold">Ndiaga Sall</h3>
                         <p class="fs-4 fw-bold">Admin</p>
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                   <div class="col-md-7 information">
                     <div class="">
@@ -146,27 +148,27 @@
                       <form class="row g-3">
                         <div class="col-md-6">
                           <label for="validationDefault01" class="form-label">Prénom</label>
-                          <input type="text" class="form-control" id="prenom" required>
+                          <input type="text" class="form-control" id="inputPrenom" required>
                         </div>
                         <div class="col-md-6">
                           <label for="validationDefault02" class="form-label">Nom</label>
-                          <input type="text" class="form-control" id="nom" required>
+                          <input type="text" class="form-control" id="inputNom" required>
                         </div>
                         <div class="col-md-12">
                           <label for="validationDefault03" class="form-label">Téléphone</label>
-                          <input type="text" class="form-control" id="phone" required>
+                          <input type="text" class="form-control" id="inputPhone" required>
                         </div>
                         <div class="col-md-12">
                             <label for="validationDefault03" class="form-label">E-mail</label>
-                            <input type="text" class="form-control" id="email" required>
+                            <input type="text" class="form-control" id="inputEmail" required>
                         </div>
                         <div class="col-md-12">
                           <label for="validationDefault05" class="form-label">Statut</label>
-                          <input type="text" class="form-control" id="statut" value="Administrateur" required>
+                          <input type="text" class="form-control" id="inputStatut" value="Administrateur" required>
                         </div>
                         <div class="col-12 bttn">
                           <a href="parametresGeneraux.html">
-                            <button class="btn" type="submit" id="mettreAjour">Mettre à jour</button>
+                            <!-- <button class="btn" type="submit" id="mettreAjour">Mettre à jour</button> -->
                           </a>
                         </div>
                       </form>
@@ -179,6 +181,6 @@
   </div>
     
   </body>
-  <script src="parametresGeneraux.js"></script>
+  <script src="editerProfil.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
 </html>
