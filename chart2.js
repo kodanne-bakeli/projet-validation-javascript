@@ -18,6 +18,10 @@ var myChart = new Chart(ctx, {
                 'rgba(255, 168, 167, 1)',
                 'rgba(253, 208, 159, 0.7)'
             ],
+
+            title:[
+                '18%', '49.48%', '9.04%', '23'
+            ],
             borderWidth: 1
         }]
     },
