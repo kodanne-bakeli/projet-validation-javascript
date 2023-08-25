@@ -1,31 +1,69 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+import {
+  getFirestore,
+  collection,
+  getDocs,
+  addDoc,
+  doc,
+  updateDoc,
+  deleteDoc,
+} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAdYSscG955-wSnJz3eD4EAKYSw7dnnDb8",
+  authDomain: "validationjs-220cb.firebaseapp.com",
+  projectId: "validationjs-220cb",
+  storageBucket: "validationjs-220cb.appspot.com",
+  messagingSenderId: "968244401042",
+  appId: "1:968244401042:web:f6684d97e4168a23b0a74b",
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+// Initialize Firebase firestore
+const db = getFirestore(app);
+
 let tableOne = document.getElementById("tableOne")
 let tableTwo =document.getElementById("tableTwo")
 let main =document.getElementsByClassName("table-responsive")
-let date =new Date()
 let dateOne = ["","Janvier", "Février", "Mars", "Avril", "Mai", "Juin"]
 let dateTwo = ["","Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre"]
-for (let i= 1; i< dateOne.length; i++) {
-    tableOne.innerHTML += `<table>
-    
-    <tbody>
-    <tr>
-        <th scope="row">${dateOne[i]}</th>
-        <td>01/0${i}/2023</td>
-        <td>25.000FCFA</td>
-        <td class="text-primary fw-bold"> En attente</td>
-        <td><i class="bi bi-eye" data-bs-toggle="modal"
-                data-bs-target="#exampleModal1"></i>
-            <i class="bi bi-pencil-square"></i>
-        </td>
-    </tr>
-    
-</tbody>
-</table>
-`
+window.addEventListener("DOMContentLoaded",async (e)=>
+{
+    const querySnapshot = await getDocs(collection(db, "cotisations"));
+    querySnapshot.forEach((doc) => {
+        const cotis = doc.data()
+        for (let i= 1; i< dateOne.length; i++) {
+            tableOne.innerHTML += `<table>
+            
+            <tbody>
+            <tr>
+                <th scope="row">${dateOne[i]}</th>
+                <td>${cotis.debutDate}</td>
+                <td>${cotis.cotiseMontant}FCFA</td>
+                <td class="text-primary fw-bold"> En attente</td>
+                <td><i class="bi bi-eye" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal1"></i>
+                    <i class="bi bi-pencil-square"></i>
+                </td>
+            </tr>
+            
+        </tbody>
+        </table>
+        `
+        
+        }
+      console.log(doc.id, " => ",cotis);
+    Next(cotis)
+    Prev(cotis)
 
-}
 
-function Next(){
+
+});
+function Next(cotis){
     tableTwo.innerHTML=`
     <thead>
  <tr>
@@ -56,8 +94,8 @@ function Next(){
         <tbody>
         <tr>
             <th scope="row">${dateTwo[i]}</th>
-            <td>01/${6+i}/2023</td>
-            <td>25.000FCFA</td>
+            <td>${cotis.debutDate}</td>
+            <td>${cotis.cotiseMontant}FCFA</td>
             <td class="text-primary fw-bold"> En attente</td>
             <td><i class="bi bi-eye" data-bs-toggle="modal"
                     data-bs-target="#exampleModal1"></i>
@@ -72,7 +110,7 @@ function Next(){
     }
     
 }
-function Prev(){
+function Prev(cotis){
     tableOne.innerHTML=`
     <thead>
 <tr>
@@ -100,8 +138,8 @@ function Prev(){
         <tbody>
         <tr>
             <th scope="row">${dateOne[i]}</th>
-            <td>01/${i}/2023</td>
-            <td>25.000FCFA</td>
+            <td>${cotis.debutDate}</td>
+            <td>${cotis.cotiseMontant}FCFA</td>
             <td class="text-primary fw-bold"> En attente</td>
             <td><i class="bi bi-eye" data-bs-toggle="modal"
                     data-bs-target="#exampleModal1"></i>
@@ -115,3 +153,5 @@ function Prev(){
     
     }
 }
+
+})
