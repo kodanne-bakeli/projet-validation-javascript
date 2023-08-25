@@ -1,0 +1,34 @@
+.fewnu {
+    background: #093545;
+    height: 100vh;
+    border-radius: 0 20% 20% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .titre {
+    color: #093545 !important;
+  }
+  .bg {
+    background-color: #093545 !important;
+  }
+  .input{
+    color: white !important;
+  }
+  ::placeholder {
+    color: white !important;
+  }
+  .ra {
+    background: #20df7f !important;
+    border: none !important;
+    color: #224957 !important;
+  }
+  @media  (max-width: 990px) {
+    .fewnu{
+        display: none;
+        box-sizing: border-box;
+    }
+   
+  }
+  
+  

@@ -1,16 +1,16 @@
-*{
-	margin: 0;
-	padding: 0;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-body{
-	background-color: #ededee;
-	font-family: Montserrat;
-/*	font-weight: bold;*/
+body {
+    background-color: rgb(210, 210, 210);
+    font-family: Montserrat;
 }
-li{
-	list-style-type: none;
-}
+
+/* /* css sidebar admin par sam laye */
 #navi ul li{
+	list-style-type: none;
 	padding-left: 1rem;
 }
 a{
@@ -75,61 +75,6 @@ a{
 	width: 55px;
 	height: 55px;
 }
-/*================D.R.O.P.D.O.W.N==================*/
-
-#myModal{
-	position: absolute;
-	display: none;
-	width: 200px;
-	height: auto;
-	margin: 10px;
-	background-color: #093545;
-	z-index: 10;
-	top: 50px;
-	right: 50px;
-	color: #fff;
-}
-#modal_container{
-	position: relative;
-	padding: 20px 10px 10px 10px;
-	margin: 10px;
-	border: 1px solid #fff;
-}
-#myModal #modal_container ul{
-	margin-left: 0px;
-	padding-left: 0;
-}
-#myModal #modal_container ul #modal_deconnexion button{
-	padding-left: 0 !important;
-}
-#myModal #modal_container ul #modal_deconnexion button a{
-	transition: 0.75s ease-in-out !important;
-}
-#myModal #modal_container ul #modal_deconnexion i{
-	font-size: 15px;
-}
-#myModal #modal_container ul #modal_deconnexion button,
-#myModal #modal_container ul #notification_resp button
-{
-	background-color: transparent;
-}
-#myModal #modal_container ul #modal_deconnexion button a,
-#myModal #modal_container ul #notification_resp button a
-{
-/*	background-color: transparent;*/
-}
-#myModal #modal_container ul #modal_deconnexion button a:hover{
-	 color: red !important;
-}
-#closeModalBtn{
-	position: absolute;
-	z-index: 9;
-	top: 0;
-	right: 0;
-	width: 40px;
-	height: 30px;
-}
-/*======================================*/
 
 #badge{
 	top: 20%;
@@ -138,27 +83,6 @@ a{
 	font-size: 10px;
 	background-color: #20df7f;
 	border: 2px solid white;
-}
-#start #link-animation-start-param,
-#start #link-animation-start-param{
-/*	transition: 3s ease-in-out;*/
-}
-#start .link-animation{
-	transform: translate(calc(1px * var(--x)), calc(1px * var(--y)));
-	transition: transform 1s;
-	transition-delay: calc(0.1s * var(--i));
-	background-color: #093545;
-}
-#start.active .link-animation{
-	transform: translate(calc(14px * var(--x)), calc(14px * var(--y)));
-}
-/*#start .link-animation{
-	transform: translate(calc(14px * var(--x)), calc(14px * var(--y)));
-	transition: transform 1s;
-	transition-delay: ;
-}*/
-#start.desactive .link-animation{
-	transform: translate(calc(1px * var(--x)), calc(1px * var(--y)));
 }
 
 @media screen and (max-width: 1000px){
@@ -180,12 +104,10 @@ a{
 }
 
 @media screen and (min-width: 768px){
-	#header-mobile-option,
-	#param-dropu,
-	#notification_resp
-	{
+	#header-mobile-option{
 		display: none;
 	}
+
 }
 
 @media screen and (max-width: 768px){
@@ -205,10 +127,7 @@ a{
 	#header .profil-compte .user-type, 
 	.sidebar .bakeli-tontine,
 	.sidebar #navi #nav-ul li .link-name-hidden, 
-	.sidebar #param-dropdown,
-	#nav-link-items, 
-	#myModal #modal_container ul #modal_deconnexion #btn
-	{
+	#nav-link-items{
 	 	display: none;
 	}
 	#header .profil-compte{
@@ -226,10 +145,6 @@ a{
 	}
 	#header #create-new-container{
 		margin-right: 25px;
-	}
-	#header #myModal{
-		top: 50px;
-		left: 50px;
 	}
 	
 	.sidebar{
@@ -253,16 +168,9 @@ a{
 		flex-direction: row;
 		justify-content: space-around;
 	}
-	#navi ul li a .bi, 
-	#navi ul li .nav-link-items span .bi, 
-	#param-dropu #start .link-animation .bi,
-	#param-dropu #start #link-animation-start .bi
-	{
+	#navi ul li a .bi, #navi ul li .nav-link-items span .bi{
 		font-size: 50px;
 		color: #093545;
-	}
-	#navi ul li a .bi{
-		position: relative;
 	}
 					#navi ul li:active, .dropdown .dropdown-menu li:active{
 						background-color: transparent;
@@ -272,10 +180,6 @@ a{
 	.bi{
 		padding: 0 4px;
 	}
-	
-	#start.active{
-
-	}
 }	
 
 @media screen and (max-width: 650px){
@@ -283,10 +187,7 @@ a{
 		font-size: 13px;
 	}
 	
-	#navi ul li a .bi, 
-	#navi ul li .nav-link-items span .bi, 
-	#param-dropu #start .link-animation .bi,
-	#param-dropu #start #link-animation-start .bi{
+	#navi ul li a .bi, #navi ul li .nav-link-items span .bi{
 		font-size: 30px;
 		margin: auto;
 	}
@@ -332,10 +233,7 @@ a{
 }
 
 @media screen and (max-width: 430px){
-	#navi ul li .nav-link-items span .bi, 
-	#param-dropu #start .link-animation .bi,
-	#param-dropu #start #link-animation-start .bi
-	{
+	#navi ul li .nav-link-items span .bi{
 		font-size: 30px;
 		margin: auto;
 	}
@@ -403,3 +301,214 @@ a{
 	}
 }
 
+/* css sidebar admin par sam laye */
+
+.bouton-du-modal {
+    background-color: #C5C5C5;
+    border: none;
+}
+
+.bouton-du-modal:hover {
+    background-color: #CCCC;
+}
+
+.bouton-du-modal div {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #20df7f;
+}
+
+.les-trois-card-du-haut .card {
+    height: 170px;
+    border: none;
+    box-shadow: 2px 1px 12px 1px rgba(0, 0, 0, 0.2);
+    color: #093545;
+}
+
+@media(max-width:468px) {
+    .les-trois-card-du-haut h2 {
+        font-size: 20px;
+    }
+    .les-trois-card-du-haut .card{
+        height: 120px;
+    }
+}
+
+.les-trois-card-du-haut .card h5 {
+    color: #6C757D;
+}
+
+.les-trois-card-du-haut .card h2 {
+    color: #093545;
+}
+
+.card-cotisation-verte-blanche {
+    border: none;
+    box-shadow: 2px 1px 12px 1px rgba(0, 0, 0, 0.2);
+}
+
+.table1-cotisations td,
+.table1-cotisations th {
+    padding: 1.5rem;
+}
+
+.table1-cotisations th {
+    background-color: #20df7f;
+}
+
+.table1-cotisations.rounded-table {
+    border-radius: 20px;
+}
+
+.table1-cotisations .th-top-left {
+    border-top-left-radius: 1rem;
+}
+
+.table1-cotisations .th-top-right {
+    border-top-right-radius: 1rem;
+}
+
+.table1-cotisations .td-bottom-left {
+    border-bottom-left-radius: 1rem;
+}
+
+.table1-cotisations .td-bottom-right {
+    border-bottom-right-radius: 1rem;
+}
+
+.pagination .page-link {
+    border: none;
+    background-color: transparent;
+}
+
+.pagination .page-link div {
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination .active .page-link div {
+    background-color: #20df7f;
+}
+
+.modal-bouton-trois-points {
+    max-width: 1000px;
+}
+
+@media(max-width:992px) {
+    .modal-bouton-trois-points {
+        max-width: 700px;
+    }
+}
+
+@media(max-width:768px) {
+    .modal-bouton-trois-points {
+        max-width: 500px;
+    }
+}
+
+.modal-bouton-trois-points .modal-header {
+    background-color: #20df7f;
+}
+
+.modal-bouton-trois-points .modal-body {
+    overflow: scroll;
+    max-height: 800px;
+}
+
+.modal-bouton-trois-points .finish,
+.total-cotisations-user,
+.statut-termine {
+    color: #20df7f;
+}
+
+.modal-bouton-trois-points .table1-cotisations th {
+    background-color: #093545;
+    color: #fff;
+}
+.modal-body h2{
+    color: #083A50;
+    font-weight: bolder;
+}
+
+.modal-bouton-trois-points .table1-cotisations {
+    box-shadow: 2px 1px 12px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* debut de copie du css par barry */
+.details-cotisations .modal-bouton-trois-points {
+    max-width: 700px;
+}
+
+@media(max-width:720px) {
+    .details-cotisations .modal-bouton-trois-points {
+        max-width: 600px;
+    }
+}
+
+@media(max-width:668px) {
+    .details-cotisations .modal-bouton-trois-points {
+        max-width: 570px;
+    }
+}
+
+.details-cotisations .modal-body {
+    overflow: scroll;
+    max-height: 600px;
+}
+
+@media(max-width:992px) {
+    .details-cotisations .modal-body {
+        height: 500px;
+    }
+}
+
+.details-cotisations .table1-cotisations th {
+    padding: 10px;
+}
+
+.details-tableau div {
+    background-color: #cccc;
+}
+
+.details-tableau .first-div {
+    background-color: #093545;
+    color: #fff;
+}
+
+.nom1-details-cotisations {
+    max-width: 180px;
+}
+
+.nom2-details-cotisations {
+    max-width: 240px;
+}
+
+.nom3-details-cotisations {
+    max-width: 260px;
+}
+
+.pre-card {
+    background-color: #20df7f;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.post-card {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+/* fin de copie du css par barry */
+.w-100-w-md-75{
+	width: 75%;
+}
+@media(max-width:768px){
+	.w-100-w-md-75{
+		width: 100%;
+	}
+}
