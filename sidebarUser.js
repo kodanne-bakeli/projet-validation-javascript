@@ -12,7 +12,7 @@ menuElements.forEach(elem => {
 	});
 });
 
-// ===========DROPDOWN PERSONNALISE=============
+// ===========DROPDOWN PERSONNALISE===============
 let closeModalBtn = document.getElementById('closeModalBtn')
 let myModal = document.getElementById('myModal')
 let btnModal = document.getElementById('header-btn-down')
