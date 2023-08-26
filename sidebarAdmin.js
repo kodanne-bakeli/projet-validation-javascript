@@ -1,6 +1,6 @@
 let menuElements = document.querySelectorAll(".sidebar #navi #nav-ul li")
 
-// =======STYLE DES ELEMENTS DU MENU============
+// =======STYLE DES ELEMENTS DU MENU===============
 menuElements.forEach(elem => {
 	
 	elem.addEventListener('click',() =>{
