@@ -143,7 +143,7 @@
 								<div id="modal_container">
 									<ul>
 										<li id="modal_deconnexion">
-											<button type="button" class="btn leBoutonPourSeDeconnecter" id="btn">
+											<button type="button" class="btn leBoutonPourSeDeconnecter" id="btn" onclick="deconnexionButton()">
 												<a href="" class="text-white">
 													<i class="bi bi-power"></i> Deconnexion
 												</a>
@@ -170,7 +170,7 @@
 										 <a href="utilisateur.html" class="text-white">create new</a>
 									</span>
 								</button>
-								<button class="btn col text-white btn-sm mb-1 d-flex border my-auto rounded p-2 ms-1 leBoutonPourSeDeconnecter" id="power-container">
+								<button class="btn col text-white btn-sm mb-1 d-flex border my-auto rounded p-2 ms-1 leBoutonPourSeDeconnecter" id="power-container"  onclick="deconnexionButton()">
 									<span class="align-middle"><i class="bi bi-power"></i></span> 
 									<span class="text-capitalize pe-1 my-auto" id="btn-deconnexion">
 										 <a href="" class="text-white">Deconnexion
@@ -183,11 +183,9 @@
 				</div>
 			</header>
 			
-			<div class="">
+			<div class="offset-2">
 				<!-- LE CONTENU DE LA PAGE ICI -->
-				<br><br>
-				<button class="btn btn-primary" id="deconnexionButton">Bouton essai deconnexion</button>
-				<br><br><br><br><br><br><br><br><br>3
+				<br><br><br><br><br><br><br><br><br><br><br>3
 				<br><br><br><br><br><br><br><br><br><br><br>4
 				<br><br><br><br><br><br><br><br><br><br><br>5
 				<br><br><br><br><br><br><br><br><br><br><br>6
@@ -197,6 +195,6 @@
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="sidebarAdmin.js"></script>
-	<!-- <script type="module" src="sidebarAdminSignOut.js"></script> -->
+	<script type="module" src="sidebarAdminSignOut.js"></script>
 </body>
 </html>
