@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="parametres-generaux.css">
     <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-storage-compat.js"></script>
+
 
     <title>Paramètres généraux</title>
   </head>
@@ -101,9 +103,9 @@
 
                   <div class="d-flex mx-2">
                       <div class="d-flex">
-                          <img src="images/Ellipse 9.png" class="rounded-circle me-2 me-md-4 my-auto">
+                          <img src="img/profil.png" class="rounded-circle me-2 me-md-4 my-auto" id="imgHeader">
                           <div class="d-flex flex-column lh-1 py-auto">
-                              <h3 class="fw-bold py-0 user-name">Ndiaga Sall</h3>
+                              <h3 class="fw-bold py-0 user-name"></h3>
                               <p class="text-muted py-0 user-type">Administrateur</p>
                           </div>
                           <button class="ms-3 my-auto border-0" id="header-btn-down"><i
@@ -129,18 +131,6 @@
                 </div>
                 <div class="bg-light d-flex flex-wrap" id="contentInfo">
                   <div class="col-md-4 text-center editAdmin" id="admin">
-                    <!-- <p class="titleProfil">Profil</p>
-                    <div class="pb-5 profil">
-                      <div class="profilAdmin">
-                        <img src="./images/Ellipse 82.png" class="rounded-circle" alt="img" id="photo">
-                        <input type="file" name="file" id="file">
-                        <label for="file" id="uploadButton" class="d-flex justify-content-center align-items-center"><i class="bi bi-camera-fill"></i></label>
-                      </div>
-                      <div class="name">
-                        <h3 class="fw-bold">Ndiaga Sall</h3>
-                        <p class="fs-4 fw-bold">Admin</p>
-                      </div>
-                    </div> -->
                   </div>
                   <div class="col-md-7 information">
                     <div class="">
@@ -167,9 +157,7 @@
                           <input type="text" class="form-control" id="inputStatut" value="Administrateur" required>
                         </div>
                         <div class="col-12 bttn">
-                          <a href="parametresGeneraux.html">
                             <!-- <button class="btn" type="submit" id="mettreAjour">Mettre à jour</button> -->
-                          </a>
                         </div>
                       </form>
                     </div>
