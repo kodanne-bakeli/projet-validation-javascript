@@ -1,10 +1,8 @@
 * {
-
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat";
-
 }
 
 .bg {
@@ -38,7 +36,6 @@
 }
 
 @media (max-width: 990px) {
-
   .giss {
     display: none;
   }
@@ -100,7 +97,6 @@
   border: none !important;
   color: #224957 !important;
 }
-
 .footer-img {
   display: none;
 }
