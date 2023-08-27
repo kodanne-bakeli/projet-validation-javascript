@@ -45,10 +45,8 @@ connexionButton.addEventListener("click", () => {
 // Vérifie l'état de l'authentification à chaque chargement de page
 auth.onAuthStateChanged((user) => {
   if (user) {
-    console.log("User is logged in");
-    toggleButtons(true);
+    window.location.href = "/cotisations.html";
   } else {
-    console.log("User is logged out");
-    toggleButtons(false);
+    window.location.href = "/connexion.html";
   }
 });
