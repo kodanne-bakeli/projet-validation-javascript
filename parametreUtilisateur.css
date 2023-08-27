@@ -30,7 +30,7 @@ body{
 }
 
 
-/* media quiries */
+/* media queries */
 @media screen and (min-width:560px) and (max-width:1400px){
     #parametresUtilisateur #user{
         border-right: 3px solid #C8C8C8;
@@ -494,11 +494,11 @@ a{
 		font-size: 50px;
 		color: #093545;
 	}
-				#navi ul li:active, .dropdown .dropdown-menu li:active{
-					background-color: transparent;
-					border-left: 0;
-					padding-left: 0;
-				}
+    #navi ul li:active, .dropdown .dropdown-menu li:active{
+        background-color: transparent;
+        border-left: 0;
+        padding-left: 0;
+    }
 	#navi {
 		padding: 0;
 	}
@@ -526,7 +526,7 @@ a{
 
 	.sidebar nav {
 	    margin-top: auto;
-	  }
+	}
 }
 
 
