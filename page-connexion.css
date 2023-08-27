@@ -1,10 +1,8 @@
 * {
-
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat";
-
 }
 
 .bg {
@@ -38,33 +36,26 @@
 }
 
 @media (max-width: 990px) {
-
   .giss {
     display: none;
   }
-
   .footer-img {
     display: block !important;
   }
-
   .footer-img img {
     margin-top: 20vh !important;
   }
-
   .titre h1 {
     display: none;
   }
-
   .titre img {
     margin-bottom: 100px;
     margin-left: 50px;
   }
-
   .titre h2 {
     margin-bottom: 70px;
     font-size: 40px;
   }
-
   .titre img {
     display: block !important;
   }
@@ -92,7 +83,7 @@
 .para:hover {
   background-color: #224957 !important;
   color: white !important;
-  transition: 1s;
+  transition: 2s;
 }
 
 .ra {
@@ -100,11 +91,9 @@
   border: none !important;
   color: #224957 !important;
 }
-
 .footer-img {
   display: none;
 }
-
 .titre img {
   display: none;
-}+
+}

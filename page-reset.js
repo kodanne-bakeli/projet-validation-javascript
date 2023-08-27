@@ -2,13 +2,8 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
 import {
   getAuth,
-  createUserWithEmailAndPassword,
+  sendPasswordResetEmail,
 } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
-import {
-  getFirestore,
-  addDoc,
-  collection,
-} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -27,32 +22,29 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 // Initialize Firebase Authentication and get a reference to the service
 const auth = getAuth(app);
-const db = getFirestore(app);
 
-// Récupération des éléments du Dom
-const emailInput = document.getElementById("email");
-const passwordInput = document.getElementById("password");
-const inscriptionButton = document.getElementById("inscription");
+// Les  éléments du DOM
+const numOrEmailInput = document.getElementById("numOrEmail");
+const envoyerButton = document.getElementById("envoyer");
 
-// Inscription
-inscriptionButton.addEventListener("click", () => {
-  const email = emailInput.value;
-  const password = passwordInput.value;
+// Réinitialisation du mot de passe
+envoyerButton.addEventListener("click", () => {
+  const numOrEmail = numOrEmailInput.value;
 
-  createUserWithEmailAndPassword(auth, email, password)
+  sendPasswordResetEmail(auth, numOrEmail)
     .then(() => {
-      alert("User signed up successfully");
+      alert("Password reset email sent");
     })
     .catch((error) => {
-      alert("Sign up error:", error.message);
+      alert("Password reset error:", error.message);
     });
 });
 
-/// Vérifie l'état de l'authentification à chaque chargement de page
+// Vérifie l'état de l'authentification à chaque chargement de page
 auth.onAuthStateChanged((user) => {
   if (user) {
-    window.location.href = "cotisations.html";
+    window.location.href = "/cotisations.html";
   } else {
-    window.location.href = "connexion.html";
+    window.location.href = "/connexion.html";
   }
 });

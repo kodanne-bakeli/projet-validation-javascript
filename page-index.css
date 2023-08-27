@@ -2,11 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: hwb(196 4% 73%);
+  font-family: "Montserrat";
 }
 
 .phase {
-  height: 500px;
+  background: hsl(196, 77%, 15%);
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,41 +20,41 @@
   width: 100%;
   background: #20df7f !important;
   border: none !important;
-  margin-top: 80px;
+  margin-top: 50px;
   animation: SlideUp 3s;
 }
 
 .para:hover {
   background-color: #224957 !important;
-  color: white !important;
-  transition: 1s;
+  color: whitesmoke !important;
+  transition: 2s;
 }
 
-.titre h1 {
-  font-size: 50px !important;
+h1 {
+  font-size: 3rem !important;
+  color: white;
   animation: SlideDown 3s;
 }
 
 @media (max-width: 990px) {
   .phase {
-    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
   }
 
   h1 {
+    font-size: 60px;
     animation: SlideDown 3s;
   }
 
   .para {
     color: #224957 !important;
     font-weight: bolder !important;
-    font-size: 1.5rem;
+    font-size: 20px;
     background: #20df7f !important;
     border: none !important;
-    margin-top: 80px;
+    margin-top: 150px;
     animation: SlideUp 3s;
   }
 }
@@ -63,7 +64,6 @@
     transform: translateY(-200px);
     opacity: 0;
   }
-
   to {
     transform: translateY(0);
     opacity: 1;
@@ -75,7 +75,6 @@
     transform: translateY(200px);
     opacity: 0;
   }
-
   to {
     transform: translateY(0);
     opacity: 1;

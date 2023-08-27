@@ -1,6 +1,9 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
-import { getAuth } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -20,19 +23,22 @@ const app = initializeApp(firebaseConfig);
 // Initialize Firebase Authentication and get a reference to the service
 const auth = getAuth(app);
 
-// Récupération de l'élément du DOM
-const deconnexionButton = document.getElementById("deconnexion");
+// Récupération des éléments du Dom
+const emailInput = document.getElementById("email");
+const passwordInput = document.getElementById("password");
+const connexionButton = document.getElementById("connexion");
 
-// Déconnexion
-deconnexionButton.addEventListener("click", () => {
-  auth
-    .signOut()
+// Connexion
+connexionButton.addEventListener("click", () => {
+  const email = emailInput.value;
+  const password = passwordInput.value;
+
+  signInWithEmailAndPassword(auth, email, password)
     .then(() => {
-      alert("User logged out successfully");
-      toggleButtons(false);
+      alert("User logged in successfully");
     })
     .catch((error) => {
-      alert("Logout error:", error.message);
+      console.log("Login error:", error.message);
     });
 });
 
