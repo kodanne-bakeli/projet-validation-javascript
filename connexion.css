@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> a1fc45f8f808670068edbd18d61280613aa1074f
     margin: 0;
@@ -118,6 +119,12 @@
   box-sizing: border-box;
   font-family: "Montserrat";
 >>>>>>> 64bc9ba95ce6625f22650269b4ee1d0f4c10eaf3
+=======
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+>>>>>>> a15903a345bb61519581202f5c3f6cc43d43b627
 }
 
 .bg {
@@ -143,6 +150,7 @@
 
 .contenu {
   background: #093545;
+<<<<<<< HEAD
 <<<<<<< HEAD
   width: 100%;
   height: 100vh;
@@ -172,6 +180,8 @@
   background: hsl(196, 77%, 15%);
 =======
 >>>>>>> 64bc9ba95ce6625f22650269b4ee1d0f4c10eaf3
+=======
+>>>>>>> a15903a345bb61519581202f5c3f6cc43d43b627
   height: 100vh;
   border-radius: 0 20% 20% 0;
   display: flex;
@@ -181,11 +191,36 @@
 
 @media (max-width: 990px) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   .fewnu {
+=======
+  .giss {
+>>>>>>> a15903a345bb61519581202f5c3f6cc43d43b627
     display: none;
+  }
+  .footer-img {
+    display: block !important;
+  }
+  .footer-img img {
+    margin-top: 20vh !important;
+  }
+  .titre h1 {
+    display: none;
+  }
+  .titre img {
+    margin-bottom: 100px;
+    margin-left: 50px;
+  }
+  .titre h2 {
+    margin-bottom: 70px;
+    font-size: 40px;
+  }
+  .titre img {
+    display: block !important;
   }
 }
 
+<<<<<<< HEAD
 .fewnu {
   background: #093545;
   width: 100%;
@@ -220,11 +255,16 @@
   }
 }
 
+=======
+>>>>>>> a15903a345bb61519581202f5c3f6cc43d43b627
 @media (max-width: 990px) {
   .fewnu {
     display: none;
   }
+<<<<<<< HEAD
 >>>>>>> 64bc9ba95ce6625f22650269b4ee1d0f4c10eaf3
+=======
+>>>>>>> a15903a345bb61519581202f5c3f6cc43d43b627
 }
 
 ::placeholder {
@@ -241,19 +281,26 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a15903a345bb61519581202f5c3f6cc43d43b627
 .para:hover {
   background-color: #224957 !important;
   color: white !important;
   transition: 1s;
 }
 
+<<<<<<< HEAD
 >>>>>>> 64bc9ba95ce6625f22650269b4ee1d0f4c10eaf3
+=======
+>>>>>>> a15903a345bb61519581202f5c3f6cc43d43b627
 .ra {
   background: #20df7f !important;
   border: none !important;
   color: #224957 !important;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 .raga {
@@ -287,3 +334,11 @@ input {
   display: none;
 }
 >>>>>>> 64bc9ba95ce6625f22650269b4ee1d0f4c10eaf3
+=======
+.footer-img {
+  display: none;
+}
+.titre img {
+  display: none;
+}
+>>>>>>> a15903a345bb61519581202f5c3f6cc43d43b627

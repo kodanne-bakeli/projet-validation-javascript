@@ -1,12 +1,50 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+>>>>>>> a15903a345bb61519581202f5c3f6cc43d43b627
 .conte {
-    background: hsl(196, 77%, 15%);
-    height: 100vh;
-    border-radius: 0 20% 20% 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background: hsl(196, 77%, 15%);
+  height: 100vh;
+  border-radius: 0 20% 20% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.raga {
+  background: #20df7f !important;
+  border: none !important;
+  border-radius: 10px 10px 10px 10px;
+  color: #093545 !important;
+  width: 50%;
+}
+
+.raga:hover {
+  background-color: #224957 !important;
+  color: white !important;
+  transition: 1s;
+}
+
+.titre {
+  color: #093545 !important;
+}
+
+.titre h1 {
+  font-size: 60px;
+}
+
+@media (max-width: 990px) {
+  .conte {
+    display: none;
   }
+<<<<<<< HEAD
   .raga {
     background: #20df7f !important;
     border: none !important;
@@ -72,3 +110,6 @@
   }
 }
 >>>>>>> 64bc9ba95ce6625f22650269b4ee1d0f4c10eaf3
+=======
+}
+>>>>>>> a15903a345bb61519581202f5c3f6cc43d43b627
