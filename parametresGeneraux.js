@@ -13,6 +13,7 @@ let usersView = document.getElementById('informationGenerale');
 let profilInfo = document.querySelector('#admin');
 let imgHeader = document.getElementById("imgHeader");
 var adminHeaderName = document.querySelector('.user-name');
+var adminHeaderStatut = document.querySelector('.user-type');
 profilInfo.innerHTML = ''
 db.collection("admin").onSnapshot((querySnapshot) => {
     usersView.innerHTML = '';
@@ -45,7 +46,7 @@ db.collection("admin").onSnapshot((querySnapshot) => {
         </div>
         <div class="name">
             <h3 class="fs-3 fw-bold" id="profilName">${doc.data().prenom} ${doc.data().name}</h3>
-            <p class="fs-4 fw-bold" id="profilStatut">Admin</p>
+            <p class="fs-4 fw-bold" id="profilStatut">${doc.data().admin}</p>
         </div>
         </div>
         <div>
@@ -55,6 +56,7 @@ db.collection("admin").onSnapshot((querySnapshot) => {
         </div>`
         imgHeader.src = doc.data().profilURL;
         adminHeaderName.innerHTML = doc.data().prenom +' '+ doc.data().name;
+        adminHeaderStatut.innerHTML = doc.data().admin
     });
 
 });

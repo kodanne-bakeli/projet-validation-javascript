@@ -17,6 +17,8 @@ let email =document.getElementById('inputEmail');
 let phone = document.getElementById('inputPhone');
 let mettreAjour = document.querySelector('.bttn');
 var adminHeaderName = document.querySelector('.user-name');
+var adminHeaderStatut = document.querySelector('.user-type');
+
 mettreAjour.innerHTML = '';
 let imgHeader = document.getElementById("imgHeader");
 
@@ -37,7 +39,7 @@ function getAdmin(){
                 </div>
                 <div class="name">
                     <h3 class="fs-3 fw-bold" id="profilName">${doc.data().prenom} ${doc.data().name}</h3>
-                    <p class="fs-4 fw-bold" id="profilStatut">Admin</p>
+                    <p class="fs-4 fw-bold" id="profilStatut">${doc.data().admin}</p>
                 </div>
             </div>`
             prenom.value = doc.data().prenom;
@@ -46,6 +48,7 @@ function getAdmin(){
             phone.value = doc.data().telephone;
             imgHeader.src = doc.data().profilURL;
             adminHeaderName.innerHTML = doc.data().prenom +' '+ doc.data().name;
+            adminHeaderStatut.innerHTML = doc.data().admin;
             mettreAjour.innerHTML = `<button class="btn" type="button" onclick="update('${doc.id}')" id="">Mettre à jour</button>`
         });
     
