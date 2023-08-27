@@ -25,6 +25,10 @@ body {
 
 }
 
+.color-text{
+    color: rgba(9, 53, 69, 1);
+}
+
 /* .caisse .mtn {
     font-size: 2px;
 } */
@@ -59,6 +63,10 @@ body {
     line-height: 40px;
     letter-spacing: 0em;
     text-align: left;
+}
+
+#evolution .cercle{
+    display: flex;
 }
 
 #doughnut-chart{
@@ -209,6 +217,21 @@ a {
     .nav-param_link-items {
         font-size: 14px;
     }
+
+    #doughnut-chart{
+        height: 44vh;
+        width: 75%;
+        margin: 0 40px;
+        cursor: pointer;
+}
+
+#doughnut{
+    height: 10%;
+}
+
+.card-diagramme{
+    height: 100%;
+}
 }
 
 @media screen and (max-width: 823px) {
