@@ -104,7 +104,8 @@ a{
 #myModal #modal_container ul #modal_deconnexion button{
 	padding-left: 0 !important;
 }
-#myModal #modal_container ul #modal_deconnexion button a{
+#myModal #modal_container ul #modal_deconnexion button,
+#myModal #modal_container ul #modal_deconnexion button i{
 	transition: 0.75s ease-in-out !important;
 }
 #myModal #modal_container ul #modal_deconnexion i{
@@ -115,7 +116,8 @@ a{
 {
 	background-color: transparent;
 }
-#myModal #modal_container ul #modal_deconnexion button a:hover{
+#myModal #modal_container ul #modal_deconnexion button:hover,
+#myModal #modal_container ul #modal_deconnexion button:hover i{
 	 color: red !important;
 }
 #closeModalBtn{
@@ -159,7 +161,7 @@ a{
 	}
 }
 
-@media screen and (min-width: 767px){
+@media screen and (min-width: 768px){
 	#icone-infos,
 	#icone-chg-password,
 	#notification_resp
