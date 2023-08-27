@@ -7,7 +7,8 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat";
+  font-weight: 500;
 }
 
 label {
@@ -17,23 +18,12 @@ label {
 
 button {
   background-color: rgba(9, 53, 69, 1) !important;
-  outline: none !important;
   border: none !important;
 }
 
 button:hover {
-  background-color: rgb(25, 134, 151) !important;
-  transition: 1s;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-a:hover {
-  color: white;
-  font-weight: bold;
+  background-color: rgba(32, 223, 127, 1) !important;
+  transition: 2s;
 }
 
 p:hover {
@@ -42,8 +32,10 @@ p:hover {
       rgba(32, 223, 127, 1) 2%);
   width: 100%;
   height: 100%;
-  transition: 1s;
+  transition: 2s;
   cursor: pointer;
+  color: whitesmoke;
+  font-weight: bold;
 }
 
 ul {
@@ -53,11 +45,21 @@ ul {
 
 li {
   list-style-type: none;
-  display: inline-block;
+  display: inline;
   margin-left: 5px;
   margin-right: 5px;
   font-size: normal;
   cursor: pointer;
+}
+
+li .suivant {
+  background-color: rgba(32, 223, 127, 1);
+  width: 30px;
+  height: 30px;
+  font-size: medium;
+  border: 1px solid rgba(32, 223, 127, 1);
+  border-radius: 50%;
+  padding: 5px;
 }
 
 input {
@@ -73,18 +75,6 @@ input {
 
   to {
     transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes SlideUp {
-  from {
-    transform: translateY(200px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
     opacity: 1;
   }
 }
