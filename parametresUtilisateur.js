@@ -20,7 +20,7 @@ db.collection("user").onSnapshot((querySnapshot) => {
   usersView.innerHTML = '';
   querySnapshot.forEach((doc) => {
       console.log(`${doc.id} => ${doc.data().nom}`);
-      usersView.innerHTML +=     
+      usersView.innerHTML =     
       `<h4 class="p-2 fw-bold">Informations générales</h4>
       <div class="col d-flex justify-content-between border-bottom pb-3">
       <div class="col-md-8">Prénom</div>
@@ -41,11 +41,11 @@ db.collection("user").onSnapshot((querySnapshot) => {
 
     profilInfo.innerHTML = 
     `<p class="titleProfil">Profil</p>
-      <div class="pb-5 profil">
-      <div class="profilAdmin">
-          <img src="${doc.data().profilURL}" class="rounded-circle" alt="img" id="photo">
+      <div class="pb-5 profil row">
+      <div class="profilAdmin col-lg-12 col-sm-12">
+          <img src="${doc.data().profilURL}" class="rounded-circle img-fluid" alt="img" id="photo">
       </div>
-      <div class="name">
+      <div class="name col-lg-12 col-sm-12 pt-4">
           <h3 class="fs-3 fw-bold" id="profilName">${doc.data().prenom} ${doc.data().name}</h3>
           <p class="fs-4 fw-bold" id="profilStatut">${doc.data().statut}</p>
       </div>
