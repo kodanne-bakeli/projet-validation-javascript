@@ -17,6 +17,10 @@
   <!-- https://cdnjs.com/libraries/font-awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
   <link rel="stylesheet" href="parametres-generaux.css">
+  <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-storage-compat.js"></script>
+
 
   <title>Paramètres généraux</title>
 </head>
@@ -61,7 +65,7 @@
                 </a>
               </li>
               <li class="dropdown-item text-capitalize">
-                <a href="param-user.html" class="text-white nav-param_link-items">
+                <a href="parametres-utilisateur.html" class="text-white nav-param_link-items">
                   utilisateurs
                 </a>
               </li>
@@ -96,10 +100,10 @@
 
           <div class="d-flex mx-2">
             <div class="d-flex">
-              <img src="images/Ellipse 9.png" class="rounded-circle me-2 me-md-4 my-auto">
+              <img src="images/Ellipse 9.png" class="rounded-circle me-2 me-md-4 my-auto" id="imgHeader">
               <div class="d-flex flex-column lh-1 py-auto">
-                <h3 class="fw-bold py-0 user-name">Ndiaga Sall</h3>
-                <p class="text-muted py-0 user-type">Administrateur</p>
+                <h3 class="fw-bold py-0 user-name"></h3>
+                <p class="text-muted py-0 user-type"></p>
               </div>
               <button class="ms-3 my-auto border-0" id="header-btn-down"><i class="bi bi-caret-down-fill"></i></button>
             </div>
@@ -123,41 +127,10 @@
           </div>
           <div class="bg-light d-flex flex-wrap" id="contentInfo">
             <div class="col-md-4 col-sm-12 text-center" id="admin">
-              <p class="titleProfil">Profil</p>
-              <div class="pb-5 profil">
-                <div class="profilAdmin">
-                  <img src="./images/Ellipse 82.png" class="rounded-circle" alt="img" id="photo">
-                </div>
-                <div class="name">
-                  <h3 class="fs-3 fw-bold">Ndiaga Sall</h3>
-                  <p class="fs-4 fw-bold">Admin</p>
-                </div>
-              </div>
-              <div>
-                <a href="editProfil.html">
-                  <button class="btn" id="editerProfil">Editer le profil</button>
-                </a>
-              </div>
+
             </div>
             <div class="col-md-8 col-sm-12" id="adminInformations">
-              <div class="col-md-12">
-                <h4 class="p-2 fw-bold">Informations générales</h4>
-                <div class="col d-flex justify-content-between border-bottom pb-3">
-                  <div class="col-md-8">Prénom</div>
-                  <div class="col-md-4 text-center">Ndiaga</div>
-                </div>
-                <div class="col d-flex justify-content-between border-bottom pb-3">
-                  <div class="col-md-8">Nom</div>
-                  <div class="col-md-4 text-center">Sall</div>
-                </div>
-                <div class="col d-flex justify-content-between border-bottom pb-3">
-                  <div class="col-md-8">Statut</div>
-                  <div class="col-md-4 text-center">Administrateur</div>
-                </div>
-                <div class="col d-flex justify-content-between border-bottom pb-3">
-                  <div class="col-md-8">Email</div>
-                  <div class="col-md-4 text-center">ndiaga@gmail.com</div>
-                </div>
+              <div class="col-md-12" id="informationGenerale">                
               </div>
               <div class="col-md-12">
                 <h4 class="p-2 fw-bold">Statistiques</h4>

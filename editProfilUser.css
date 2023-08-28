@@ -1,67 +1,67 @@
-/* Parametres Generaux */
+/* Parametres Generaux Utilisateur */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 body{
     font-family: 'Montserrat', sans-serif;
 }
-#parametresGeneraux{
+#parametresUtilisateur{
     background-color: #EDEDEE;
     font-family: 'Montserrat';
     height: 100%;
 }
 
-#parametresGeneraux #editerProfil , #parametresGeneraux .btn{
+#parametresUtilisateur #editerProfil , #parametresUtilisateur .btn{
     background-color: #093545;
     color: #fff;
 }
 
 
 
-#parametresGeneraux #adminInformations h4{
+#parametresUtilisateur #adminInformations h4{
     background-color: #20DF7F;
 }
 
-#parametresGeneraux #contentInfo {
-    width: 90%;
+#parametresUtilisateur #contentInfo {
+    width: 100%;
 }
 
-#parametresGeneraux #admin img {
+#parametresUtilisateur #user img {
     border: 6px solid #20DF7F;
     width: 45%;
 }
-
-#parametresGeneraux #photo{
-    width: 150px;
-    height: 150px;
-    object-fit:fill;
+#photo{
+    width: 120px;
+    height: 120px;
+    object-fit: fill;
 }
 
 
-/* media queries */
+
+/* media quiries */
 @media screen and (min-width:560px) and (max-width:1400px){
-    #parametresGeneraux #admin{
+    #parametresUtilisateur #user{
         border-right: 3px solid #C8C8C8;
     }
 
-    #parametresGeneraux #adminInformations{
+    #parametresUtilisateur #adminInformations{
         padding: 3%;
     }
 
-    #parametresGeneraux #contentInfo {
+    #parametresUtilisateur #contentInfo {
         padding: 3%;
         width: 100%;
         
     }
 
-    #parametresGeneraux .information{
+    #parametresUtilisateur .information{
         padding: 4%;
     }
 
-    #parametresGeneraux .information .bttn{
+    #parametresUtilisateur .information .bttn{
         display: flex;
         justify-content: right;
     }
 
-    #parametresGeneraux .profilAdmin{
+    #parametresUtilisateur .profilAdmin{
         /* text-align: center; */
         width: 100%;
         position: relative;
@@ -70,20 +70,20 @@ body{
         align-items: center;           
     }
 
-    #parametresGeneraux .profilAdmin img {
-        width: 100%;
-        height: 100%;
-    }
+    /* #parametresUtilisateur .profilAdmin img {
+        width: 100px !important;
+        height: 100px !important;
+    } */
 
-    #parametresGeneraux #file {
+    #parametresUtilisateur #file {
         display: none;
     }
 
-    #parametresGeneraux #admin .name {
+    #parametresUtilisateur #user .name {
         padding-top: 13%;
     }
 
-    #parametresGeneraux #uploadButton{
+    #parametresUtilisateur #uploadButton{
         position: absolute;
         height: 30px;
         padding: 5% 5%;
@@ -99,7 +99,7 @@ body{
 }
 
 @media screen and (min-width: 300px) and (max-width: 559px){
-    #parametresGeneraux #admin .profil {
+    #parametresUtilisateur #user .profil {
         display: flex;
         padding-top: 2%;
         padding-bottom: 2%;
@@ -107,17 +107,11 @@ body{
 
     }
 
-    #parametresGeneraux #admin .titleProfil{
+    #parametresUtilisateur #user .titleProfil{
         display: none;
     }
 
-    #parametresGeneraux #admin #photo{
-        width: 160px;
-        height: 160px;
-        object-fit:fill;
-    }
-
-    #parametresGeneraux #adminInformations{
+    #parametresUtilisateur #adminInformations{
         padding: 0;
         margin: 0;
         width: 100%;
@@ -126,49 +120,57 @@ body{
     #parametresGeneraux #contentInfo {
         padding: 0;
         width: 100%;
+        margin: 0;
     }
 
-    #parametresGeneraux .information{
+    #photo{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
+
+    #parametresUtilisateur .information{
         padding: 4%;
+        width: 100%;
     }
 
-    #parametresGeneraux #admin{
+    #parametresUtilisateur #user{
         padding: 0;
         margin: 0;
         width: 100%;
     }
     
-    /* #parametresGeneraux #admin img {
-        width: 50%;
+    /* #parametresUtilisateur #user img {
+        width: 80%;
         height: 100%;
     } */
 
-    #parametresGeneraux #admin .name {
-        padding-top: 0;
-        padding-left: 0;
+    #parametresUtilisateur #user .name {
+        padding-top: 13%;
+        padding-left: 5%;
     }
 
-    #parametresGeneraux #editerProfil{
+    #parametresUtilisateur #editerProfil{
         display: none;
     }
 
-    #parametresGeneraux .information .bttn{
+    #parametresUtilisateur .information .bttn{
         display: flex;
         justify-content: center;
     }
 
-    #parametresGeneraux .profilAdmin{
+    #parametresUtilisateur .profilAdmin{
         width: 100%;
         position: relative;
         justify-content: center;
         align-items: center;           
     }
 
-    #parametresGeneraux #file {
+    #parametresUtilisateur #file {
         display: none;
     }
 
-    #parametresGeneraux #uploadButton{
+    #parametresUtilisateur #uploadButton{
         position: absolute;
         height: 30px;
         padding: 5% 5%;
@@ -177,13 +179,13 @@ body{
         background-color: #20DF7F;
         color: #fff;
         cursor: pointer;
-        left: 56%;
+        left: 58%;
         top: 80%;
     }
 }
 
 @media screen and (min-width: 530px) and (max-width: 770px){
-    #parametresGeneraux #uploadButton{
+    #parametresUtilisateur #uploadButton{
         position: absolute;
         height: 30px;
         padding: 6% 7%;
@@ -196,22 +198,22 @@ body{
         top: 82%;
     }
 
-    #parametresGeneraux .name {
+    #parametresUtilisateur .name {
         padding-top: 8%;
     }
 
-    #parametresGeneraux .profilAdmin{
+    #parametresUtilisateur .profilAdmin{
         width: 100%;
     }
 
-    #parametresGeneraux #admin img{
+    #parametresUtilisateur #user img{
         width: 80%;
         height: 100%;
     }
 }
 
 @media screen and (min-width: 100px) and (max-width: 259px){
-    #parametresGeneraux #uploadButton{
+    #parametresUtilisateur #uploadButton{
         position: absolute;
         height: 30px;
         padding: 4px 7px 5px 7px;
@@ -224,61 +226,55 @@ body{
         top: 80%;
     }
 
-    #parametresGeneraux #admin .profil {
+    #parametresUtilisateur #user .profil {
         display: flex;
         padding-top: 2%;
         padding-bottom: 2%;
 
     }
 
-    #parametresGeneraux #photo{
-        width: 100%;
-        height: 100%;
-        object-fit:fill;
-    }
-
-    #parametresGeneraux #admin .titleProfil{
+    #parametresUtilisateur #user .titleProfil{
         display: none;
     }
 
-    #parametresGeneraux #adminInformations{
+    #parametresUtilisateur #adminInformations{
         padding: 0;
         margin: 0;
         width: 100%;
     }
 
-    #parametresGeneraux #admin{
+    #parametresUtilisateur #user{
         padding: 0;
         margin: 0;
         width: 100%;
     }
     
-    #parametresGeneraux #admin img {
+    #parametresUtilisateur #user img {
         width: 100%;
         height: 80%;
     }
 
-    #parametresGeneraux #admin .name {
+    #parametresUtilisateur #user .name {
         padding: 10%;
     }
 
-    #parametresGeneraux #editerProfil{
+    #parametresUtilisateur #editerProfil{
         display: none;
     }
 
-    #parametresGeneraux .information .bttn{
+    #parametresUtilisateur .information .bttn{
         display: flex;
         justify-content: center;
     }
 
-    #parametresGeneraux .profilAdmin{
+    #parametresUtilisateur .profilAdmin{
         width: 80%;
         position: relative;
         justify-content: center;
         align-items: center;           
     }
 
-    #parametresGeneraux #file {
+    #parametresUtilisateur #file {
         display: none;
     }
 
@@ -286,40 +282,40 @@ body{
 }
 
 @media screen and (min-width:1401px) and (max-width:1450px){
-    #parametresGeneraux #admin{
+    #parametresUtilisateur #user{
         border-right: 3px solid #C8C8C8;
     }
-    #parametresGeneraux #adminInformations{
+    #parametresUtilisateur #adminInformations{
         padding: 3%;
     }
 
-    #parametresGeneraux #contentInfo {
+    #parametresUtilisateur #contentInfo {
         padding: 2%;
         width: 100%;
     }
 
-    #parametresGeneraux .information{
+    #parametresUtilisateur .information{
         padding-left: 6%;
         padding-top: 1%;
     }
 
-    #parametresGeneraux .information .bttn{
+    #parametresUtilisateur .information .bttn{
         display: flex;
         justify-content: right;
     }
 
-    #parametresGeneraux .profilAdmin{
+    #parametresUtilisateur .profilAdmin{
         width: 100%;
         position: relative;
         justify-content: center;
         align-items: center;           
     }
 
-    #parametresGeneraux #file {
+    #parametresUtilisateur #file {
         display: none;
     }
 
-    #parametresGeneraux #uploadButton{
+    #parametresUtilisateur #uploadButton{
         position: absolute;
         height: 30px;
         padding: 4px 7px 5px 7px;
@@ -334,14 +330,17 @@ body{
 
 }
 
+
+
 *{
 	margin: 0;
 	padding: 0;
 }
 body{
-	font-family: Montserrat;
+	background-color: #ededee;
 }
-#nav ul li{
+
+#navi ul li{
 	list-style-type: none;
 	padding-left: 1rem;
 }
@@ -372,7 +371,7 @@ a{
 .dropdown .dropdown-menu li{
 	padding-left: 0.2rem;
 }
-#nav ul li:active, .dropdown .dropdown-menu li:active{
+.style-nav-elem{
 	background-color: #20df7f;
 	border-left: 0.2rem solid white;
 	padding-left: 0.8rem;
@@ -404,8 +403,8 @@ a{
 	background-color: transparent;
 }
 #header img{
-		width: 45px;
-		height: 45px;
+		width: 55px;
+		height: 55px;
 	}
 
 #badge{
@@ -417,11 +416,12 @@ a{
 	border: 2px solid white;
 }
 
+
 /*================================================
 	R E S P O N S I V E     D E S I G N
 ==================================================*/
 @media screen and (max-width: 1000px){
-	#nav ul li{
+	#navi ul li{
 		padding-left: 0.1rem;
 	}
 	.nav-link-items{
@@ -433,19 +433,24 @@ a{
 }
 
 @media screen and (max-width: 823px){
-	#nav ul li .dropdown-toggle span{
+	#navi ul li .dropdown-toggle span{
 		font-size: 13px;
 	}
 }
 
-@media screen and (min-width: 768px){
-	#header-mobile-option{
+@media screen and (min-width: 767px){
+	#icone-infos,
+	#icone-chg-password
+	{
 		display: none;
 	}
-}
+}	
 
-@media screen and (max-width: 768px){
+
+
+@media screen and (max-width: 767px){
 	#header{
+		width: 100%;
 		padding-top: 10px;
 		padding-bottom: 10px;
 		box-shadow: 0 0 8px 0.7px;
@@ -455,11 +460,19 @@ a{
 	#header div div button i{
 		color: #fff;
 	}
-	#header .option-menu, #header .profil-compte .clock, #header .profil-compte .user-type{
+	#header .option-menu, 
+	#header .profil-compte .clock, 
+	#header .profil-compte .user-type, 
+	.sidebar .bakeli-tontine,
+	.sidebar #navi #nav-ul li .link-name-hidden, 
+	#nav-link-items,
+	#profil-user-link
+	{
 	 	display: none;
-	 }
+	}
 	#header .profil-compte{
 		padding-left: 10px;
+		margin: auto;
 	 	align-items: center;
 	}
 	#header .profil-compte .user-name{
@@ -473,6 +486,7 @@ a{
 	
 	.sidebar{
 		background-color: #FFF;
+		max-width: 100%;
 		box-shadow: 0 0 8px 0.7px #093545;
 		bottom: 0;
 		height: auto;
@@ -480,32 +494,33 @@ a{
 		flex-direction: row;
 	    align-items: center;
 	}
-	.sidebar #nav {
+	.sidebar #navi {
 		width: 100%;
 		padding-top: 0;
 	}
-	.sidebar #nav ul{
+	.sidebar #navi ul{
 		width: 100%;
 		margin-bottom: 0;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
 	}
-	#nav ul li a .bi, #nav ul li .nav-link-items .bi{
+	#navi ul li a .bi, #navi ul li .nav-link-items span .bi{
 		font-size: 50px;
 		color: #093545;
 	}
-	.sidebar .bakeli-tontine{
-		display: none;
+				#navi ul li:active, .dropdown .dropdown-menu li:active{
+					background-color: transparent;
+					border-left: 0;
+					padding-left: 0;
+				}
+	#navi {
+		padding: 0;
 	}
-	#nav ul li:active, .dropdown .dropdown-menu li:active{
-	background-color: transparent;
-	border-left: 0rem;
-	padding-left: 0rem;
-}
-	#nav-link-items{
-		display: none;
-	}
+	#navi ul li{
+		padding: 0;
+		margin: 0;
+	}			
 	.bi{
 		padding: 0 4px;
 	}
@@ -516,11 +531,11 @@ a{
 		font-size: 13px;
 	}
 	
-	#nav ul li a .bi{
+	#navi ul li a .bi{
 		font-size: 45px;
 		margin: auto;
 	}
-	#nav ul li span .bi{
+	#navi ul li span .bi{
 		font-size: 45px;
 	}
 
@@ -528,6 +543,7 @@ a{
 	    margin-top: auto;
 	  }
 }
+
 
 @media screen and (max-width: 575px){
 	#header .user-name{
@@ -539,4 +555,5 @@ a{
 	.option-menu{
 		font-size: 14px;
 	}
+
 }

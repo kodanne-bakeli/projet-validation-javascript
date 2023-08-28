@@ -28,7 +28,12 @@
         display: none;
         box-sizing: border-box;
     }
-   
+    .that{
+      margin-top: 250px !important;
+    }
+    body{
+      background: #093545;
+    }
   }
   
   
