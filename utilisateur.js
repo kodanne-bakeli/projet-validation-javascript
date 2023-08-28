@@ -5,7 +5,9 @@ import {
   getFirestore,
   collection,
   getDocs ,
-  addDoc
+  addDoc,
+  doc,
+  deleteDoc 
 } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -27,7 +29,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 // Récupération des éléments du DOM
-const  form = document.querySelector("form");
+const  form = document.getElementById("form");
 const name = document.getElementById("nom");
 const firstname = document.getElementById("pre");
 const birth = document.getElementById("date");
@@ -40,67 +42,72 @@ let tbody = document.getElementById("tbody");
 
 // ecoutez l'evenement lors du chargement de la page avant l'affichage des données
 
+// fonction pour ajouter les utilisateurs
+function ajouter() { 
+  // Ajouter l'utilisateur
+  addDoc(collection(db, "user"), {
+    name: name.value,
+    prenom: firstname.value,
+    date: birth.value,
+    profession: profession.value,
+    email: email.value,
+    telephone: telephone.value,
+    adresse: adresse.value,
+    organisation: organisation.value,
+  });
+};
+
+// écoutons l'evenement lorsqu'on saisie des informations via le formulaire
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  ajouter();
+  
+});
+
+
+// recuperation des donnés
 document.addEventListener("DOMContentLoaded", async (e) => {
-  // le code pour créer et afficher le tableau ici
-  const querySnapshot = await getDocs(collection(db, "users"));
-  querySnapshot.forEach((doc) => {
-    // console.log(doc.id, " => ", doc.data());
-    const user = doc.data();
+  try {
+    
+    // Récupérer les données de la collection "users"
+    const userSnapshot = await getDocs(collection(db, "user"));
+    const usersData = [];
+    userSnapshot.forEach((doc) => {
+      usersData.push({ id: doc.id, ...doc.data() });
+    });
+
+    // Récupérer les données de la collection "cotisations"
+    const cotisationsSnapshot = await getDocs(collection(db, "cotisations"));
+    const cotisationsData = [];
+    cotisationsSnapshot.forEach((doc) => {
+    cotisationsData.push({ id: doc.id, ...doc.data() });
+    });
+    // Afficher les données récupérées
+    // const user = usersData.data();
     let tr = document.createElement("tr");
     tr.innerHTML = `
-    <td>${user.prenom} ${user.name}</td>
+    <td>${usersData[0].prenom} ${usersData[0].name}</td>
     <td>300.000 FCFA</td>
     <td>01/01/2022</td>
     <td class="d-flex gap-2 justify-content-center align-items-center">
-        <div class="progress mt-2 w-75">
-            <div class="progress-bar bg-dark progwidth" id="t2" role="progressbar"
-                aria-valuenow="57" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-        <span class="progress-label">57%</span>
+    <div class="progress mt-2 w-75">
+      <div class="progress-bar bg-dark progwidth" role="progressbar"
+      aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <span class="progress-label">50%</span>
     </td>
-    <td class="fw-semibold text-danger">Bloqué</td>
-    <td><i class="fa-solid fa-eye ms-4"></i>
+    <td class="fw-semibold text">Actif</td>
+    <td><i class="fa-solid fa-eye ms-4" data-bs-toggle="modal" data-bs-target="#example3Modal"></i>
         <i class="fa fa-archive"></i>
-        <i class="fa fa-ban text-danger"></i>
+        <i class="fa fa-ban"></i>
     </td>
     `
     tbody.appendChild(tr);
-  });
+
+    console.log("Données des utilisateurs:", usersData);
+    console.log("Données des cotisations:", cotisationsData);
+  } catch (error) {
+      console.error("Erreur lors de la récupération des données:", error);
+  }
 });
-
-// écoutons l'evenement lorsqu'on saisie des informations via le formulaire
-const bajouter = document.getElementById("ajouter");
-bajouter.addEventListener("click", (e) => {
-  // e.preventDefault();
-  ajouter();
-});
-
-// fonction pour ajouter les utilisateurs
-function ajouter() {
-  const nom = name.value;
-  const prenom = firstname.value;
-  const date = birth.value;
-  const prof = profession.value;
-  const mail = email.value;
-  const phone = telephone.value;
-  const address = adresse.value;
-  const org = organisation.value;
- 
-  // Ajouter l'utilisateur
-  addDoc(collection(db, "users"), {
-    name: nom,
-    prenom: prenom,
-    date: date,
-    profession: prof,
-    email: mail,
-    telephone: phone,
-    adresse: address,
-    organisation: org
-  });
-  alert("User added");
-};
-
-
-
-
 
