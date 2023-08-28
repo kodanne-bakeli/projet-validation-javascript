@@ -31,13 +31,13 @@ function getAdmin(){
             profilInfo.innerHTML = '';
             profilInfo.innerHTML = 
           `<p class="titleProfil">Profil</p>
-            <div class="pb-5 profil">
-                <div class="profilAdmin">
+            <div class="pb-5 profil row">
+                <div class="profilAdmin col-lg-12 col-sm-12">
                     <img src="${doc.data().profilURL}" class="rounded-circle" alt="img" id="photo">
                     <input type="file" name="file" id="file" onclick="chgImgProfil()">
                     <label for="file" id="uploadButton" class="d-flex justify-content-center align-items-center"><i class="bi bi-camera-fill"></i></label>
                 </div>
-                <div class="name">
+                <div class="name col-lg-12 col-sm-12 pt-4">
                     <h3 class="fs-3 fw-bold" id="profilName">${doc.data().prenom} ${doc.data().name}</h3>
                     <p class="fs-4 fw-bold" id="profilStatut">${doc.data().admin}</p>
                 </div>
@@ -71,6 +71,7 @@ function update(id){
         nom.value = '';
         email.value = '';
         phone.value = '';
+        window.location.href = "parametresGeneraux.html"
     }).catch(function(error){
         console.error("Error removing document:" , error)
     })
