@@ -32,7 +32,7 @@ function getAdmin(){
           `<p class="titleProfil">Profil</p>
             <div class="pb-5 profil">
                 <div class="profilAdmin">
-                    <img src="${doc.data().profilURL}" class="rounded-circle" alt="img" id="photo">
+                    <img src="${doc.data().profilURL}" class="rounded-circle img-fluid" alt="img" id="photo">
                     <input type="file" name="file" id="file" onclick="chgImgProfil()">
                     <label for="file" id="uploadButton" class="d-flex justify-content-center align-items-center"><i class="bi bi-camera-fill"></i></label>
                 </div>
