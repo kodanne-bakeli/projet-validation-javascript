@@ -86,9 +86,9 @@ body {
     margin-top: 20px;
 }
 
-.progress .progress-value {
+.progress-value {
     font-size: 10px;
-    font-weight: 200;
+    font-weight: 400;
     color: rgba(9, 53, 69, 1) !important;
     position: absolute;
     top: -17px;
