@@ -34,7 +34,7 @@ let names = document.querySelectorAll(".user-name")
 let btnprevs = document.querySelectorAll(".Prev")
 let btndate = document.querySelector(".cotise .form .date")
 let btnnumber = document.querySelector(".cotise .form .number")
-let form = document.querySelector(".cotise .form")
+let btncotise = document.querySelector(".cotise .form .btncotise")
 let tableTwo = document.getElementById("tableTwo")
 let dateOne = ["", "Janvier", "Février", "Mars", "Avril", "Mai", "Juin"]
 let dateTwo = ["", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre"]
@@ -68,14 +68,18 @@ window.addEventListener("DOMContentLoaded", async (e) => {
         }
         console.log(" => ", cotis);
     };
-    form.addEventListener("submit", async () => {
+    btncotise.addEventListener("click", async (e) => {
+        e.preventDefault()
         await updateDoc(docref, {
             "debutDate": btndate.value,
             "cotiseMontant": btnnumber.value
+            
         })
-        const cotis = querySnapshot.data()
-        console.log(cotis);
-        window.location.reload()
+        console.log("donnees mise a jour")
+        setTimeout(() => {
+            window.location.reload()
+        }, 1000);
+        
     });
     btnnexts.forEach((btnnext)=>{
         btnnext.addEventListener("click", () => {
