@@ -28,13 +28,14 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 let tableOne = document.getElementById("tableOne")
-let btnnext = document.querySelector(".Next")
-let btnprev = document.querySelector(".Prev")
+let btnnexts = document.querySelectorAll(".Next")
+let profils = document.querySelectorAll(".img-profil")
+let names = document.querySelectorAll(".user-name")
+let btnprevs = document.querySelectorAll(".Prev")
 let btndate = document.querySelector(".cotise .form .date")
 let btnnumber = document.querySelector(".cotise .form .number")
 let form = document.querySelector(".cotise .form")
 let tableTwo = document.getElementById("tableTwo")
-let main = document.getElementsByClassName("table-responsive")
 let dateOne = ["", "Janvier", "Février", "Mars", "Avril", "Mai", "Juin"]
 let dateTwo = ["", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre"]
 window.addEventListener("DOMContentLoaded", async (e) => {
@@ -66,76 +67,77 @@ window.addEventListener("DOMContentLoaded", async (e) => {
 
         }
         console.log(" => ", cotis);
-
-
-
-
     };
-    form.addEventListener("submit",async()=>{
+    form.addEventListener("submit", async () => {
         await updateDoc(docref, {
-        "debutDate": btndate.value,
-        "cotiseMontant": btnnumber.value
-    })
-    window.location.reload()
+            "debutDate": btndate.value,
+            "cotiseMontant": btnnumber.value
+        })
+        const cotis = querySnapshot.data()
+        console.log(cotis);
+        window.location.reload()
     });
-    btnnext.addEventListener("click", () => {
-        tableTwo.innerHTML = `
-    <thead>
- <tr>
-<th scope="col" class="bg-success text-primary">Mois</th>
-<th scope="col" class="bg-success text-primary">Date</th>
-<th scope="col" class="bg-success text-primary">Montant</th>
-<th scope="col" class="bg-success text-primary">Statut</th>
-<th scope="col" class="bg-success text-primary">Actions</th>
- </tr>
-</thead>`
-        document.querySelector(".active div").classList.remove("bg-success")
-        document.querySelector(".active div").classList.add("text-info")
-        document.querySelector(".active div").classList.remove("text-white")
-        document.querySelector(".active div").classList.add("bg-white")
-        document.querySelector("#tableOne").classList.add("d-none")
-        document.querySelector(".next div").classList.add("bg-success")
-        document.querySelector(".next div").classList.add("active")
-        document.querySelector(".next div").classList.add("text-white")
-        document.querySelector(".next div").classList.remove("bg-white")
-        document.querySelector("#tableTwo").classList.remove("d-none")
-        document.querySelector(".prev").classList.remove("disabled")
-        document.querySelector(".prev").classList.add("fw-bold")
-        document.querySelector(".nexte").classList.add("disabled")
-        document.querySelector(".nexte").classList.remove("fw-bold")
-
-
-        if (querySnapshot.exists()) {
-            const cotis = querySnapshot.data()
-            console.log(cotis)
-            for (let i = 1; i < dateTwo.length; i++) {
-                tableTwo.innerHTML += `<table>
-            
-            <tbody>
-            <tr>
-                <th scope="row">${dateTwo[i]}</th>
-                <td>${cotis.debutDate}</td>
-                <td>${cotis.cotiseMontant}FCFA</td>
-                <td class="text-primary fw-bold"> En attente</td>
-                <td><i class="bi bi-eye" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal1"></i>
-                    <i class="bi bi-pencil-square"></i>
-                </td>
-            </tr>
-            
-        </tbody>
-        </table>
-        `
-
+    btnnexts.forEach((btnnext)=>{
+        btnnext.addEventListener("click", () => {
+            tableTwo.innerHTML = `
+        <thead>
+     <tr>
+    <th scope="col" class="bg-success text-primary">Mois</th>
+    <th scope="col" class="bg-success text-primary">Date</th>
+    <th scope="col" class="bg-success text-primary">Montant</th>
+    <th scope="col" class="bg-success text-primary">Statut</th>
+    <th scope="col" class="bg-success text-primary">Actions</th>
+     </tr>
+    </thead>`
+            document.querySelector(".active div").classList.remove("bg-success")
+            document.querySelector(".active div").classList.add("text-info")
+            document.querySelector(".active div").classList.remove("text-white")
+            document.querySelector(".active div").classList.add("bg-white")
+            document.querySelector("#tableOne").classList.add("d-none")
+            document.querySelector(".next div").classList.add("bg-success")
+            document.querySelector(".next div").classList.add("active")
+            document.querySelector(".next div").classList.add("text-white")
+            document.querySelector(".next div").classList.remove("bg-white")
+            document.querySelector("#tableTwo").classList.remove("d-none")
+            document.querySelector(".prev").classList.remove("disabled")
+            document.querySelector(".prev").classList.add("fw-bold")
+            document.querySelector(".nexte").classList.add("disabled")
+            document.querySelector(".nexte").classList.remove("fw-bold")
+    
+    
+            if (querySnapshot.exists()) {
+                const cotis = querySnapshot.data()
+                console.log(cotis)
+                for (let i = 1; i < dateTwo.length; i++) {
+                    tableTwo.innerHTML += `<table>
+                
+                <tbody>
+                <tr>
+                    <th scope="row">${dateTwo[i]}</th>
+                    <td>${cotis.debutDate}</td>
+                    <td>${cotis.cotiseMontant}FCFA</td>
+                    <td class="text-primary fw-bold"> En attente</td>
+                    <td><i class="bi bi-eye" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal1"></i>
+                        <i class="bi bi-pencil-square"></i>
+                    </td>
+                </tr>
+                
+            </tbody>
+            </table>
+            `
+    
+                }
+                console.log(doc.id, " => ", cotis);
+    
             }
-            console.log(doc.id, " => ", cotis);
+        })
+    })
+    
 
-        }
-})
-
-
-btnprev.addEventListener("click", async () => {
-    tableOne.innerHTML = `
+btnprevs.forEach((btnprev)=>{
+    btnprev.addEventListener("click", async () => {
+        tableOne.innerHTML = `
     <thead>
 <tr>
 <th scope="col" class="bg-success text-primary">Mois</th>
@@ -145,23 +147,23 @@ btnprev.addEventListener("click", async () => {
 <th scope="col" class="bg-success text-primary">Actions</th>
 </tr>
 </thead>`
-    document.querySelector(".active div").classList.add("bg-success")
-    document.querySelector(".active div").classList.add("text-white")
-    document.querySelector("#tableOne").classList.remove("d-none")
-    document.querySelector(".active div").classList.remove("text-info")
-    document.querySelector(".active div").classList.remove("bg-white")
-    document.querySelector(".next div").classList.remove("bg-success")
-    document.querySelector(".next div").classList.remove("text-white")
-    document.querySelector("#tableTwo").classList.add("d-none")
-    document.querySelector(".next div").classList.add("bg-white")
-    document.querySelector(".prev").classList.add("disabled")
-    document.querySelector(".nexte").classList.remove("disabled")
-    if (querySnapshot.exists()) {
-        const cotis = querySnapshot.data()
-        console.log(cotis)
-        console.log(cotis)
-        for (let i = 1; i < dateOne.length; i++) {
-            tableOne.innerHTML += `<table>
+        document.querySelector(".active div").classList.add("bg-success")
+        document.querySelector(".active div").classList.add("text-white")
+        document.querySelector("#tableOne").classList.remove("d-none")
+        document.querySelector(".active div").classList.remove("text-info")
+        document.querySelector(".active div").classList.remove("bg-white")
+        document.querySelector(".next div").classList.remove("bg-success")
+        document.querySelector(".next div").classList.remove("text-white")
+        document.querySelector("#tableTwo").classList.add("d-none")
+        document.querySelector(".next div").classList.add("bg-white")
+        document.querySelector(".prev").classList.add("disabled")
+        document.querySelector(".nexte").classList.remove("disabled")
+        if (querySnapshot.exists()) {
+            const cotis = querySnapshot.data()
+            console.log(cotis)
+            console.log(cotis)
+            for (let i = 1; i < dateOne.length; i++) {
+                tableOne.innerHTML += `<table>
             
             <tbody>
             <tr>
@@ -179,10 +181,35 @@ btnprev.addEventListener("click", async () => {
         </table>
         `
 
-        }
-        console.log(doc.id, " => ", cotis);
+            }
+            console.log(doc.id, " => ", cotis);
 
-    }
+        }
+    })
 })
+   
+    const docRef = doc(db, "user", "os4eD2Gp7X87zRdoAISv")
+    const qerySnapshot = await getDoc(docRef)
+    if (qerySnapshot.exists()) {
+        const cotis = qerySnapshot.data()
+        console.log(cotis)
+        profils.forEach((profil) => {
+            profil.src = cotis.profilURL
+        })
+        console.log(profils)
+    }
+    if (qerySnapshot.exists()) {
+        const cotis = qerySnapshot.data()
+        console.log(cotis)
+        names.forEach((name) => {
+            name.innerHTML = cotis.prenom + " " + cotis.name
+        })
+        console.log(names)
+    }
+
+
+
+
+
 
 })

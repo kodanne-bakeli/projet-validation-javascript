@@ -82,10 +82,10 @@
 				<div class="d-flex profil-compte">
 
 					<div class="d-flex mx-2">
-						<img src="images/profil.png" class="rounded-circle me-2 me-md-4 my-auto">
+						<img src="images/profil.png" class="rounded-circle me-2 me-md-4 my-auto img-profil">
 						<div class="d-flex flex-column lh-1 py-auto">
-							<h3 class="fw-bold py-0 user-name">Faly Seck</h3> 
-							<p class="text-muted py-0 user-type">User</p>
+							<h3 class="fw-bold py-0 user-name">User</h3> 
+							<p class="text-muted py-0 user-type">Utilisateur</p>
 						</div>
 						<button class="ms-3 my-auto border-0" id="header-btn-down"><i class="bi bi-caret-down-fill align-middle"></i></button>
 
@@ -114,7 +114,7 @@
                 <main class="userdashboard mb-5 pb-5 w-100 mx-auto">
                     <div class="container  main">
                         <div class="row row-cols-1 row-cols-md-3 my-4 justify-content-center">
-                            <div class="col-12 col-md-4">
+                            <div class="col-12 col-md-4 my-1">
                                 <div class="card mb-3 shadow ">
                                     <div class="card-body">
                                         <h6 class="card-title">Total Cotisé</h6>
@@ -125,7 +125,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-4">
+                            <div class="col-12 col-md-4 my-1">
                                 <div class="card mb-3 shadow ">
                                     <div class="card-body">
                                         <h6 class="card-title">Montant Restant</h6>
@@ -135,7 +135,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-4 caisse">
+                            <div class="col-12 col-md-4 caisse my-1">
                                 <div class="card mb-3 shadow ">
                                     <div class="card-body d-flex">
                                         <div class="align-self-stretch me-3 me-md-3"><i
@@ -159,7 +159,7 @@
                         </div>
 
                         <div class="container-fluid w-100">
-                            <div class="d-md-flex d-none "><a class="btn btn-primary ms-auto mb-3"
+                            <div class="d-md-flex "><a class="btn btn-primary ms-0 ms-md-auto mb-3"
                                     data-bs-toggle="modal" data-bs-target="#exampleModal">Je cotise</a></div>
                             <div class="table-responsive">
                                 <table class="table table-borderless my-3" id="tableOne">
@@ -191,7 +191,7 @@
                                 <nav aria-label="...">
                                     <ul class="pagination">
                                         <li class="page-item disabled prev" href="#">
-                                            <a class="page-link border-0 bg-transparent text-dark " onclick="Prev()">Previous page</a>
+                                            <a class="page-link border-0 bg-transparent text-dark Prev" onclick="Prev()">Previous page</a>
                                         </li>
                                         <li class="page-item active" aria-current="page"><a class="page-link border-0 bg-transparent Prev" href="#">
                                                 <div class="bg-success rounded-circle d-flex justify-content-center align-items-center"><b>1</b></div>
@@ -202,7 +202,7 @@
                                             </a>
                                         </li>
                                         <li class="page-item nexte">
-                                            <a class="page-link text-dark fw-bold border-0 bg-transparent " href="#">Next page</a>
+                                            <a class="page-link text-dark fw-bold border-0 bg-transparent Next" href="#">Next page</a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -216,9 +216,9 @@
                                 <div class="modal-content">
                                     <div class="modal-body text-center cotise">
                                         <img src="images/profil.png"
-                                            class="img-fluid rounded-circle w-25"
+                                            class="img-fluid rounded-circle w-25 img-profil"
                                             alt="photo de faly seck">
-                                        <h3 class="text-primary">Faly Seck</h3>
+                                        <h3 class="text-primary user-name">Faly Seck</h3>
                                         <h3 class="text-primary">Ajouter une cotisation</h3>
                                         <form action="" class="form">
                                             <input type="date" name="" id="" class="form-control mb-3 date">
@@ -257,9 +257,9 @@
                             <div class="modal-content">
                                 <div class="modal-body text-center">
                                     <img src="./images/profil.png"
-                                        class="img-fluid rounded-circle border border-success w-25"
+                                        class="img-fluid rounded-circle border border-success w-25 img-profil"
                                         alt="photo de faly seck">
-                                    <h3 class="text-primary">Faly Seck</h3>
+                                    <h3 class="text-primary user-name>Faly Seck</h3>
                                     <h3 class="text-primary">modifier la cotisation</h3>
                                     <form action="">
                                         <input type="date" name="" id="" class="form-control mb-3">
