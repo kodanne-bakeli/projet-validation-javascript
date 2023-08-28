@@ -31,7 +31,7 @@ body{
 
 
 /* media quiries */
-@media screen and (min-width:560px) and (max-width:1400px){
+@media screen and (min-width:560px) {
     #parametresGeneraux #admin{
         border-right: 3px solid #C8C8C8;
     }

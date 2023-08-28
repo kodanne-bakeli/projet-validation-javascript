@@ -43,10 +43,10 @@ connexionButton.addEventListener("click", () => {
 });
 
 // Vérifie l'état de l'authentification à chaque chargement de page
-auth.onAuthStateChanged((user) => {
-  if (user) {
-    window.location.href = "/cotisations.html";
-  } else {
-    window.location.href = "/connexion.html";
-  }
-});
+// auth.onAuthStateChanged((user) => {
+//   if (user) {
+//     window.location.href = "cotisations.html";
+//   } else {
+//     window.location.href = "page-connexion.html";
+//   }
+// });
