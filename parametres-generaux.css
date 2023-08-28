@@ -29,8 +29,14 @@ body{
     width: 45%;
 }
 
+#parametresGeneraux #photo{
+    width: 150px;
+    height: 150px;
+    object-fit:fill;
+}
 
-/* media quiries */
+
+/* media queries */
 @media screen and (min-width:560px) and (max-width:1400px){
     #parametresGeneraux #admin{
         border-right: 3px solid #C8C8C8;
@@ -105,6 +111,12 @@ body{
         display: none;
     }
 
+    #parametresGeneraux #admin #photo{
+        width: 160px;
+        height: 160px;
+        object-fit:fill;
+    }
+
     #parametresGeneraux #adminInformations{
         padding: 0;
         margin: 0;
@@ -126,14 +138,14 @@ body{
         width: 100%;
     }
     
-    #parametresGeneraux #admin img {
-        width: 80%;
+    /* #parametresGeneraux #admin img {
+        width: 50%;
         height: 100%;
-    }
+    } */
 
     #parametresGeneraux #admin .name {
-        padding-top: 13%;
-        padding-left: 5%;
+        padding-top: 0;
+        padding-left: 0;
     }
 
     #parametresGeneraux #editerProfil{
@@ -146,7 +158,7 @@ body{
     }
 
     #parametresGeneraux .profilAdmin{
-        width: 60%;
+        width: 100%;
         position: relative;
         justify-content: center;
         align-items: center;           
@@ -159,13 +171,13 @@ body{
     #parametresGeneraux #uploadButton{
         position: absolute;
         height: 30px;
-        padding: 6% 7%;
+        padding: 5% 5%;
         width: 30px;
         border-radius: 50%;
         background-color: #20DF7F;
         color: #fff;
         cursor: pointer;
-        left: 65%;
+        left: 56%;
         top: 80%;
     }
 }
@@ -217,6 +229,12 @@ body{
         padding-top: 2%;
         padding-bottom: 2%;
 
+    }
+
+    #parametresGeneraux #photo{
+        width: 100%;
+        height: 100%;
+        object-fit:fill;
     }
 
     #parametresGeneraux #admin .titleProfil{

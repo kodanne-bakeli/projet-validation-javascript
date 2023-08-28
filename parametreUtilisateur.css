@@ -29,8 +29,14 @@ body{
     width: 45%;
 }
 
+#photo{
+    width: 120px;
+    height: 120px;
+    object-fit:fill;
+}
 
-/* media quiries */
+
+/* media queries */
 @media screen and (min-width:560px) and (max-width:1400px){
     #parametresUtilisateur #user{
         border-right: 3px solid #C8C8C8;
@@ -105,6 +111,13 @@ body{
         display: none;
     }
 
+    #photo{
+        width: 100%;
+        height: 100%;
+        border-radius: 50% !important;
+        object-fit: cover;
+    }
+
     #parametresUtilisateur #adminInformations{
         padding: 0;
         margin: 0;
@@ -132,8 +145,8 @@ body{
     }
 
     #parametresUtilisateur #user .name {
-        padding-top: 13%;
-        padding-left: 5%;
+        padding-top: 0;
+        padding-left: 0;
     }
 
     #parametresUtilisateur #editerProfil{
@@ -494,11 +507,11 @@ a{
 		font-size: 50px;
 		color: #093545;
 	}
-				#navi ul li:active, .dropdown .dropdown-menu li:active{
-					background-color: transparent;
-					border-left: 0;
-					padding-left: 0;
-				}
+    #navi ul li:active, .dropdown .dropdown-menu li:active{
+        background-color: transparent;
+        border-left: 0;
+        padding-left: 0;
+    }
 	#navi {
 		padding: 0;
 	}
@@ -526,7 +539,7 @@ a{
 
 	.sidebar nav {
 	    margin-top: auto;
-	  }
+	}
 }
 
 

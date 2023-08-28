@@ -13,6 +13,7 @@ let usersView = document.getElementById('informationGenerale');
 let profilInfo = document.querySelector('#admin');
 let imgHeader = document.getElementById("imgHeader");
 var adminHeaderName = document.querySelector('.user-name');
+var adminHeaderStatut = document.querySelector('.user-type');
 profilInfo.innerHTML = ''
 db.collection("admin").onSnapshot((querySnapshot) => {
     usersView.innerHTML = '';
@@ -39,22 +40,23 @@ db.collection("admin").onSnapshot((querySnapshot) => {
 
       profilInfo.innerHTML = 
       `<p class="titleProfil">Profil</p>
-        <div class="pb-5 profil">
-        <div class="profilAdmin">
-            <img src="${doc.data().profilURL}" class="rounded-circle" alt="img" id="photo">
+      <div class="pb-5 profil row">
+        <div class="profilAdmin col-lg-12 col-sm-12">
+            <img src="${doc.data().profilURL}" class="rounded-circle img-fluid" alt="img" id="photo">
         </div>
-        <div class="name">
+        <div class="name col-lg-12 col-sm-12 pt-4">
             <h3 class="fs-3 fw-bold" id="profilName">${doc.data().prenom} ${doc.data().name}</h3>
-            <p class="fs-4 fw-bold" id="profilStatut">Admin</p>
+            <p class="fs-4 fw-bold" id="profilStatut">${doc.data().admin}</p>
         </div>
-        </div>
-        <div>
-            <a href="editProfil.html">
-                <button class="btn" id="editerProfil">Editer le profil</button>
-            </a>
-        </div>`
+      </div>
+      <div>
+          <a href="editProfil.html">
+              <button class="btn" id="editerProfil">Editer le profil</button>
+          </a>
+      </div>`
         imgHeader.src = doc.data().profilURL;
         adminHeaderName.innerHTML = doc.data().prenom +' '+ doc.data().name;
+        adminHeaderStatut.innerHTML = doc.data().admin
     });
 
 });

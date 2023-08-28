@@ -21,10 +21,9 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
 // Récupération de l'élément du DOM
-const deconnexionButton = document.getElementById("deconnexion");
 
 // Déconnexion
-deconnexionButton.addEventListener("click", () => {
+let deconnexionButton = function() {
   auth
     .signOut()
     .then(() => {
@@ -34,13 +33,13 @@ deconnexionButton.addEventListener("click", () => {
     .catch((error) => {
       alert("Logout error:", error.message);
     });
-});
+}
 
 // Vérifie l'état de l'authentification à chaque chargement de page
 auth.onAuthStateChanged((user) => {
   if (user) {
-    window.location.href = "/cotisations.html";
+    window.location.href = "cotisations.html";
   } else {
-    window.location.href = "/connexion.html";
+    window.location.href = "connexion.html";
   }
 });
