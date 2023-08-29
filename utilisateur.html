@@ -133,27 +133,27 @@
                 <section class="container pt-5 contsection">
                     <div class="row mx-auto les-trois-card-du-haut">
                         <div class="col-lg-4">
-                            <div class="card shadow border-0 mb-3 box1">
+                            <div class="card shadow border-0 mb-3" id="box1">
                                 <div class="card-body">
                                     <h5 class="card-title titreUser">Membres Actifs <i
                                             class="fa fa-circle text-success"></i></h5>
-                                    <p class="card-text fw-bold  pUser">94 Membres</p>
+                                    <p class="card-text fw-bold  pUser">5 Membres</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4">
-                            <div class="card shadow border-0 mb-3 box2">
+                            <div class="card shadow border-0 mb-3" id="box2">
                                 <div class="card-body">
                                     <h5 class="card-title ">Membres Bloqués <i class="fa fa-ban text-danger"></i></h5>
-                                    <p class="card-text fw-bold">6 Membres</p>
+                                    <p class="card-text fw-bold">1 Membres</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4">
-                            <div class="card shadow border-0 mb-3 vert box3">
+                            <div class="card shadow border-0 mb-3" id="box3">
                                 <div class="card-body">
                                     <h5 class="card-title ">Total Effectifs </h5>
-                                    <p class="card-text fw-bold">100 Membres</p>
+                                    <p class="card-text fw-bold " id="totalEff"></p>
                                 </div>
                             </div>
                         </div>
@@ -168,8 +168,8 @@
                         </div>
                     </div>
                         <!-- tableau des membres actifs -->
-                    <div class="row  d-block table-responsive-lg ">
-                        <table class="table table1-cotisations table1 table-borderless d-none">
+                    <div class="container  d-block table-responsive-lg ">
+                        <table class="table table1-cotisations  table-borderless" id="table1">
                             <thead>
                                 <tr>
                                     <th class="th-top-left " scope="col">
@@ -210,96 +210,11 @@
                                         <i class="fa fa-ban"></i>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>Emma watson</td>
-                                    <td>300.000 FCFA</td>
-                                    <td>01/01/2022</td>
-                                    <td class="d-flex gap-2 justify-content-center align-items-center">
-                                        <div class="progress mt-2 w-75">
-                                            <div class="progress-bar bg-dark progwidth" id="t2" role="progressbar"
-                                                aria-valuenow="57" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                        <span class="progress-label">57%</span>
-                                    </td>
-                                    <td class="fw-semibold">En cours</td>
-                                    <td><i class="fa-solid fa-eye ms-4" data-bs-toggle="modal" data-bs-target="#example3Modal"></i>
-                                        <i class="fa fa-archive"></i>
-                                        <i class="fa fa-ban"></i>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Jonh Robert</td>
-                                    <td>300.000 FCFA</td>
-                                    <td>01/01/2022</td>
-                                    <td class="d-flex gap-2 justify-content-center align-items-center">
-                                        <div class="progress mt-2 w-75">
-                                            <div class="progress-bar vert1" role="progressbar" aria-valuenow="100"
-                                                aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                        <span class="progress-label">100%</span>
-                                    </td>
-                                    <td class="text fw-semibold">Terminé</td>
-                                    <td><i class="fa-solid fa-eye ms-4" data-bs-toggle="modal" data-bs-target="#example2Modal"></i>
-                                        <i class="fa fa-archive"></i>
-                                        <i class="fa fa-ban"></i>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Anne Hataway</td>
-                                    <td>300.000 FCFA</td>
-                                    <td>01/01/2022</td>
-                                    <td class="d-flex gap-2 justify-content-center align-items-center">
-                                        <div class="progress mt-2 w-75">
-                                            <div class="progress-bar bg-dark progwidth" role="progressbar"
-                                                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                        <span class="progress-label">50%</span>
-                                    </td>
-                                    <td class="fw-semibold">En cours</td>
-                                    <td><i class="fa-solid fa-eye ms-4" data-bs-toggle="modal" data-bs-target="#example4Modal"></i>
-                                        <i class="fa fa-archive"></i>
-                                        <i class="fa fa-ban"></i>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Ravi Shankar</td>
-                                    <td>300.000 FCFA</td>
-                                    <td>01/01/2022</td>
-                                    <td class="d-flex gap-2 justify-content-center align-items-center">
-                                        <div class="progress mt-2 w-75">
-                                            <div class="progress-bar bg-dark progwidth" role="progressbar"
-                                                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                        <span class="progress-label">50%</span>
-                                    </td>
-                                    <td class="fw-semibold">En cours</td>
-                                    <td><i class="fa-solid fa-eye ms-4" data-bs-toggle="modal" data-bs-target="#example2Modal"></i>
-                                        <i class="fa fa-archive"></i>
-                                        <i class="fa fa-ban"></i>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="td-bottom-left">Emma stone</td>
-                                    <td>300.000 FCFA</td>
-                                    <td>01/01/2022</td>
-                                    <td class="d-flex gap-2 justify-content-center align-items-center">
-                                        <div class="progress mt-2 w-75">
-                                            <div class="progress-bar bg-dark progwidth" id="t6" role="progressbar"
-                                                aria-valuenow="64" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                        <span class="progress-label">64%</span>
-                                    </td>
-                                    <td class="fw-semibold">En cours</td>
-                                    <td><i class="fa-solid fa-eye ms-4" data-bs-toggle="modal" data-bs-target="#example2Modal"></i>
-                                        <i class="fa fa-archive"></i>
-                                        <i class="fa fa-ban"></i>
-                                    </td>
-                                </tr>
                             </tbody>
                         </table>
                         <!-- tableau des membres bloqués -->
-                        <div class="row table-responsive-sm d-none">
-                            <table class="table table1-cotisations  table-borderless">
+                        <div class="row table-responsive-lg mx-auto">
+                            <table class="table table1-cotisations  table-borderless" id="table2">
                                 <thead>
                                     <tr>
                                         <th class="th-top-left " scope="col">
@@ -330,63 +245,12 @@
                                             <i class="fa fa-ban text-danger"></i>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>Emma watson</td>
-                                        <td>300.000 FCFA</td>
-                                        <td>01/01/2022</td>
-                                        <td class="text-danger fw-semibold">Bloqué</td>
-                                        <td><i class="fa-solid fa-eye ms-4" data-bs-toggle="modal" data-bs-target="#example3Modal"></i>
-                                            <i class="fa fa-archive"></i>
-                                            <i class="fa fa-ban text-danger"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Jonh Robert</td>
-                                        <td>300.000 FCFA</td>
-                                        <td>01/01/2022</td>
-                                        <td class="text-danger fw-semibold">Bloqué</td>
-                                        <td><i class="fa-solid fa-eye ms-4"></i>
-                                            <i class="fa fa-archive"></i>
-                                            <i class="fa fa-ban text-danger"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Anne Hataway</td>
-                                        <td>300.000 FCFA</td>
-                                        <td>01/01/2022</td>
-                                        <td class="text-danger fw-semibold">Bloqué</td>
-                                        <td><i class="fa-solid fa-eye ms-4" data-bs-toggle="modal" data-bs-target="#example4Modal"></i>
-                                            <i class="fa fa-archive"></i>
-                                            <i class="fa fa-ban text-danger"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Ravi Shankar</td>
-                                        <td>300.000 FCFA</td>
-                                        <td>01/01/2022</td>
-                                        <td class="text-danger fw-semibold">Bloqué</td>
-                                        <td><i class="fa-solid fa-eye ms-4" data-bs-toggle="modal" data-bs-target="#example2Modal"></i>
-                                            <i class="fa fa-archive"></i>
-                                            <i class="fa fa-ban text-danger"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="td-bottom-left">Emma stone</td>
-                                        <td>300.000 FCFA</td>
-                                        <td>01/01/2022</td>
-                                        <td class="text-danger fw-semibold">Bloqué</td>
-                                        <td><i class="fa-solid fa-eye ms-4" data-bs-toggle="modal" data-bs-target="#example2Modal"></i>
-                                            <i class="fa fa-archive"></i>
-                                            <i class="fa fa-ban text-danger"></i>
-                                        </td>
-                                    </tr>
                                 </tbody>
                             </table>
                         </div>
-                    
                         <!-- tableau  effectifs total -->
-                        <div class="  d-block table-responsive-lg">
-                            <table class="table table1-cotisations table-borderless ">
+                        <div class="d-block table-responsive-lg mx-auto">
+                            <table class="table table1-cotisations table-borderless" id="table3">
                                 <thead>
                                     <tr>
                                         <th class="th-top-left " scope="col">
@@ -410,110 +274,7 @@
                                     </tr>
                                 </thead>
                                 <tbody class="bg-light" id="tbody">
-                                    <!-- <tr>
-                                        <td>Selena Roy</td>
-                                        <td>300.000 FCFA</td>
-                                        <td>01/01/2022</td>
-                                        <td class="d-flex gap-2 justify-content-center align-items-center">
-                                            <div class="progress mt-2 w-75" style="height: 5px">
-                                                <div class="progress-bar vert1" role="progressbar" aria-valuenow="100"
-                                                    aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                            <span class="progress-label">100%</span>
-                                        </td>
-                                        <td class="text fw-semibold">Actif</td>
-                                        <td><i class="fa-solid fa-eye ms-4" data-bs-toggle="modal" data-bs-target="#example3Modal"></i>
-                                            <i class="fa fa-archive"></i>
-                                            <i class="fa fa-ban"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Emma watson</td>
-                                        <td>300.000 FCFA</td>
-                                        <td>01/01/2022</td>
-                                        <td class="d-flex gap-2 justify-content-center align-items-center">
-                                            <div class="progress mt-2 w-75">
-                                                <div class="progress-bar bg-dark progwidth" id="t2" role="progressbar"
-                                                    aria-valuenow="57" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                            <span class="progress-label">57%</span>
-                                        </td>
-                                        <td class="fw-semibold text-danger">Bloqué</td>
-                                        <td><i class="fa-solid fa-eye ms-4"></i>
-                                            <i class="fa fa-archive"></i>
-                                            <i class="fa fa-ban text-danger"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Jonh Robert</td>
-                                        <td>300.000 FCFA</td>
-                                        <td>01/01/2022</td>
-                                        <td class="d-flex gap-2 justify-content-center align-items-center">
-                                            <div class="progress mt-2 w-75">
-                                                <div class="progress-bar vert1" role="progressbar" aria-valuenow="100"
-                                                    aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                            <span class="progress-label">100%</span>
-                                        </td>
-                                        <td class="text fw-semibold">Actif</td>
-                                        <td><i class="fa-solid fa-eye ms-4" data-bs-toggle="modal" data-bs-target="#example3Modal"></i>
-                                            <i class="fa fa-archive"></i>
-                                            <i class="fa fa-ban"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Anne Hataway</td>
-                                        <td>300.000 FCFA</td>
-                                        <td>01/01/2022</td>
-                                        <td class="d-flex gap-2 justify-content-center align-items-center">
-                                            <div class="progress mt-2 w-75">
-                                                <div class="progress-bar bg-dark progwidth" role="progressbar"
-                                                    aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                            <span class="progress-label">50%</span>
-                                        </td>
-                                        <td class="fw-semibold text">Actif</td>
-                                        <td><i class="fa-solid fa-eye ms-4" data-bs-toggle="modal" data-bs-target="#example3Modal"></i>
-                                            <i class="fa fa-archive"></i>
-                                            <i class="fa fa-ban"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Ravi Shankar</td>
-                                        <td>300.000 FCFA</td>
-                                        <td>01/01/2022</td>
-                                        <td class="d-flex gap-2 justify-content-center align-items-center">
-                                            <div class="progress mt-2 w-75">
-                                                <div class="progress-bar bg-dark progwidth" role="progressbar"
-                                                    aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                            <span class="progress-label">50%</span>
-                                        </td>
-                                        <td class="fw-semibold text">Actif</td>
-                                        <td><i class="fa-solid fa-eye ms-4" data-bs-toggle="modal" data-bs-target="#example3Modal"></i>
-                                            <i class="fa fa-archive"></i>
-                                            <i class="fa fa-ban"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="td-bottom-left">Emma stone</td>
-                                        <td>300.000 FCFA</td>
-                                        <td>01/01/2022</td>
-                                        <td class="d-flex gap-2 justify-content-center align-items-center">
-                                            <div class="progress mt-2 w-75">
-                                                <div class="progress-bar bg-dark progwidth" id="t6" role="progressbar"
-                                                    aria-valuenow="64" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                            <span class="progress-label">64%</span>
-                                        </td>
-                                        <td class="fw-semibold text-danger">Bloqué</td>
-                                        <td class=""><span class="iconeResp">
-                                            <i class="fa-solid fa-eye ms-4"></i>
-                                            <i class="fa fa-archive"></i>
-                                            <i class="fa fa-ban text-danger"></i>
-                                        </span>
-                                        </td>
-                                    </tr> -->
+                                    <!--  -->
                                 </tbody>
                             </table>
                         </div>
@@ -956,7 +717,7 @@
                                             href="#">Previous page</a></span></div>
                                 <div class="page d-flex  ms-5">
                                     <span class="page-item"><a
-                                            class="page-link rounded-5 border-0 shadow-sm active p1 text-dark fw-semibold"
+                                            class="page-link active rounded-5 border-0 shadow-sm  p1 text-dark fw-semibold"
                                             href="#">1</a></span>
                                     <span class="page-item ms-3"><a
                                             class="page-link rounded-5 border-0 shadow-sm text-dark fw-semibold"

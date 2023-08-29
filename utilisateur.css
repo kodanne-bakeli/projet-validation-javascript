@@ -53,7 +53,7 @@ body, .gris{
     width: 64% !important;
 }
 .vert1{
-    width: 100% !important;
+    /* width: 100% !important; */
     background-color: #24dc7c !important;
 }
 .vert{
@@ -69,7 +69,7 @@ body, .gris{
     color: #24dc7c;
 }
 .progwidth{
-   width: 50% !important;
+    width: 50% !important; 
 }
 
 .progress{
@@ -96,7 +96,7 @@ body, .gris{
 	color: #24dc7c !important;
 }
 /* ----------------------------------------------------------------- */
-.les-trois-card-du-haut .box1:active{
+.les-trois-card-du-haut #box1:active{
     background-color: #20df7f;
 }
 .page-item .agi:active {
@@ -185,7 +185,9 @@ a{
 	background-color: #20df7f;
 	border: 2px solid white;
 }
-
+.page-link .active{
+	background-color: none;
+}
 /* debut de copie du css de chams */
 .details-cotisations .modal-bouton-trois-points {
     max-width: 700px;
