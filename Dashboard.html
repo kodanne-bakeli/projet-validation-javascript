@@ -18,6 +18,10 @@
 </head>
 
 <style>
+    #navPage{
+        position: relative;
+        bottom: 20vh;
+    }
     .pagination {
         margin-right: 40%;
     }
@@ -95,6 +99,11 @@
             margin: 0 50px 20px;
             padding-bottom: 30px;
         }
+
+        #navPage{
+        position: relative;
+        bottom: 10vh;
+    }
     }
 </style>
 
@@ -159,7 +168,7 @@
         </div>
         <div class="col-12 col-md-10 offset-md-2">
             <header class="d-flex flex-row justify-content-between px-2" id="header">
-                <h2 class="my-auto fw-bold option-menu">
+                <h2 class="my-auto fw-bold option-menu mx-4 align-items-center">
                     Admin Dashboard
                 </h2>
                 <div class="d-flex align-middle profil-compte">
@@ -174,7 +183,7 @@
 
                     <div class="d-flex mx-2">
                         <div class="d-flex">
-                            <img src="images/Ellipse 9.png" class="rounded-circle me-2 me-md-4 my-auto">
+                            <img src="images/Ellipse 82.png" class="rounded-circle me-2 me-md-4 my-auto">
                             <div class="d-flex flex-column lh-1 py-auto">
                                 <h3 class="fw-bold py-0 user-name">Ndiaga Sall</h3>
                                 <p class="text-muted py-0 user-type">Administrateur</p>
@@ -190,13 +199,12 @@
                                     <span class="text-capitalize pe-1">create new</span>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </header>
 
-            <div class="container p-5">
+            <div class="container p-5 menuPage">
                 <section id="caisse" class=" p-4">
                     <div class="container">
                         <div class="row">
@@ -231,8 +239,8 @@
                                         <div class="caisse m-2">
                                             <p class="color-text">Caisse</p>
                                             <div class="mtn text-break">
-                                                <h5 class="text-secondary ">3.500.000 FCFA <span
-                                                    class="fw-bolder text-card">/5.000.000 FCFA</span>
+                                                <h5 class="text-secondary ">3.500.000FCFA<span
+                                                    class="fw-bolder text-card">/5.000.000FCFA</span>
                                                 </h5>
                                             </div>
                                             <div class="progress">
@@ -307,12 +315,12 @@
                                                 <th scope="col">Statut</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody id="TableauUn">
                                             <tr>
                                                 <th class="text-secondary" scope="row">Selena Roy</th>
                                                 <td>25.000 FCFA</td>
                                                 <td>01-06-2022</td>
-                                                <td class="text-valide">valide</td>
+                                                <td class="text-valide fw-bolder">valide</td>
                                             </tr>
                                             <tr>
                                                 <th class="text-secondary" scope="row">Emma Watson</th>
@@ -343,7 +351,7 @@
                                                 <th class="text-secondary" scope="row">Emma Stone</th>
                                                 <td>25.000 FCFA</td>
                                                 <td>01-06-2022</td>
-                                                <td class="text-success fw-bolder">valide</td>
+                                                <td class="text-valide fw-bolder">valide</td>
                                             </tr>
                                             <tr>
                                             </tr>
@@ -362,7 +370,7 @@
                                                 <th scope="col">Progression</th>
                                             </tr>
                                         </thead>
-                                        <tbody class="p-5">
+                                        <tbody class="p-5" id="TableauDeux">
                                             <tr>
                                                 <th class="text-secondary" scope="row">Selena Roy</th>
                                                 <td>01-06-2022</td>
@@ -373,7 +381,7 @@
                                                                 style="width: 100%" aria-valuenow="100" aria-valuemin="0"
                                                                 aria-valuemax="100">
                                                             </div>
-                                                            <div class="progress-value"><span>100</span>%</div>
+                                                            <div class="progress-value"><span>100%</span></div>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -387,7 +395,7 @@
                                                             <div class="progress-bar bg-vert" role="progressbar"
                                                                 style="width: 100%" aria-valuenow="100" aria-valuemin="0"
                                                                 aria-valuemax="100"></div>
-                                                            <div class="progress-value"><span>100</span>%</div>
+                                                            <div class="progress-value"><span>100%</span></div>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -401,7 +409,7 @@
                                                             <div class="progress-bar bg-blue" role="progressbar"
                                                                 style="width: 64%" aria-valuenow="100" aria-valuemin="0"
                                                                 aria-valuemax="100"></div>
-                                                            <div class="progress-value"><span>64</span>%</div>
+                                                            <div class="progress-value"><span>64%</span></div>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -415,7 +423,7 @@
                                                             <div class="progress-bar bg-blue" role="progressbar"
                                                                 style="width: 57%" aria-valuenow="100" aria-valuemin="0"
                                                                 aria-valuemax="100"></div>
-                                                            <div class="progress-value"><span>57</span>%</div>
+                                                            <div class="progress-value"><span>57%</span></div>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -429,7 +437,7 @@
                                                             <div class="progress-bar bg-blue" role="progressbar"
                                                                 style="width: 50%" aria-valuenow="100" aria-valuemin="0"
                                                                 aria-valuemax="100"></div>
-                                                            <div class="progress-value"><span>50</span>%</div>
+                                                            <div class="progress-value"><span>50%</span></div>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -444,7 +452,7 @@
                                                             <div class="progress-bar bg-blue" role="progressbar"
                                                                 style="width: 50%" aria-valuenow="100" aria-valuemin="0"
                                                                 aria-valuemax="100"></div>
-                                                            <div class="progress-value"><span>50</span>%</div>
+                                                            <div class="progress-value"><span>50%</span></div>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -456,7 +464,7 @@
                         </div>
                     </div>
                 </section>
-                <nav aria-label="Page navigation">
+                <nav aria-label="Page navigation" id="navPage">
                     <ul class="pagination justify-content-center custom-pagination">
                         <li class="page-pagi disabled">
                             <a class="pagi-link text-secondary" href="#" tabindex="-1" aria-disabled="true"
@@ -484,6 +492,11 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
     <script src="chart.js"></script>
     <script src="chart2.js"></script>
-    <script src="Dashboard.js"></script>
+    <script type="module" src="Dashboard.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore-compat.js"></script>
+    <!-- <script type="text/javascript" src="sidebarAdmin.js"></script>
+	<script type="module" src="sidebarAdminSignOut.js"></script>
+    <script src="sidebarAdminetDeconnexion.js"></script> -->
 </body>
 </html>
