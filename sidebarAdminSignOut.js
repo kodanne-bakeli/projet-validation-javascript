@@ -40,6 +40,6 @@ auth.onAuthStateChanged((user) => {
   if (user) {
     window.location.href = "cotisations.html";
   } else {
-    window.location.href = "connexion.html";
+    // window.location.href = "connexion.html";
   }
 });
