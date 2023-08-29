@@ -29,8 +29,8 @@ body{
     width: 45%;
 }
 #photo{
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 140px;
     object-fit: fill;
 }
 
