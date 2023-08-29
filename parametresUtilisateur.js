@@ -19,12 +19,12 @@ profilInfo.innerHTML = ''
 db.collection("user").onSnapshot((querySnapshot) => {
   usersView.innerHTML = '';
   querySnapshot.forEach((doc) => {
-      console.log(`${doc.id} => ${doc.data().nom}`);
+      console.log(`${doc.id} => ${doc.data().name}`);
       usersView.innerHTML =     
       `<h4 class="p-2 fw-bold">Informations générales</h4>
       <div class="col d-flex justify-content-between border-bottom pb-3">
-      <div class="col-md-8">Prénom</div>
-      <div class="col-md-4 text-center" id="paraPrenom">${doc.data().prenom}</div>
+      <div class="col-md-8 col-sm-4">Prénom</div>
+      <div class="col-md-4 col-sm-8 text-center" id="paraPrenom">${doc.data().prenom}</div>
     </div>
     <div class="col d-flex justify-content-between border-bottom pb-3">
       <div class="col-md-8">Nom</div>
