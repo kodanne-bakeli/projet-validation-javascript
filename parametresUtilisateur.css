@@ -138,6 +138,7 @@ body{
     #parametresUtilisateur #contentInfo {
         padding-top: 3%;
         width: 100%;
+        padding-bottom: 5%;
     }
 
     #parametresUtilisateur .information{

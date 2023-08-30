@@ -41,7 +41,7 @@ firebase.initializeApp ({
   
       profilInfo.innerHTML = 
       `<p class="titleProfil">Profil</p>
-        <div class="pb-5 profil row">
+        <div class="pb-2 profil row">
           <div class="profilAdmin col-lg-12 col-sm-12">
               <img src="${doc.data().profilURL}" class="rounded-circle img-fluid" alt="img" id="photo">
           </div>
@@ -50,7 +50,7 @@ firebase.initializeApp ({
               <p class="fs-4 fw-bold" id="profilStatut">${doc.data().statut}</p>
           </div>
         </div>
-        <div>
+        <div class="col-lg-12 col-sm-12 d-flex justify-content-center pb-5">
             <a href="editProfilUser.html">
                 <button class="btn" id="editerProfil">Editer le profil</button>
             </a>
