@@ -24,21 +24,16 @@ body {
 }
 
 .card {
-    border-radius: 10px;
+    border-radius: 10px ;
 }
 
 .text-card {
     color: rgba(9, 53, 69, 1);
-
 }
 
 .color-text{
     color: rgba(9, 53, 69, 1);
 }
-
-/* .caisse .mtn {
-    font-size: 2px;
-} */
 
 .text-valide,
 .icone-card {
@@ -58,7 +53,7 @@ body {
 
 .bg-table,
 .bg-vert {
-    background: rgba(32, 223, 127, 1);
+    background: rgba(32, 223, 127, 1) !important;
 }
 
 .bg-blue {
@@ -71,7 +66,7 @@ body {
 
 .small{
     padding: 0.25px !important;
-    border-radius: 5px;
+    border-radius: 5px 0 0;
 }
 
 .small-1{
@@ -91,7 +86,7 @@ body {
 }
 
 #doughnut-chart{
-   height: 44vh;
+   height: 42.5vh;
    width: 70%;
    margin: 0 40px;
    cursor: pointer;
@@ -120,6 +115,14 @@ body {
 #top-progression{
     position: relative;
     bottom: 20vh;
+}
+
+.rounded-th{
+    border-radius: 10px 0 0;
+}
+
+.rounded-th-1{
+    border-radius: 0 10px 0 0;
 }
 
 .table thead tr th{
@@ -231,14 +234,6 @@ tbody th,
     }
 }
 
-#header {
-    z-index: 1000;
-    position: fixed;
-    float: left;
-    width: 84%;
-    height: 13%;
-}
-
 /*********************** code SamLaye  ***********************/
 li{
 	list-style-type: none;
@@ -292,6 +287,7 @@ a{
 	box-shadow: 0 0 8px 0.7px;
 	background-color: #fff;
 	color: #333;
+    z-index: 1000;
 }
 #header div span .bi{
 	font-size: 25px;
@@ -312,55 +308,7 @@ a{
 #header #leBoutonPourSeDeconnecter{
 	outline: none !important;
 }
-/*================D.R.O.P.D.O.W.N==================*/
 
-/*#myModal{
-	position: absolute;
-	display: none;
-	width: 200px;
-	height: auto;
-	margin: 10px;
-	background-color: #093545;
-	z-index: 10;
-	top: 50px;
-	right: 50px;
-	color: #fff;
-}
-#modal_container{
-	position: relative;
-	padding: 20px 10px 10px 10px;
-	margin: 10px;
-	border: 1px solid #fff;
-}
-#myModal #modal_container ul{
-	margin-left: 0px;
-	padding-left: 0;
-}
-#myModal #modal_container ul #modal_deconnexion button{
-	padding-left: 0 !important;
-}
-#myModal #modal_container ul #modal_deconnexion button a{
-	transition: 0.75s ease-in-out !important;
-}
-#myModal #modal_container ul #modal_deconnexion i{
-	font-size: 15px;
-}
-#myModal #modal_container ul #modal_deconnexion button,
-#myModal #modal_container ul #notification_resp button
-{
-	background-color: transparent;
-}
-#myModal #modal_container ul #modal_deconnexion button a:hover{
-	 color: red !important;
-}
-#closeModalBtn{
-	position: absolute;
-	z-index: 9;
-	top: 0;
-	right: 0;
-	width: 40px;
-	height: 30px;
-}*/
 /*======================================*/
 
 #badge{
@@ -371,10 +319,7 @@ a{
 	background-color: #20df7f;
 	border: 2px solid white;
 }
-#start #link-animation-start-param,
-#start #link-animation-start-param{
-/*	transition: 3s ease-in-out;*/
-}
+
 #start .link-animation{
 	transform: translate(calc(1px * var(--x)), calc(1px * var(--y)));
 	transition: transform 1s;
@@ -423,13 +368,11 @@ a{
 		box-shadow: 0 0 8px 0.7px;
 		background-color: #093545;
 		color: #fff;
-        height: 10%;
 	}
 	#header div div button i{
 		color: #fff;
 	}
 	#header .option-menu, 
-/*	#header .profil-compte .clock, */
 	#header .profil-compte .user-type, 
 	.sidebar .bakeli-tontine,
 	.sidebar #navi #nav-ul li .link-name-hidden, 
@@ -501,10 +444,6 @@ a{
 	.bi{
 		padding: 0 4px;
 	}
-	
-	#start.active{
-
-	}
 }	
 
 @media screen and (max-width: 650px){
@@ -558,9 +497,6 @@ a{
 	.option-menu{
 		font-size: 14px;
 	}
-	#param-dropu{
-/*		margin-right: 100px;*/
-	}
 }
 
 @media screen and (max-width: 430px){
@@ -576,7 +512,6 @@ a{
 @media screen and (max-width: 405px){
 	#header #create-new-container{
 		margin-right: 10px;
-
 	}
 
 	#create-new-container{
