@@ -29,7 +29,7 @@ const db = getFirestore(app);
 
 let tableOne = document.getElementById("tableOne")
 let btnnexts = document.querySelectorAll(".Next")
-let profils = document.querySelectorAll(".img-profil")
+let profils = document.querySelectorAll(".profil-compte img")
 let names = document.querySelectorAll(".user-name")
 let btnprevs = document.querySelectorAll(".Prev")
 let btndate = document.querySelector(".cotise .form .date")
@@ -192,7 +192,7 @@ btnprevs.forEach((btnprev)=>{
     })
 })
    
-    const docRef = doc(db, "user","58qp6lnAfYq67pqtfI9g")
+    const docRef = doc(db, "user","nTzIY4IjSUO9w0J7ktrq")
     const qerySnapshot = await getDoc(docRef)
     if (qerySnapshot.exists()) {
         const cotis = qerySnapshot.data()
