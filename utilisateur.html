@@ -194,7 +194,7 @@
                             </thead>
                             <tbody class="bg-light">
                                 <tr>
-                                    <td>Selena Roy</td>
+                                    <td id="table1-nom">Selena Roy</td>
                                     <td>300.000 FCFA</td>
                                     <td>01/01/2022</td>
                                     <td class="d-flex gap-2 justify-content-center align-items-center">
@@ -710,28 +710,25 @@
                         </div>
                     </div>
                     <!-- pagination -->
-                    <div class="row">
-                        <div class="col">
-                            <div class="pagination justify-content-center pagUser">
-                                <div class=""><span class=""><a class="page-link text-secondary border-0 bg-transparent"
-                                            href="#">Previous page</a></span></div>
-                                <div class="page d-flex  ms-5">
-                                    <span class="page-item"><a
-                                            class="page-link active rounded-5 border-0 shadow-sm  p1 text-dark fw-semibold"
-                                            href="#">1</a></span>
-                                    <span class="page-item ms-3"><a
-                                            class="page-link rounded-5 border-0 shadow-sm text-dark fw-semibold"
-                                            href="#">2</a></span>
-                                    <span class="page-item ms-3"><a
-                                            class="page-link rounded-5 border-0 shadow-sm text-dark fw-semibold"
-                                            href="#">3</a></span>
-                                    <span class="page-item ms-3 "><a
-                                            class="page-link rounded-5 border-0 shadow-sm text-dark fw-semibold"
-                                            href="#">4</a></span>
-                                </div>
-                                <div class="next ms-5"> <span><a class="page-link text-dark border-0 bg-transparent" href="#">Next page</a></span>
-                                </div>
-                            </div>
+                    <div class="row mx-auto ">
+                        <div class="col-lg-8 mx-auto">
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination justify-content-center custom-pagination">
+                                    <li class="page-pagi disabled">
+                                        <a class="pagi-link text-secondary" href="#" tabindex="-1" aria-disabled="true"
+                                            aria-label="Précédent">Previous page</a>
+                                    </li>
+                                    <li class="page-item active" aria-current="page">
+                                        <a class="page-link" href="#">1</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                    <li class="page-pagi">
+                                        <a class="pagi-link text-black" href="#" aria-label="Suivant">Next page</a>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
                     </div>
                 </section>    

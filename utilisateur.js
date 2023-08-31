@@ -40,9 +40,11 @@ const adresse = document.getElementById("adr");
 const organisation = document.getElementById("org");
 let tbody = document.getElementById("tbody");
 
+
 // ecoutez l'evenement lors du chargement de la page avant l'affichage des données
 
 // fonction pour ajouter les utilisateurs
+
 function ajouter() { 
   // Ajouter l'utilisateur
   addDoc(collection(db, "user"), {
@@ -55,6 +57,7 @@ function ajouter() {
     adresse: adresse.value,
     organisation: organisation.value,
   });
+  resetForm();
 };
 
 // écoutons l'evenement lorsqu'on saisie des informations via le formulaire
@@ -99,41 +102,50 @@ document.addEventListener("DOMContentLoaded", async (e) => {
     const table1 = document.getElementById("table1");
     const table2 = document.getElementById("table2");
     const table3 = document.getElementById("table3");
+
    // Par défaut, affichez le tableau 3 et masquez les autres
     table1.style.display = "none";
     table2.style.display = "none";
+    carte3.style.background = "green";
     // Ajoutez des gestionnaires d'événements de clic aux cartes
     carte1.addEventListener("click", () => {
       table1.style.display = "block";
-      // carte1.className = "vert";
       table2.style.display = "none";
       table3.style.display = "none";
+      carte1.style.background = "green";
+      carte2.style.background = "white";
+      carte3.style.background = "white";
     });
 
     carte2.addEventListener("click", () => {
       table1.style.display = "none";
       table2.style.display = "block";
       table3.style.display = "none";
-      // carte1.className = "white";
-      // carte2.className = "vert";
+      carte1.style.background = "white";
+      carte2.style.background = "green";
+      carte3.style.background = "white";
     });
 
     carte3.addEventListener("click", () => {
       table1.style.display = "none";
       table2.style.display = "none";
       table3.style.display = "block";
-      // carte3.className = "vert";
+      carte1.style.background = "white";
+      carte2.style.background = "white";
+      carte3.style.background = "green";
     });
+    // let table1Nom = document.getElementById("table1-nom");
+    // table1Nom.textContent = usersData.nom;
     // determination du nombre de membres dans chaque carte
     totalEffectif.textContent =  `${membreActifs} Membres` ;
    
     // Afficher les données récupérées
     usersData.forEach((usData, index) => {
-      const cotiseData = cotisationsData[index]; 
+      let cotiseData = cotisationsData[index]; 
       let tr = document.createElement("tr");
       // gestion des actions
       const seuil = 300000;
-      const pourcentage = (cotiseData.montantCotise / seuil) * 100;
+      let pourcentage = (cotiseData.montantCotise / seuil) * 100;
 
       // Ajout des cellules de données pour les utilisateurs
       tr.innerHTML += `
@@ -162,21 +174,21 @@ document.addEventListener("DOMContentLoaded", async (e) => {
 
       // Mettez à jour la largeur de la barre de progression et le texte dans le label
       // c'est le debut du code qui n'a pas marché pour la barre de progression
-      function updateProgressBar(pourcentage) {
-        progressBar.style.width = `${pourcentage}%`;
-        progressBar.setAttribute('aria-valuenow', pourcentage);
-        progressLabel.textContent = `${pourcentage.toFixed(0)}%`;
-      }
+      // function updateProgressBar(pourcentage) {
+      //   progressBar.style.width = `${pourcentage}%`;
+      //   progressBar.setAttribute('aria-valuenow', pourcentage);
+      //   progressLabel.textContent = `${pourcentage.toFixed(0)}%`;
+      // }
       // dethyuç_
-      let montant = cotiseData.montantCotise;
-      function simulateProgress() {
-        if (montant <= 100) {
-            updateProgressBar(montant);
-            montant += 10;
-            // setTimeout(simulateProgress, 1000);
-        }
-      }
-      simulateProgress();
+      // let montant = cotiseData.montantCotise;
+      // function simulateProgress() {
+      //   if (montant <= 100) {
+      //       updateProgressBar(montant);
+      //       montant += 10;
+      //       // setTimeout(simulateProgress, 1000);
+      //   }
+      // }
+      // simulateProgress();
     // fin du code
     // ce sont ces 3 lignes de codes qui ont fonctionné avec le pourcentage
      progressBar.style.width = `${pourcentage}%`;
@@ -221,11 +233,13 @@ document.addEventListener("DOMContentLoaded", async (e) => {
   }
 });
 
-
-
-
-
-
-
-
-
+function resetForm() {
+  name.value = "";
+  firstname.value = "";
+  birth.value = "";
+  profession.value = "";
+  email.value = "";
+  telephone.value = "";
+  adresse.value = "";
+  organisation.value = "";
+}

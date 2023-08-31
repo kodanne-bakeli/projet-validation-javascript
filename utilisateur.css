@@ -80,12 +80,97 @@ body, .gris{
     margin: 20px 0 !important;
 }
 /* pagination */
-.ppage-link{
+/* .ppage-link{
     width: 15px !important;
     height: 15px !important;
 }
 .page-item .p1:active{
     color: #24dc7c !important;
+} */
+.custom-pagination .page-link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	font-size: 12px;
+	text-align: center;
+	line-height: 30px;
+	font-weight: bold;
+	margin: 0 9px;
+}
+
+.custom-pagination .page-item.active .page-link {
+	background-color: #20DF7F;
+	border-color: #20DF7F;
+	color: #1f1e1e;
+}
+
+.custom-pagination .page-item:nth-child(3) .page-link {
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	background-color: #efeded;
+	border-color: #efeded;
+	color: #1f1e1e;
+}
+
+.custom-pagination .page-item:nth-child(3) .page-link:hover {
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	background-color: #efeded;
+	border-color: #efeded;
+	color: #1f1e1e;
+}
+
+.custom-pagination .page-item:nth-child(4) .page-link {
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	background-color: #efeded;
+	border-color: #efeded;
+	color: #1f1e1e;
+}
+
+.custom-pagination .page-item:nth-child(4) .page-link:hover {
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	background-color: #efeded;
+	border-color: #efeded;
+	color: #1f1e1e;
+}
+
+.custom-pagination .page-item:nth-child(5) .page-link {
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	background-color: #efeded;
+	border-color: #efeded;
+	color: #1f1e1e;
+}
+
+.custom-pagination .page-item:nth-child(5) .page-link:hover {
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	background-color: #efeded;
+	border-color: #efeded;
+	color: #1f1e1e;
+}
+
+.custom-pagination .page-pagi .pagi-link[aria-label="Précédent"],
+.custom-pagination .page-pagi .pagi-link[aria-label="Suivant"] {
+	text-decoration: none;
+	width: 30px;
+	height: 30px;
+	font-size: 11px;
+	text-align: center;
+	line-height: 30px;
+	font-weight: bold;
+	margin: 0 10px;
 }
 
 /* Modal */
