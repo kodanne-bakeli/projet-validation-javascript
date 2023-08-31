@@ -1,81 +1,157 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-body{
-    font-family: 'Montserrat', sans-serif;
-}
 
-*{
+* {
 	margin: 0;
 	padding: 0;
 }
 
-#nav ul li{
+body {
+	font-family: Montserrat;
+}
+
+li {
 	list-style-type: none;
+}
+
+#navi ul li {
 	padding-left: 1rem;
 }
-a{
+
+a {
 	text-decoration: none;
 }
 
-.sidebar{
+.header {
+	margin-top: 76px;
+	background-color: #efeded;
+	padding: 30px;
+}
+
+.sidebar {
 	background-color: #093545;
 	height: 100%;
 	position: fixed;
 	z-index: 1000;
 }
-.sidebar .bakeli-tontine{
+
+.sidebar .bakeli-tontine {
 	font-size: 22px;
 }
 
-.nav-link-items{
+.nav-link-items {
 	font-size: 17px;
 }
-.nav-param_link-items{
+
+.nav-param_link-items {
 	font-size: 15px;
 }
 
-.dropdown .dropdown-menu li:hover{
+.dropdown .dropdown-menu li:hover {
 	background-color: transparent;
 }
-.dropdown .dropdown-menu li{
+
+.dropdown .dropdown-menu li {
 	padding-left: 0.2rem;
 }
-#nav ul li:active, .dropdown .dropdown-menu li:active{
+
+.style-nav-elem {
 	background-color: #20df7f;
 	border-left: 0.2rem solid white;
 	padding-left: 0.8rem;
 }
 
 
-.dropdown .dropdown-menu{
+.dropdown .dropdown-menu {
 	color: white;
 	overflow: hidden;
 	background-color: transparent;
 }
 
-#header{
+#header {
+	width: 83.333%;
 	padding-top: 10px;
 	box-shadow: 0 0 8px 0.7px;
 	background-color: #fff;
 	color: #333;
 }
-#header div span .bi{
+
+#header div span .bi {
 	font-size: 25px;
 }
-#header .user-name{
+
+#header .user-name {
 	font-size: 21px;
 }
-#header .user-type{
+
+#header .user-type {
 	font-size: 15px;
 }
-#header-btn-down{
+
+#header-btn-down {
 	background-color: transparent;
 }
-#header img{
-		width: 45px;
-		height: 45px;
-	}
 
-#badge{
+#header img {
+	width: 55px;
+	height: 55px;
+}
+
+#header #leBoutonPourSeDeconnecter {
+	outline: none !important;
+}
+
+/*================D.R.O.P.D.O.W.N==================*/
+
+/*#myModal{
+	position: absolute;
+	display: none;
+	width: 200px;
+	height: auto;
+	margin: 10px;
+	background-color: #093545;
+	z-index: 10;
+	top: 50px;
+	right: 50px;
+	color: #fff;
+}
+#modal_container{
+	position: relative;
+	padding: 20px 10px 10px 10px;
+	margin: 10px;
+	border: 1px solid #fff;
+}
+#myModal #modal_container ul{
+	margin-left: 0px;
+	padding-left: 0;
+}
+#myModal #modal_container ul #modal_deconnexion button{
+	padding-left: 0 !important;
+}
+#myModal #modal_container ul #modal_deconnexion button a{
+	transition: 0.75s ease-in-out !important;
+}
+#myModal #modal_container ul #modal_deconnexion i{
+	font-size: 15px;
+}
+#myModal #modal_container ul #modal_deconnexion button,
+#myModal #modal_container ul #notification_resp button
+{
+	background-color: transparent;
+}
+#myModal #modal_container ul #modal_deconnexion button a:hover{
+	 color: red !important;
+}
+#closeModalBtn{
+	position: absolute;
+	z-index: 9;
+	top: 0;
+	right: 0;
+	width: 40px;
+	height: 30px;
+}*/
+/*======================================*/
+
+#badge {
 	top: 20%;
 	width: 25px;
 	height: 25px;
@@ -84,126 +160,297 @@ a{
 	border: 2px solid white;
 }
 
-/*================================================
-	R E S P O N S I V E     D E S I G N
-==================================================*/
-@media screen and (max-width: 1000px){
-	#nav ul li{
+#start #link-animation-start-param,
+#start #link-animation-start-param {
+	/*	transition: 3s ease-in-out;*/
+}
+
+#start .link-animation {
+	transform: translate(calc(1px * var(--x)), calc(1px * var(--y)));
+	transition: transform 1s;
+	transition-delay: calc(0.1s * var(--i));
+	background-color: #093545;
+}
+
+#start.active .link-animation {
+	transform: translate(calc(14px * var(--x)), calc(14px * var(--y)));
+}
+
+#start.desactive .link-animation {
+	transform: translate(calc(1px * var(--x)), calc(1px * var(--y)));
+}
+
+@media screen and (max-width: 1000px) {
+	#navi ul li {
 		padding-left: 0.1rem;
 	}
-	.nav-link-items{
+
+	.nav-link-items {
 		font-size: 15px;
 	}
-	.nav-param_link-items{
+
+	.nav-param_link-items {
 		font-size: 14px;
 	}
 }
 
-@media screen and (max-width: 823px){
-	#nav ul li .dropdown-toggle span{
+@media screen and (max-width: 823px) {
+	#navi ul li .dropdown-toggle span {
 		font-size: 13px;
 	}
 }
 
-@media screen and (min-width: 768px){
-	#header-mobile-option{
+@media screen and (min-width: 768px) {
+
+	#header-mobile-option,
+	#param-dropu,
+	#notification_resp {
 		display: none;
 	}
 }
 
-@media screen and (max-width: 768px){
-	#header{
+@media screen and (max-width: 768px) {
+	#header {
+		width: 100%;
 		padding-top: 10px;
 		padding-bottom: 10px;
 		box-shadow: 0 0 8px 0.7px;
 		background-color: #093545;
 		color: #fff;
 	}
-	#header div div button i{
+
+	#header div div button i {
 		color: #fff;
 	}
-	#header .option-menu, #header .profil-compte .clock, #header .profil-compte .user-type{
-	 	display: none;
-	 }
-	#header .profil-compte{
+
+	#header .option-menu,
+	/*	#header .profil-compte .clock, */
+	#header .profil-compte .user-type,
+	.sidebar .bakeli-tontine,
+	.sidebar #navi #nav-ul li .link-name-hidden,
+	.sidebar #param-dropdown,
+	#nav-link-items {
+		display: none;
+	}
+
+	#header .profil-compte .clock {
+		margin-right: 30px !important;
+	}
+
+	#header .profil-compte .clock i {
+		font-size: 22px !important;
+	}
+
+	#header .profil-compte {
 		padding-left: 10px;
-	 	align-items: center;
+		margin: auto;
+		align-items: center;
 	}
-	#header .profil-compte .user-name{
-	 	vertical-align: center;
-	 	margin: auto 10px;
+
+	#header .profil-compte .user-name {
+		vertical-align: center;
+		margin: auto 10px;
 	}
-	#header img{
+
+	#header img {
 		width: 55px;
 		height: 55px;
 	}
-	
-	.sidebar{
-		background-color: #FFF;
+
+	#header #create-new-container {
+		margin-right: 25px;
+	}
+
+	#header #myModal {
+		top: 50px;
+		left: 50px;
+	}
+
+	.sidebar {
+		background-color: #fff;
+		width: 100%;
 		box-shadow: 0 0 8px 0.7px #093545;
 		bottom: 0;
 		height: auto;
 		display: flex;
 		flex-direction: row;
-	    align-items: center;
+		align-items: center;
 	}
-	.sidebar #nav {
+
+	.sidebar #navi {
 		width: 100%;
 		padding-top: 0;
 	}
-	.sidebar #nav ul{
+
+	.sidebar #navi ul {
 		width: 100%;
 		margin-bottom: 0;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
 	}
-	#nav ul li a .bi, #nav ul li .nav-link-items .bi{
+
+	#navi ul li a .bi,
+	#navi ul li .nav-link-items span .bi,
+	#param-dropu #start .link-animation .bi,
+	#param-dropu #start #link-animation-start .bi {
 		font-size: 50px;
 		color: #093545;
 	}
-	.sidebar .bakeli-tontine{
-		display: none;
+
+	#navi ul li a .bi {
+		position: relative;
 	}
-	#nav ul li:active, .dropdown .dropdown-menu li:active{
-	background-color: transparent;
-	border-left: 0rem;
-	padding-left: 0rem;
-}
-	#nav-link-items{
-		display: none;
-	}
-	.bi{
+
+	.bi {
 		padding: 0 4px;
 	}
-}	
-
-@media screen and (max-width: 650px){
-	.nav-link-items{
-		font-size: 13px;
-	}
-	
-	#nav ul li a .bi{
-		font-size: 45px;
-		margin: auto;
-	}
-	#nav ul li span .bi{
-		font-size: 45px;
-	}
-
-	.sidebar nav {
-	    margin-top: auto;
-	  }
 }
 
-@media screen and (max-width: 575px){
-	#header .user-name{
-	font-size: 16px;
+@media screen and (max-width: 650px) {
+	.nav-link-items {
+		font-size: 13px;
 	}
-	#header .user-type{
+
+	#navi ul li a .bi,
+	#navi ul li .nav-link-items span .bi,
+	#param-dropu #start .link-animation .bi,
+	#param-dropu #start #link-animation-start .bi {
+		font-size: 30px;
+		margin: auto;
+	}
+
+	#navi ul li span .bi {
+		font-size: 30px;
+	}
+}
+
+@media screen and (max-width: 625px) {
+	#btn-deconnexion {
+		display: none;
+	}
+
+	#header #power-container {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.sidebar {
+		height: auto;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.sidebar nav ul {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	#header .user-name {
+		font-size: 16px;
+	}
+
+	#header .user-type {
 		font-size: 12px;
 	}
-	.option-menu{
+
+	.option-menu {
 		font-size: 14px;
+	}
+
+	#param-dropu {
+		/*		margin-right: 100px;*/
+	}
+}
+
+@media screen and (max-width: 430px) {
+
+	#navi ul li .nav-link-items span .bi,
+	#param-dropu #start .link-animation .bi,
+	#param-dropu #start #link-animation-start .bi {
+		font-size: 30px;
+		margin: auto;
+	}
+}
+
+@media screen and (max-width: 405px) {
+	#header #create-new-container {
+		margin-right: 10px;
+
+	}
+
+	#create-new-container {
+		display: flex;
+		justify-content: center;
+	}
+
+	#create-new-container .create-new {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 365px) {
+	#header-mobile-option div button {
+		border: none !important;
+	}
+
+	#header #create-new-container {
+		margin-right: 0px;
+		padding: 0 !important;
+	}
+
+	#header #create-new-container .create-new {
+		padding: 0 !important;
+	}
+
+	#header-mobile-option div #power-container #btn-deconnexion {
+		padding: 0 !important;
+	}
+
+	#header-mobile-option div #power-container {
+		padding: 0 !important;
+		margin-left: 0 !important;
+	}
+
+}
+
+@media screen and (max-width: 322px) {
+	#header .profil-compte {
+		padding: 0 0;
+		margin: 0 !important;
+	}
+
+	#header .profil-compte .clock i {
+		font-size: 18px !important;
+	}
+
+	#header-mobile-option button i {
+		font-size: 17px !important;
+	}
+
+	#header #header-user-profil {
+		margin-left: 0 0 !important;
+	}
+
+	#header #header-user-profil #header-btn-down {
+		margin-left: 2px !important;
+		font-size: 15px;
+	}
+
+	#header #profil-img {
+		width: 45px !important;
+		height: 45px !important;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+
+	#header .user-name {
+		font-size: 15px !important;
 	}
 }
