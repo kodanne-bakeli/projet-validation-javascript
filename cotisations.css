@@ -659,3 +659,20 @@ a {
 		width: 100%;
 	}
 }
+
+/* animation pour affichage des lignes du 1er tableau */
+.fade-in-row-before {
+	opacity: 0;
+	transform: translateY(150px);
+	transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in-row-after {
+	opacity: 1;
+	transform:translateY(0px) ;
+}
+
+/* animation pour affichage des lignes du 1er tableau */
+.btn-confirmer,.btn-confirmer:hover{
+	background-color: #083A50;
+}

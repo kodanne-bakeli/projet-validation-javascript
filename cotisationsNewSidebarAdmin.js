@@ -22,32 +22,6 @@ menuElements.forEach(elem => {
         }
     });
 });
-// =============================================
-
-// ===========DROPDOWN PERSONNALISE=============
-// let closeModalBtn = document.getElementById('closeModalBtn')
-// let myModal = document.getElementById('myModal')
-// let btnModal = document.getElementById('header-btn-down')
-
-// btnModal.addEventListener('click', function(){
-// 	myModal.style.display = "block";
-// })
-
-// closeModalBtn.addEventListener('click', function(){
-// 	myModal.style.display = "none";
-// })
-
-// window.addEventListener('click', function(event){
-// 	let displayDropDown = document.getElementsByClassName('unNomDeClasseSpecial')[0]
-// 	if (
-// 		event.target.parentElement.parentElement === displayDropDown 
-// 		&& 
-// 		myModal.style.display === "block"
-// 	) {
-// 		myModal.style.display = "none"
-// 	}
-// })
-// =============================================
 
 let start = document.getElementById("start");
 let param_icon = document.getElementById("link-animation-start")

@@ -1,39 +1,60 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
-import {
-    getAuth,
-    createUserWithEmailAndPassword,
-    signInWithEmailAndPassword,
-    sendPasswordResetEmail,
-} from "https://www.gstatic.com/firebasejs/10.3.0/firebase-auth.js";
-import {
-    getFirestore,
-    collection,
-    getDoc,
-    addDoc,
-    doc,
-    updateDoc,
-    deleteDoc,
-} from "https://www.gstatic.com/firebasejs/10.3.0/firebase-firestore.js";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+let URL = "http://localhost:3000/users";
 
-// Your web app's Firebase configuration
-const firebaseConfig = {
-    apiKey: "AIzaSyAdYSscG955-wSnJz3eD4EAKYSw7dnnDb8",
-    authDomain: "validationjs-220cb.firebaseapp.com",
-    projectId: "validationjs-220cb",
-    storageBucket: "validationjs-220cb.appspot.com",
-    messagingSenderId: "968244401042",
-    appId: "1:968244401042:web:f6684d97e4168a23b0a74b",
-};
+// montant seuil des cotisations 
+let seuil = 300000;
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-// Initialize Firebase Authentication and get a reference to the service
-const auth = getAuth(app);
-// Initialize Firebase firestore
-const db = getFirestore(app);
+// recuperation des données et afficher
+let tbody = document.querySelector("#firstTable tbody");
+// let montantTotalCotiseparUtilisateur = 0;
+// let montantTotalCotiseParMoisDeTousLesUtilisateurs = 0;
+fetch(URL, {
+    method: "GET",
+    headers: {
+        "Content-Type": "application/json"
+    },
+})
+    .then((response) => response.json())
+    .then((users) => {
+        console.log(users);
+        users.forEach((user, index) => {
+            // Calcul de la somme des cotisations pour l'utilisateur actuel
+            let montantTotalCotiseparUser = user.cotisations.reduce((total, cotisation) => {
+                total = total + parseFloat(cotisation.montantCotisation);
+                return (total);
+            }, 0)
+            let tr1 = document.createElement("tr");
+            tr1.innerHTML = ` 
+        <td>${users[index].prenom} ${users[index].name} </td>
+        <td>01/01/2023</td>
+        <td> ${montantTotalCotiseparUser} FCFA </td>
+        <td>${seuil - montantTotalCotiseparUser} FCFA </td>
+        <td><button type="button" class="btn  btn-sm btn-confirmer my-0 fw-bold text-light" onclick="boutonConfirmer(this)">confirmer</button>
+        </td>
+        `
+            tr1.classList.add("fade-in-row-before");
+            tbody.appendChild(tr1);
+            setTimeout(() => {
+                tr1.classList.add("fade-in-row-after");
+            }, 600)
+        })
+    })
+    .catch((error) => {
+        console.log("erreur erreur ", error)
+    })
+
+function boutonConfirmer(button) {
+    button.style.display = "none";
+
+    let messageConfirmation = document.createElement("p");
+    messageConfirmation.textContent = "Validé";
+    messageConfirmation.style.color = "#20df7f";
+    messageConfirmation.style.marginBottom = 0;
+
+    let td = button.parentElement;
+    td.appendChild(messageConfirmation);
+}
+
+
 
 
 
