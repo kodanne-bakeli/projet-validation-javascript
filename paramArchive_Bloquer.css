@@ -3,23 +3,27 @@
 * {
 	margin: 0;
 	padding: 0;
-}
-
-body {
+	box-sizing: border-box;
+  }
+  
+  body {
+	background-color: white;
 	font-family: Montserrat;
-}
-
-li {
+	font-weight: 500;
+  }
+  
+  li {
 	list-style-type: none;
-}
-
-#navi ul li {
+	color: black;
+  }
+  
+  #navi ul li {
 	padding-left: 1rem;
-}
-
-a {
+  }
+  
+  a {
 	text-decoration: none;
-}
+  }
 
 .header {
 	margin-top: 76px;
@@ -158,11 +162,6 @@ a {
 	font-size: 10px;
 	background-color: #20df7f;
 	border: 2px solid white;
-}
-
-#start #link-animation-start-param,
-#start #link-animation-start-param {
-	/*	transition: 3s ease-in-out;*/
 }
 
 #start .link-animation {
@@ -362,10 +361,6 @@ a {
 
 	.option-menu {
 		font-size: 14px;
-	}
-
-	#param-dropu {
-		/*		margin-right: 100px;*/
 	}
 }
 
