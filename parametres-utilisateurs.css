@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -21,6 +23,12 @@ li {
 
 a {
   text-decoration: none;
+}
+
+.dn {
+	margin-top: 76px;
+	background-color: #efeded;
+	padding: 30px;
 }
 
 .sidebar {
@@ -90,7 +98,7 @@ a {
   height: 55px;
 }
 /*================D.R.O.P.D.O.W.N==================*/
-
+/* 
 #myModal {
   position: absolute;
   display: none;
@@ -144,7 +152,7 @@ a {
   right: 0;
   width: 40px;
   height: 30px;
-}
+} */
 
 /*======================================*/
 #badge {
@@ -447,7 +455,7 @@ label {
   padding: 15px;
 } */
 
-#suivant {
+/* #suivant {
   list-style-type: none;
   display: inline-block;
   margin-left: 5px;
@@ -462,7 +470,7 @@ label {
   border: 1px solid rgba(32, 223, 127, 1);
   border-radius: 50%;
   padding: 5px;
-}
+} */
 
 input {
   animation: SlideRight 3s;
@@ -499,4 +507,92 @@ input {
 
 .bg-secondary-subtle {
   background-color: rgba(13, 13, 13, 0.19) !important;
+}
+
+/* ********************** PAGINATION ******************* */
+
+.custom-pagination .page-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  margin: 0 9px;
+}
+
+.custom-pagination .page-item.active .page-link {
+  background-color: #20DF7F;
+  border-color: #20DF7F;
+  color: #1f1e1e;
+}
+
+.custom-pagination .page-item:nth-child(3) .page-link {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #efeded;
+  border-color: #efeded;
+  color: #1f1e1e;
+}
+
+.custom-pagination .page-item:nth-child(3) .page-link:hover {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #efeded;
+  border-color: #efeded;
+  color: #1f1e1e;
+}
+
+.custom-pagination .page-item:nth-child(4) .page-link {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #efeded;
+  border-color: #efeded;
+  color: #1f1e1e;
+}
+
+.custom-pagination .page-item:nth-child(4) .page-link:hover {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #efeded;
+  border-color: #efeded;
+  color: #1f1e1e;
+}
+
+.custom-pagination .page-item:nth-child(5) .page-link {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #efeded;
+  border-color: #efeded;
+  color: #1f1e1e;
+}
+
+.custom-pagination .page-item:nth-child(5) .page-link:hover {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #efeded;
+  border-color: #efeded;
+  color: #1f1e1e;
+}
+
+.custom-pagination .page-pagi .pagi-link[aria-label="Précédent"],
+.custom-pagination .page-pagi .pagi-link[aria-label="Suivant"] {
+  text-decoration: none;
+  width: 30px;
+  height: 30px;
+  font-size: 11px;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  margin: 0 10px;
 }

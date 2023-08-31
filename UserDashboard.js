@@ -39,7 +39,7 @@ let tableTwo = document.getElementById("tableTwo")
 let dateOne = ["", "Janvier", "Février", "Mars", "Avril", "Mai", "Juin"]
 let dateTwo = ["", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre"]
 window.addEventListener("DOMContentLoaded", async (e) => {
-    const docref = doc(db, "cotisations", "GSrBRXnrB7QTc7DQBv1j");
+    const docref = doc(db, "cotisations", "pFMhZBC1hJF23fVGYRuF");
     const querySnapshot = await getDoc(docref);
 
     if (querySnapshot.exists()) {
@@ -208,7 +208,7 @@ btnprevs.forEach((btnprev)=>{
         names.forEach((name) => {
             name.innerHTML = cotis.prenom + " " + cotis.name
         })
-        console.log(names)
+        
     }
 
 
