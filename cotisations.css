@@ -676,3 +676,6 @@ a {
 .btn-confirmer,.btn-confirmer:hover{
 	background-color: #083A50;
 }
+.pb-1{
+	padding-bottom: 0 !important;
+}
